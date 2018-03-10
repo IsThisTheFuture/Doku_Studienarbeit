@@ -6,13 +6,23 @@ Zur Orientierung im Spektrum elektromagnetischer Wellen haben sich international
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.75\textwidth]{frequenzbereich.png}
-	\caption[Spektrum elektromagnetischer Wellen und gebräuchliche Bandbezeichnungen]{Spektrum elektromagnetischer Wellen und gebräuchliche Bandbezeichnungen. Quelle: \cite[Kark, S. 1]{Kark2006}} 
+	\caption[Spektrum elektromagnetischer Wellen und gebräuchliche Bandbezeichnungen]{Spektrum elektromagnetischer Wellen und gebräuchliche Bandbezeichnungen. Quelle: \cite[Kark, S. 1]{Kark:2017}} 
 	\label{frequenzbereiche}
 \end{figure}
 
 
 
-In Deutschland gilt zudem die Aufteilung des Frequenzbereiches von 0 kHz bis 3000 GHz, welche von der Bundesnetzagentur im sogenannten Frequenzplan \cite[Bundesnetzagentur, 2016]{bundesnetzagentur-frequenzplan:2016} gemäß § 54 TKG festgehalten wird. %TODO: Was heißt "es gilt"? --> Umformulieren
+
+\subsection{Rechtliche Grundlagen} %TODO
+In Deutschland gilt rechtlich zudem die Aufteilung des Frequenzbereiches von 9 kHz bis 3000 GHz, welche von der Bundesnetzagentur im sogenannten Frequenzplan \cite[Bundesnetzagentur, 2016]{bundesnetzagentur-frequenzplan:2016} gemäß § 54 TKG festgehalten wird.
+Dort werden die Frequenzbereiche nach Frequenznutzung (Amateurfunk, Seefunk, WLAN, etc.) eingeteilt und entsprechende Nutzungsbestimmungen spezifiziert:
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{freqplan-wlan.png}
+	\caption[Eintrag: 2,4 GHz WLAN im Frequenzplan]{Eintrag: 2,4 GHz WLAN im Frequenzplan. Quelle: \cite[Bundesnetzagentur, 2016]{bundesnetzagentur-frequenzplan:2016}}
+	\label{frequenzplan-wlan}
+\end{figure}
 
 \subsection{Dezimeterwelle}
 Das Frequenzband von 300 MHz bis 3 GHz, auch \ac{UHF}-Band genannt, ist ein Frequenzbereich in dem die Wellen eine Länge von zehn Dezimeter bis einem Dezimeter besitzen.
@@ -26,5 +36,6 @@ Bluetooth ist eine Übertragungstechnik für kabellose Kommunikation über kurze
 \end{description}
 Die Aufteilung des Frequenzbereiches von 0 kHz bis 3000 GHz wird von der Bundesnetzagentur im sogenannten Frequenzplan \cite[Bundesnetzagentur]{bundesnetzagentur-frequenzplan:2016} gemäß § 54 TKG festgehalten.
 
-
+\section{Software Defined Radio} 
+\enquote{Funkübertragungssysteme, bei denen wesentliche Teile der Verarbeitung mittels Software erfolgen, werden als Software Defined Radio \ac{SDR}-Systeme bezeichnet.} \cite[Heuberger, e. a., S. 1]{Heuberger:2017}
 
