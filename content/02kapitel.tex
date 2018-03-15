@@ -4,7 +4,22 @@
 \section{Elektromagnetische Wellen}
 Als elektromagnetische Welle wird eine Welle beschrieben, die aus elektrischen und magnetischen Feldern besteht. 
 
+\newpage
 \section{Nachrichten- und Übertragungstechnik}
+Die Nachrichten- und Übertragungstechnik beschäftigt sich mit dem Übertragen elektronischer Nachrichten. Als Nachricht wird in diesem Kontext ein vom Sender gezielt erzeugtes Signal verstanden, welches mit Informationen behaftet und für den Empfänger der Nachricht bestimmt ist \cite[vgl. Werner, S. 3]{Werner:2006}.
+
+Das in Abb. \ref{nachrichtenuebertragung} dargestellte Kommunikationsmodell nach Shannon beschreibt den Grundlegenden Aufbau eines Nachrichtenaustausches zweier Systeme. 
+Im Folgenden werden die zum weiteren Verständnis notwendigen Begriffe eingeführt:\newline
+Die Informationsquelle (\enquote{Information Source}) übergibt die Nachricht dem Sender (\enquote{Transmitter}), der diese mit einem Signal als physikalischem Träger der Nachricht über einen Kanal (\enquote{Channel}) sendet. \newline
+Als Kanal bezeichnet man in der Nachrichtentechnik sämtliche technische Komponenten, welche eine Information vom Sender zum Empfänger transportiert. Dazu gehören beispielsweise (De-)Modulatoren, Modems, Draht- und Lichtleiter, Funkstrecken, Verstärker und andere \cite[vgl. Dankmeier, S. 13]{Dankmeier:2017}.\newline
+Die im Kanal auftretenden Störsignale, hier durch die Störsignalquelle (\enquote{Noise Source}) dargestellt, überlagern sich mit dem ursprünglichen Signal. Aus dem für den Empfänger (\enquote{Receiver}) bestimmten Empfangssignal (\enquote{Received Signal}) wird anschließend wieder eine Nachricht generiert, die im letzten Schritt der Informationssenke (\enquote{Destination}) übergeben wird.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{nachrichtenuebertragung-shannon.png}
+	\caption[Kommunikationsmodell nach Shannon]{Kommunikationsmodell nach Shannon. Quelle: \cite[Werner, S. 11f]{Werner:2017}} 
+	\label{nachrichtenuebertragung}
+\end{figure}
 
 
 \newpage
