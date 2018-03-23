@@ -29,7 +29,7 @@ Die Nachrichten- und Übertragungstechnik beschäftigt sich mit dem Übertragen 
 Das in Abb. \ref{nachrichtenuebertragung} dargestellte Kommunikationsmodell nach Shannon beschreibt den Grundlegenden Aufbau eines Nachrichtenaustausches zweier Systeme. 
 Im Folgenden werden die zum weiteren Verständnis notwendigen Begriffe eingeführt:\newline
 Die Informationsquelle (\enquote{Information Source}) übergibt die Nachricht dem Sender (\enquote{Transmitter}), der diese mit einem Signal als physikalischem Träger der Nachricht über einen Kanal (\enquote{Channel}) sendet. \newline
-Als Kanal bezeichnet man in der Nachrichtentechnik sämtliche technische Komponenten, welche eine Information vom Sender zum Empfänger transportiert. Dazu gehören beispielsweise (De-)Modulatoren, Modems, Draht- und Lichtleiter, Funkstrecken, Verstärker und andere \cite[vgl. Dankmeier, S. 13]{Dankmeier:2017}.\newline
+Als Kanal bezeichnet man in der Nachrichtentechnik sämtliche technische Komponenten, welche eine Information vom Sender zum Empfänger transportiert. \cite[vgl. Dankmeier, S. 13]{Dankmeier:2017}.\newline
 Die im Kanal auftretenden Störsignale, hier durch die Störsignalquelle (\enquote{Noise Source}) dargestellt, überlagern sich mit dem ursprünglichen Signal. Aus dem für den Empfänger (\enquote{Receiver}) bestimmten Empfangssignal (\enquote{Received Signal}) wird anschließend wieder eine Nachricht generiert, die im letzten Schritt der Informationssenke (\enquote{Destination}) übergeben wird.
 
 \begin{figure}[ht]
@@ -39,6 +39,35 @@ Die im Kanal auftretenden Störsignale, hier durch die Störsignalquelle (\enquo
 	\label{nachrichtenuebertragung}
 \end{figure}
 
+\section{Signale und Spektren}
+Signale werden üblicherweise auf 2 Arten dargestellt:
+\begin{enumerate}
+	\item Als \textit{Signal} im Zeitbereich
+	\item Als \textit{Spektrum} im Frequenzbereich
+\end{enumerate}
+
+\subsection{Kontinuierliche und diskrete Signale}
+Als Signal gilt eine Funktion mit mindestens einer unabhängigen Variablen, beispielsweise der Zeit \(t\). Ist die Zeitvariable nur für diskrete Werte definiert, so spricht man von einem zeitdiskreten Signal. Man schreibt auch \(x[n]\), wobei \(n\) die normierte Laufvariable genannt wird \cite[vgl. Werner, S. 24]{Werner:2017}.
+
+In Abb. \ref{kontinuierlich_diskret} wird das kontinuierliche Signal
+\[x(t) = \sin \omega t = \sin 2\pi f t\]
+mit \(f = 50 \text{ Hz} \) dargestellt und mit dem diskreten Signal
+\[x[n] = x(nT_a) = \sin 2\pi f T_a n\]
+überlagert, welches mit einer Abtastrate von \(f_a = 1 \text{ kHz}\) oder anders ausgedrückt: einem Abtastintervall von \(T_a = 1 / f_a = 1 \text{ ms}\) abgetastet wird \cite[vgl. Heuberger, e. a., S. 11f]{Heuberger:2017}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{kontinuierlich-diskret.png}
+	\caption[Sinus-Signal als kontinuierliches und als diskretes Signal]{Sinus-Signal als kontinuierliches und als diskretes Signal. \newline Quelle: \cite[Heuberger, e. a., S. 12]{Heuberger:2017}} 
+	\label{kontinuierlich_diskret}
+\end{figure}
+%\subsection{Analoge und digitale Signale}
+%Digitale Signale sind sowohl werte- als auch zeitdiskret.
+
+\subsection{Spektrum eines Signals}
+
+
+\section{Nyquist-Shannon-Abtasttheorem}
 
 \newpage
 \section{Frequenzbereiche}
