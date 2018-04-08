@@ -1933,15 +1933,22 @@
     <bcf:citekey order="8">Heuberger:2017</bcf:citekey>
     <bcf:citekey order="9">Heuberger:2017</bcf:citekey>
     <bcf:citekey order="10">Heuberger:2017</bcf:citekey>
-    <bcf:citekey order="11">itu-431:2015</bcf:citekey>
-    <bcf:citekey order="12">Kark:2017</bcf:citekey>
-    <bcf:citekey order="13">Kark:2017</bcf:citekey>
-    <bcf:citekey order="14">bundesnetzagentur-frequenzplan:2016</bcf:citekey>
-    <bcf:citekey order="15">bundesnetzagentur-frequenzplan:2016</bcf:citekey>
-    <bcf:citekey order="16">bundesnetzagentur-frequenzplan:2016</bcf:citekey>
-    <bcf:citekey order="17">bundesamt-strahlungsschutz:2012</bcf:citekey>
-    <bcf:citekey order="18">bundesnetzagentur-frequenzplan:2016</bcf:citekey>
-    <bcf:citekey order="19">Heuberger:2017</bcf:citekey>
+    <bcf:citekey order="11">Karrenberg:2017</bcf:citekey>
+    <bcf:citekey order="12">Heuberger:2017</bcf:citekey>
+    <bcf:citekey order="13">Heuberger:2017</bcf:citekey>
+    <bcf:citekey order="14">Meyer:2017</bcf:citekey>
+    <bcf:citekey order="15">Heuberger:2017</bcf:citekey>
+    <bcf:citekey order="16">Heuberger:2017</bcf:citekey>
+    <bcf:citekey order="17">Heuberger:2017</bcf:citekey>
+    <bcf:citekey order="18">itu-431:2015</bcf:citekey>
+    <bcf:citekey order="19">Kark:2017</bcf:citekey>
+    <bcf:citekey order="20">Kark:2017</bcf:citekey>
+    <bcf:citekey order="21">bundesnetzagentur-frequenzplan:2016</bcf:citekey>
+    <bcf:citekey order="22">bundesnetzagentur-frequenzplan:2016</bcf:citekey>
+    <bcf:citekey order="23">bundesnetzagentur-frequenzplan:2016</bcf:citekey>
+    <bcf:citekey order="24">bundesamt-strahlungsschutz:2012</bcf:citekey>
+    <bcf:citekey order="25">bundesnetzagentur-frequenzplan:2016</bcf:citekey>
+    <bcf:citekey order="26">Heuberger:2017</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
