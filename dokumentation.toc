@@ -57,14 +57,26 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Praxis Kapitel}{11}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Praxis Kapitel}{12}{chapter.4}
+\contentsline {section}{\numberline {3.1}Aufbau/Entwurf}{11}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Fazit}{13}{chapter.5}
+\contentsline {section}{\numberline {3.2}GNU Radio}{11}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Zusammenfassung}{13}{section.5.1}
+\contentsline {subsection}{\numberline {3.2.1}Funktionsweise}{11}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Ausblick}{13}{section.5.2}
+\contentsline {section}{\numberline {3.3}Hardware}{12}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{14}{chapter*.14}
+\contentsline {subsection}{\numberline {3.3.1}Antenne}{12}{subsection.3.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Anhang}{16}{chapter*.15}
+\contentsline {subsection}{\numberline {3.3.2}SDR-Ger\IeC {\"a}t}{12}{subsection.3.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Praxis Kapitel}{14}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Fazit}{15}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Zusammenfassung}{15}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Ausblick}{15}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{16}{chapter*.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Anhang}{18}{chapter*.15}
