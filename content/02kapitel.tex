@@ -30,6 +30,11 @@ Die Existenz der elektromagnetischen Wellen folgt aus den Maxwell-Gleichungen. S
 Rauschen im Allgemeinen ist der Oberbegriff für Störspannungen, die ein Nutzsignal überlagern. Es wird als unerwünschtes Signal bezeichnet, das in Kommunikationssystem leider allgegenwärtig ist. Das Rauschen behindert den Empfang von Nachrichten bei der Übertragung, deshalb ist es erforderlich diesen Nebeneffekt zu begrenzen. Rauschen kann mehrere Ursachen haben, die alle durch physikalische Gesetzmäßigkeiten begründet werden können. Üblicherweise sind  Rauschen zufällig auftretende Störspannungen, die keine  Phasen oder Frequenzbeziehung zueinander haben.
 %TODO
 
+
+
+
+
+
 \newpage
 \section{Nachrichten- und Übertragungstechnik}
 Die Nachrichten- und Übertragungstechnik beschäftigt sich mit dem Übertragen elektronischer Nachrichten. Als Nachricht wird in diesem Kontext ein vom Sender gezielt erzeugtes Signal verstanden, welches mit Informationen behaftet und für den Empfänger der Nachricht bestimmt ist \cite[vgl. Werner, S. 3]{Werner:2006}.
@@ -50,6 +55,14 @@ Aus dem für den Empfänger (\enquote{Receiver}) bestimmten Empfangssignal (\enq
 
 Die von der Informationsquelle zu übertragenden Daten werden, je nach Datenquelle, durch eine Quellcodierung komprimiert und beim Empfänger dann durch die entsprechende Umkehroperation die ursprünglichen Daten wiederhergestellt.
 
+
+
+
+
+
+
+
+
 \newpage
 \section{Signale und Spektren}
 Signale werden üblicherweise auf 2 Arten dargestellt:
@@ -57,6 +70,9 @@ Signale werden üblicherweise auf 2 Arten dargestellt:
 	\item Als \textit{Signal} im Zeitbereich
 	\item Als \textit{Spektrum} im Frequenzbereich
 \end{enumerate}
+
+
+
 
 \subsection{Kontinuierliche und diskrete Signale}
 Als Signal gilt eine Funktion mit mindestens einer unabhängigen Variablen, beispielsweise der Zeit \(t\). Ist die Zeitvariable nur für diskrete Werte definiert, so spricht man von einem zeitdiskreten Signal. Man schreibt auch \(x[n]\), wobei \(n\) die normierte Laufvariable genannt wird \cite[vgl. Werner, S. 24]{Werner:2017}.
@@ -77,6 +93,8 @@ mit \(f = 50 \text{ Hz} \) dargestellt und mit dem diskreten Signal
 %Digitale Signale sind sowohl werte- als auch zeitdiskret.
 
 
+
+
 \subsection{Nyquist-Shannon-Abtasttheorem}
 Das Abtasttheorem nach Nyquist und Shannon besagt, dass ein Signal der Funktion \(x(t)\) welches die Frequenz \(f\) besitzt, mindestens mit der Abtastrate \(f_a\) abgetastet werden muss, wobei gilt: \(f_a \ge 2f\), damit aus dem abgetasteten Signal das Originale durch eine Interpolation ausreichend genau beschrieben werden kann \cite[vgl. Werner, S. 30]{Werner:2006}. 
 Ist dies nicht der Fall, kann beim Abtasten zweier Signale unterschiedlicher Frequenzen dazu kommen, dass die resultierenden diskreten Signale identisch sind. Dieser Effekt wird als \enquote{Aliasing} bezeichnet:
@@ -90,8 +108,16 @@ Ist dies nicht der Fall, kann beim Abtasten zweier Signale unterschiedlicher Fre
 
 In der Praxis wird daher meist eine Abtastrate verwendet, die ausreichend größer ist, als der doppelte Betrag der höchsten Frequenz im gegebenen Signal.
 
+
+
+
+
 \subsection{Spektrum eines Signals}
 Eine alternative Darstellung von Signalen kann im Frequenzbereich erfolgen. Dort wir ein Signal mit einzelnen Sinus-Schwingungen beschrieben, aus denen es sich zusammensetzen lässt \cite[vgl. Karrenberg, S. 42]{Karrenberg:2017}.
+
+
+
+
 
 \subsection{Fourier-Transformation}
 Um ein Signal aus dem Zeitbereich in den Frequenzbereich zu überführen wird die sogenannte Fourier-Transformation verwendet.\newline
@@ -111,6 +137,12 @@ In der Praxis wird für die Überführung in den Frequenzbereich meist die \ac{F
 Um ein Signal mittels \ac{FFT} in den Frequenzraum überführen zu können, muss es die Länge der Form \(N = 2^L\) aufweisen. \(N\) muss also eine 2er-Potenz sein \cite[vgl. Heuberger, e. a., S. 15]{Heuberger:2017}.
 Für das zu überführende Signal gilt also:
 \[\underline{x} = \Big[ \:  \underline{x}[0] \; \underline{x}[1] \; \underline{x}[2] \; ... \; \underline{x}[N - 2] \; \underline{x}[N - 1] \; \Big] \]
+
+
+
+
+
+
 
 \subsubsection{Fensterfunktionen}
 In der Praxis, so auch bei \ac{SDR}-Systemen, handelt es sich in der Regel um Ausschnitte eines Signales. Bei der \ac{FFT} wird mit periodischen Signalen gearbeitet, ein Signalausschnitt ist aber nur quasiperiodisch. Denn an den Rändern gibt es bei der periodischen Fortsetzung des Signals Sprungstellen \cite[vgl. Meyer, S. 187]{Meyer:2017}.\newline
@@ -137,8 +169,31 @@ In Abbildung \ref{fft} wird das diskrete Zeitsignal \(x[n]\) dem gefensterten Ze
 
 
 
+
+\section{Basisbandübertragung und Trägersignale}
+Die Übertragung von Signalen kann über verschiedene Medien erfolgen, etwa metallische- und Lichtwellenleiter oder über Funk. Eine Übertragung im sogenannten Basisband ist jedoch nur mit metallischen Leitern möglich \cite[vgl. Read, S. 149]{Read:2004}. Diese haben den Vorteil, dass ein Signal zur Übertragung den gesamten Frequenzbereich uneingeschränkt nutzen kann. Dies bedeutet, dass das volle Spektrum des Signals in den Übertragungskanal (z. B. Telefonleitung, LAN Kabel) eingespeist werden kann. Eine Verschiebung von den Frequenzen informationstragender Signale ist also nicht notwendig \cite[vgl. Werner, S. 158]{Werner:2006}. Ist das der Fall, so spricht man von einer Basisbandübertragung.\newline
+
+
+\subsection{Modulationsverfahren}
+Signale, die mit einer Funkübertragungstechnik gesendet werden, müssen vor der Übertragung jedoch an Frequenz und Bandbreite des entsprechenden Kanals angepasst werden \cite[vgl. Read, S. 24]{Read:2004}. 
+Das hat unter anderem damit zu tun, dass für verschiedene Anwendungen spezielle Bereiche im Frequenzspektrum reserviert sind, siehe Abschnitt \ref{section-frequenzbereiche}.
+Des weiteren ist es zum Senden und Empfangen von Signalen vorteilhaft, wenn die Größe der Antenne in etwa der halben Wellenlänge des Signals entspricht \cite[vgl. Kark, S. 4]{Kark:2017}.
+Bei der Übertragung von Sprachsignalen, welche (bei Männern) durchschnittlich bei etwa 120 Hz liegen, wäre zum Senden eine Antenne der Größe 1.250 km ideal:
+\[ \frac{\lambda}{2} = \frac{c}{2f} = \frac{3*10^8 \text{ m/s}}{2*120 \text{ Hz}} = 1.250.000 \text{ m}\]
+
+Da eine Antenne dieser Größe utopisch ist, können die zu übertragenden Informationen einfach auf höhere Frequenzen (mit entsprechend kleineren Wellenlängen) verschoben werden. Hierbei spricht man von \textit{Modulation}.
+Die informationstragenden Signale werden dann bevorzugt einer elektromagnetischen, sinusförmigen Welle über die Amplitude, der Phase und/oder der Frequenz aufgeprägt \cite[vgl. Werner, S. 242f]{Werner:2017}. %TODO: "... der Phase und/oder der Frequenz" 
+
+
+
+\subsubsection{I/Q-Modulation}
+
+
+
+
 \newpage
 \section{Frequenzbereiche}
+\label{section-frequenzbereiche}
 Zur Orientierung im Spektrum elektromagnetischer Wellen haben sich international verschiedene Systeme zur Klassifikation sogenannter Frequenzbänder gebildet. Die \ac{ITU} empfiehlt eine Einteilung des Spektrums von 3 kHz bis 300 GHz in acht Frequenzbereiche, auch Frequenzdekaden genannt. \cite[vgl. ITU-R v.431-8]{itu-431:2015}
 
 \begin{figure}[ht]
@@ -147,6 +202,10 @@ Zur Orientierung im Spektrum elektromagnetischer Wellen haben sich international
 	\caption[Spektrum elektromagnetischer Wellen und gebräuchliche Bandbezeichnungen]{Spektrum elektromagnetischer Wellen und gebräuchliche Bandbezeichnungen. Quelle: \cite[Kark, S. 1]{Kark:2017}} 
 	\label{frequenzbereiche}
 \end{figure}
+
+
+
+
 
 
 \subsection{Rechtliche Grundlagen} %TODO
@@ -160,8 +219,22 @@ Dort werden die Frequenzbereiche nach Frequenznutzung (Amateurfunk, Seefunk, WLA
 	\label{frequenzplan-wlan}
 \end{figure}
 
+
+
+
+
+
+
 \section{Anwendungen im Bereich der Dezimeterwelle}
-Das Frequenzband von 300 MHz bis 3 GHz, auch \ac{UHF}-Band genannt, ist ein Frequenzbereich in dem die Wellen eine Länge von zehn Dezimeter bis einem Dezimeter besitzen.
+Das Frequenzband von 300 MHz bis 3 GHz, auch \ac{UHF}-Band genannt, ist ein Frequenzbereich in dem die Wellen eine Länge von zehn Dezimeter bis einem Dezimeter besitzen:
+\( \lambda = \frac{c}{f} = \frac{3*10^8 \text{ m/s}}{300 \text{ MHz}} = 1\text{ m}\)
+und
+\( \frac{3*10^8 \text{ m/s}}{3000 \text{ MHz}} = 0.1\text{ m}\)
+
+
+
+
+
 
 \subsection{Bluetooth}
 Bluetooth ist eine Übertragungstechnik für kabellose Kommunikation über kurze Distanzen. Es wird im Frequenzbereich von 2,4 bis 2,4835 GHz betrieben \cite[Bundesamt für Strahlenschutz, S. 1]{bundesamt-strahlungsschutz:2012}. Insgesamt gibt es unter Bluetoothgeräten drei verschiedene Sendeleistungsklassen:
@@ -172,8 +245,17 @@ Bluetooth ist eine Übertragungstechnik für kabellose Kommunikation über kurze
 \end{description}
 Die Aufteilung des Frequenzbereiches von 0 kHz bis 3000 GHz wird von der Bundesnetzagentur im sogenannten Frequenzplan \cite[Bundesnetzagentur]{bundesnetzagentur-frequenzplan:2016} gemäß § 54 TKG festgehalten.
 
+
+
+
+
 \subsection{Wireless Local Area Network}
 Unter dem Begriff Wireless Local Network (WLAN) versteht man ein kabelloses lokales Netzwerk, welches meist an Orten eingesetzt wird, bei der kabelgebundene Datenübertraung zu teuer, umständlich oder umkomfortabel wäre.
+
+
+
+
+
 
 \section{Software Defined Radio Systeme} 
 \ac{SDR} Systeme sind digitale Datenübertragungssysteme, bei denen der Großteil der Signal- und Datenverarbeitung mittels Softwarekomponenten erfolgt \cite[Heuberger, e. a., S. 1]{Heuberger:2017}.
