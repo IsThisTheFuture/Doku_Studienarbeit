@@ -38,7 +38,8 @@ Das in Abb. \ref{nachrichtenuebertragung} dargestellte Kommunikationsmodell nach
 Im Folgenden werden die zum weiteren Verständnis notwendigen Begriffe eingeführt:\newline
 Die Informationsquelle (\enquote{Information Source}) übergibt die Nachricht dem Sender (\enquote{Transmitter}), der diese mit einem Signal als physikalischem Träger der Nachricht über einen Kanal (\enquote{Channel}) sendet. \newline
 Als Kanal bezeichnet man in der Nachrichtentechnik sämtliche technische Komponenten, welche eine Information vom Sender zum Empfänger transportiert. \cite[vgl. Dankmeier, S. 13]{Dankmeier:2017}.\newline
-Die im Kanal auftretenden Störsignale, hier durch die Störsignalquelle (\enquote{Noise Source}) dargestellt, überlagern sich mit dem ursprünglichen Signal. Aus dem für den Empfänger (\enquote{Receiver}) bestimmten Empfangssignal (\enquote{Received Signal}) wird anschließend wieder eine Nachricht generiert, die im letzten Schritt der Informationssenke (\enquote{Destination}) übergeben wird.
+Die im Kanal auftretenden Störsignale, hier durch die Störsignalquelle (\enquote{Noise Source}) dargestellt, überlagern sich mit dem ursprünglichen Signal.\newline
+Aus dem für den Empfänger (\enquote{Receiver}) bestimmten Empfangssignal (\enquote{Received Signal}) wird anschließend wieder eine Nachricht generiert, die im letzten Schritt der Informationssenke (\enquote{Destination}) übergeben wird.
 
 \begin{figure}[ht]
 	\centering
@@ -47,6 +48,9 @@ Die im Kanal auftretenden Störsignale, hier durch die Störsignalquelle (\enquo
 	\label{nachrichtenuebertragung}
 \end{figure}
 
+Die von der Informationsquelle zu übertragenden Daten werden, je nach Datenquelle, durch eine Quellcodierung komprimiert und beim Empfänger dann durch die entsprechende Umkehroperation die ursprünglichen Daten wiederhergestellt.
+
+\newpage
 \section{Signale und Spektren}
 Signale werden üblicherweise auf 2 Arten dargestellt:
 \begin{enumerate}
@@ -72,10 +76,24 @@ mit \(f = 50 \text{ Hz} \) dargestellt und mit dem diskreten Signal
 %\subsection{Analoge und digitale Signale}
 %Digitale Signale sind sowohl werte- als auch zeitdiskret.
 
+
+\subsection{Nyquist-Shannon-Abtasttheorem}
+Das Abtasttheorem nach Nyquist und Shannon besagt, dass ein Signal der Funktion \(x(t)\) welches die Frequenz \(f\) besitzt, mindestens mit der Abtastrate \(f_a\) abgetastet werden muss, wobei gilt: \(f_a \ge 2f\), damit aus dem abgetasteten Signal das Originale durch eine Interpolation ausreichend genau beschrieben werden kann \cite[vgl. Werner, S. 30]{Werner:2006}. 
+Ist dies nicht der Fall, kann beim Abtasten zweier Signale unterschiedlicher Frequenzen dazu kommen, dass die resultierenden diskreten Signale identisch sind. Dieser Effekt wird als \enquote{Aliasing} bezeichnet:
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.9\textwidth]{aliasingsines.png}
+	\caption[Aliasing Effekt. Abtastung zweier Sinussignale verschiedener Frequenzen]{Aliasing Effekt. Abtastung zweier Sinussignale verschiedener Frequenzen. \newline Quelle: \cite[Moxfyre]{aliasingsampling:2009}} 
+	\label{abtasttheorem}
+\end{figure}
+
+In der Praxis wird daher meist eine Abtastrate verwendet, die ausreichend größer ist, als der doppelte Betrag der höchsten Frequenz im gegebenen Signal.
+
 \subsection{Spektrum eines Signals}
 Eine alternative Darstellung von Signalen kann im Frequenzbereich erfolgen. Dort wir ein Signal mit einzelnen Sinus-Schwingungen beschrieben, aus denen es sich zusammensetzen lässt \cite[vgl. Karrenberg, S. 42]{Karrenberg:2017}.
 
-\subsubsection{Fourier-Transformation}
+\subsection{Fourier-Transformation}
 Um ein Signal aus dem Zeitbereich in den Frequenzbereich zu überführen wird die sogenannte Fourier-Transformation verwendet.\newline
 Im wesentlichen wird ein Signal bzw. eine Funktion mittels Fourier-Transformation als Summe mehrerer Sinus-Schwingungen unterschiedlicher Frequenzen und Amplituden dargestellt.
 
@@ -88,7 +106,7 @@ Nach der Zerlegung ergeben sich einige Möglichkeiten mit den einzelnen Frequenz
 
 Um von dem resultierenden Spektrum wieder zu einer Darstellung im Zeitbereich zu gelangen, kann die Umkehroperation, die inverse Fourier-Transformation angewandt werden.
 
-In der Praxis wird für die Überführung in den Frequenzbereich meist die \ac{FFT} genutzt \cite[vgl. Heuberger, e. a., S. 14]{Heuberger:2017}.
+In der Praxis wird für die Überführung in den Frequenzbereich meist die \ac{FFT} genutzt \cite[vgl. Heuberger, e. a., S. 14]{Heuberger:2017}. Die \ac{FFT} ist allerdings nur eine effizientere Berechnungsart der \ac{DFT}, welche die Fouriertransformation auch mit diskreten Werten ermöglicht \cite[vgl. Meyer, S. 175]{Meyer:2017}.
 
 Um ein Signal mittels \ac{FFT} in den Frequenzraum überführen zu können, muss es die Länge der Form \(N = 2^L\) aufweisen. \(N\) muss also eine 2er-Potenz sein \cite[vgl. Heuberger, e. a., S. 15]{Heuberger:2017}.
 Für das zu überführende Signal gilt also:
@@ -117,7 +135,7 @@ In Abbildung \ref{fft} wird das diskrete Zeitsignal \(x[n]\) dem gefensterten Ze
 	\label{fft}
 \end{figure}
 
-\section{Nyquist-Shannon-Abtasttheorem}
+
 
 \newpage
 \section{Frequenzbereiche}
@@ -142,10 +160,10 @@ Dort werden die Frequenzbereiche nach Frequenznutzung (Amateurfunk, Seefunk, WLA
 	\label{frequenzplan-wlan}
 \end{figure}
 
-\subsection{Dezimeterwelle}
+\section{Anwendungen im Bereich der Dezimeterwelle}
 Das Frequenzband von 300 MHz bis 3 GHz, auch \ac{UHF}-Band genannt, ist ein Frequenzbereich in dem die Wellen eine Länge von zehn Dezimeter bis einem Dezimeter besitzen.
 
-\section{Bluetooth}
+\subsection{Bluetooth}
 Bluetooth ist eine Übertragungstechnik für kabellose Kommunikation über kurze Distanzen. Es wird im Frequenzbereich von 2,4 bis 2,4835 GHz betrieben \cite[Bundesamt für Strahlenschutz, S. 1]{bundesamt-strahlungsschutz:2012}. Insgesamt gibt es unter Bluetoothgeräten drei verschiedene Sendeleistungsklassen:
 \begin{description}
 	\item[Klasse 1: bis 1,0 mW] Reichweite: bis 10m 
@@ -154,10 +172,43 @@ Bluetooth ist eine Übertragungstechnik für kabellose Kommunikation über kurze
 \end{description}
 Die Aufteilung des Frequenzbereiches von 0 kHz bis 3000 GHz wird von der Bundesnetzagentur im sogenannten Frequenzplan \cite[Bundesnetzagentur]{bundesnetzagentur-frequenzplan:2016} gemäß § 54 TKG festgehalten.
 
-\section{Wireless Local Area Network}
+\subsection{Wireless Local Area Network}
 Unter dem Begriff Wireless Local Network (WLAN) versteht man ein kabelloses lokales Netzwerk, welches meist an Orten eingesetzt wird, bei der kabelgebundene Datenübertraung zu teuer, umständlich oder umkomfortabel wäre.
 
-\section{Software Defined Radio} 
-\enquote{Funkübertragungssysteme, bei denen wesentliche Teile der Verarbeitung mittels Software erfolgen, werden als Software Defined Radio \ac{SDR}-Systeme bezeichnet.} \cite[Heuberger, e. a., S. 1]{Heuberger:2017}
+\section{Software Defined Radio Systeme} 
+\ac{SDR} Systeme sind digitale Datenübertragungssysteme, bei denen der Großteil der Signal- und Datenverarbeitung mittels Softwarekomponenten erfolgt \cite[Heuberger, e. a., S. 1]{Heuberger:2017}.
+Besonders hervorzuheben ist bei \ac{SDR} Systemen, dass ihre Hardware größtenteils unabhängig nachrichtentechnischer Eigenschaften wie der Symbolrate und Modulationsart sind. \ac{SDR} Systeme können verschiedene Standards verwenden um entsprechende Übertragungsarten zu implementieren, da die Funktionalität durch Software, also Hardware-unabhängig, realisiert wird \cite[Heuberger, e. a., S. 36]{Heuberger:2017}. \newline
+Abbildung \ref{sdr-blockschaltbild} zeigt den Aufbau eines \ac{SDR} Systems als Blockschaltbild, in dem sowohl Sender und Empfänger als SDR realisiert sind.
+Für jedes Element im Sender gibt es ein entsprechendes Element im Empfänger, welches die Senderoperationen rückgängig macht, um die ursprünglichen Daten rekonstruieren zu können.
+
+%TODO: Hab ich mal so formuliert, aber keine Ahnung ob das auch so bleibt oder genau zutrifft. -> Evtl. umformulieren!
+Da sich diese Studienarbeit mit dem Empfangen und Auswerten von Signalen, aber nicht dem Senden befasst, wird im weiteren Verlauf des Dokumentes ausschließlich die Seite des Empfängersystems und der Übertragungsstrecke betrachtet.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.9\textwidth]{sdr.png}
+	\caption[Blockschaltbild eines SDR Systems]{Blockschaltbild eines SDR Systems. Quelle: \cite[Heuberger, e. a., S. 37]{Heuberger:2017}}
+	\label{sdr-blockschaltbild}
+\end{figure}
+
+Abbildung \ref{nachrichtentechn-blockschaltbild} zeigt den Aufbau eines klassischen digitalen Übertragungssystems. Die Funktionsweise lässt sich wie folgt zusammenfassen:
+\begin{enumerate} %TODO: Vervollständigen!
+	\item Um später die Integrität der digitalen Daten verifizieren zu können, werden sie mit einer \ac{CRC}-Kodierung versehen.
+	\item Kanalcodierung %TODO
+	\item Scrambler %TODO
+	\item Symbol-Mapper %TODO
+	\item Das Signal wird einem Trägersignal aufmoduliert damit es übertragen werden kann.
+\end{enumerate}
+
+Anschließend erfolgen auf der Empfängerseite die entsprechenden inversen Operationen zu den aufgeführten Schritten. In einem Software Defined Radio System werden \textit{alle} diese Vorgänge durch Software in der Basisbandverarbeitung abgebildet \cite[vgl. Heuberger, e. a., S. 38]{Heuberger:2017}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{sdr-nachrichtentechn-blockschaltbild.png}
+	\caption[Nachrichtentechnisches Blockschaltbild eines digitalen Übertragungssystems]{Nachrichtentechnisches Blockschaltbild eines digitalen Übertragungssystems. Quelle: \cite[Heuberger, e. a., S. 38]{Heuberger:2017}}
+	\label{nachrichtentechn-blockschaltbild}
+\end{figure}
+
+
 
 
