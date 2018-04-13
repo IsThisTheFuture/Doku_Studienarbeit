@@ -2010,6 +2010,11 @@
     <bcf:citekey order="34">Heuberger:2017</bcf:citekey>
     <bcf:citekey order="35">Heuberger:2017</bcf:citekey>
     <bcf:citekey order="36">Heuberger:2017</bcf:citekey>
+    <bcf:citekey order="37">Funktechnik:2018</bcf:citekey>
+    <bcf:citekey order="38">Funktechnik:2018</bcf:citekey>
+    <bcf:citekey order="39">wimo:2018</bcf:citekey>
+    <bcf:citekey order="40">HackRFOne:2018</bcf:citekey>
+    <bcf:citekey order="41">HackRFOne:2018</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

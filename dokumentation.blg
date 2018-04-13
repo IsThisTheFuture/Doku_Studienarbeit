@@ -1,15 +1,5 @@
-[0] Config.pm:302> INFO - This is Biber 2.11
-[0] Config.pm:305> INFO - Logfile is 'dokumentation.blg'
-[37] biber-MSWIN64:313> INFO - === 
-[72] Biber.pm:371> INFO - Reading 'dokumentation.bcf'
-[171] Biber.pm:857> INFO - Found 9 citekeys in bib section 0
-[186] Biber.pm:3976> INFO - Processing section 0
-[202] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliographie.bib' for section 0
-[208] bibtex.pm:1500> INFO - LaTeX decoding ...
-[562] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliographie.bib'
-[645] UCollate.pm:68> INFO - Overriding locale 'de_DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[646] UCollate.pm:68> INFO - Overriding locale 'de_DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[646] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de_DE'
-[646] Biber.pm:3810> INFO - No sort tailoring available for locale 'de_DE'
-[659] bbl.pm:617> INFO - Writing 'dokumentation.bbl' with encoding 'UTF-8'
-[663] bbl.pm:720> INFO - Output to dokumentation.bbl
+This is BibTeX, Version 0.99dThe top-level auxiliary file: dokumentation.aux
+I found no \citation commands---while reading file dokumentation.aux
+I found no \bibdata command---while reading file dokumentation.aux
+I found no \bibstyle command---while reading file dokumentation.aux
+(There were 3 error messages)
