@@ -79,10 +79,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Praxis Kapitel}{19}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Fazit}{20}{chapter.5}
+\contentsline {section}{\numberline {4.1}Einrichten der Entwicklungsumgebung}{19}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Zusammenfassung}{20}{section.5.1}
+\contentsline {section}{\numberline {4.2}Grundbausteine in GNU Radio Companion}{19}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Ausblick}{20}{section.5.2}
+\contentsline {chapter}{\numberline {5}Fazit}{21}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Anhang}{22}{chapter*.16}
+\contentsline {section}{\numberline {5.1}Zusammenfassung}{21}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Ausblick}{21}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{22}{chapter*.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Anhang}{24}{chapter*.18}

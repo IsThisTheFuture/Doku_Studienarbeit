@@ -194,6 +194,7 @@ Bei der Übertragung von Sprachsignalen, welche (bei Männern) durchschnittlich 
 Da eine Antenne dieser Größe utopisch ist, können die zu übertragenden Informationen einfach auf höhere Frequenzen (mit entsprechend kleineren Wellenlängen) verschoben werden. Hierbei spricht man von \textit{Modulation}.
 Die informationstragenden Signale werden dann bevorzugt einer elektromagnetischen, sinusförmigen Welle über die Amplitude, der Phase und/oder der Frequenz aufgeprägt \cite[vgl. Werner, S. 242f]{Werner:2017}. %TODO: "... der Phase und/oder der Frequenz" 
 
+Bei der Modulation wird der Frequenzbereich des Basisbandes, also des zu modulierenden Signals, in einen anderen Frequenzbereich transformiert \cite[vgl. Plaßmann, S. 1204]{Plassmann:2016}.
 
 
 \subsubsection{I/Q-Modulation}
@@ -274,7 +275,7 @@ Abbildung \ref{sdr-blockschaltbild} zeigt den Aufbau eines \ac{SDR} Systems als 
 Für jedes Element im Sender gibt es ein entsprechendes Element im Empfänger, welches die Senderoperationen rückgängig macht, um die ursprünglichen Daten rekonstruieren zu können.
 
 %TODO: Hab ich mal so formuliert, aber keine Ahnung ob das auch so bleibt oder genau zutrifft. -> Evtl. umformulieren!
-Da sich diese Studienarbeit mit dem Empfangen und Auswerten von Signalen, aber nicht dem Senden befasst, wird im weiteren Verlauf des Dokumentes ausschließlich die Seite des Empfängersystems und der Übertragungsstrecke betrachtet.
+Da sich diese Studienarbeit mit dem Empfangen und Auswerten von Signalen, aber nicht dem Senden befasst, wird im weiteren Verlauf des Dokumentes hauptsächlich die Seite des Empfängersystems und der Übertragungsstrecke betrachtet.
 
 \begin{figure}[ht]
 	\centering
@@ -289,7 +290,7 @@ Abbildung \ref{nachrichtentechn-blockschaltbild} zeigt den Aufbau eines klassisc
 	\item Kanalcodierung %TODO
 	\item Scrambler %TODO
 	\item Symbol-Mapper %TODO
-	\item Das Signal wird einem Trägersignal aufmoduliert damit es übertragen werden kann.
+	\item Das Signal wird einem Trägersignal aufgeprägt, damit es übertragen werden kann.
 \end{enumerate}
 
 Anschließend erfolgen auf der Empfängerseite die entsprechenden inversen Operationen zu den aufgeführten Schritten. In einem Software Defined Radio System werden \textit{alle} diese Vorgänge durch Software in der Basisbandverarbeitung abgebildet \cite[vgl. Heuberger, e. a., S. 38]{Heuberger:2017}
@@ -300,6 +301,8 @@ Anschließend erfolgen auf der Empfängerseite die entsprechenden inversen Opera
 	\caption[Nachrichtentechnisches Blockschaltbild eines digitalen Übertragungssystems]{Nachrichtentechnisches Blockschaltbild eines digitalen Übertragungssystems. Quelle: \cite[Heuberger, e. a., S. 38]{Heuberger:2017}}
 	\label{nachrichtentechn-blockschaltbild}
 \end{figure}
+
+
 
 
 

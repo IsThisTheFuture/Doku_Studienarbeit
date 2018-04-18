@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.4" bltxversion="3.11" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.4" bltxversion="3.10" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -360,7 +360,6 @@
     <bcf:option datatype="boolean">uniquework</bcf:option>
     <bcf:option datatype="boolean">uniqueprimaryauthor</bcf:option>
     <bcf:option datatype="boolean">defernumbers</bcf:option>
-    <bcf:option datatype="boolean">locallabelwidth</bcf:option>
     <bcf:option datatype="boolean">bibwarn</bcf:option>
     <bcf:option datatype="boolean">useprefix</bcf:option>
     <bcf:option datatype="boolean">defernums</bcf:option>
@@ -1562,19 +1561,9 @@
       <bcf:field>eprinttype</bcf:field>
       <bcf:field>eventday</bcf:field>
       <bcf:field>eventendday</bcf:field>
-      <bcf:field>eventendhour</bcf:field>
-      <bcf:field>eventendminute</bcf:field>
       <bcf:field>eventendmonth</bcf:field>
-      <bcf:field>eventendseason</bcf:field>
-      <bcf:field>eventendsecond</bcf:field>
-      <bcf:field>eventendtimezone</bcf:field>
       <bcf:field>eventendyear</bcf:field>
-      <bcf:field>eventhour</bcf:field>
-      <bcf:field>eventminute</bcf:field>
       <bcf:field>eventmonth</bcf:field>
-      <bcf:field>eventseason</bcf:field>
-      <bcf:field>eventsecond</bcf:field>
-      <bcf:field>eventtimezone</bcf:field>
       <bcf:field>eventyear</bcf:field>
       <bcf:field>eventtitle</bcf:field>
       <bcf:field>eventtitleaddon</bcf:field>
@@ -1606,19 +1595,9 @@
       <bcf:field>eprinttype</bcf:field>
       <bcf:field>eventday</bcf:field>
       <bcf:field>eventendday</bcf:field>
-      <bcf:field>eventendhour</bcf:field>
-      <bcf:field>eventendminute</bcf:field>
       <bcf:field>eventendmonth</bcf:field>
-      <bcf:field>eventendseason</bcf:field>
-      <bcf:field>eventendsecond</bcf:field>
-      <bcf:field>eventendtimezone</bcf:field>
       <bcf:field>eventendyear</bcf:field>
-      <bcf:field>eventhour</bcf:field>
-      <bcf:field>eventminute</bcf:field>
       <bcf:field>eventmonth</bcf:field>
-      <bcf:field>eventseason</bcf:field>
-      <bcf:field>eventsecond</bcf:field>
-      <bcf:field>eventtimezone</bcf:field>
       <bcf:field>eventyear</bcf:field>
       <bcf:field>eventtitle</bcf:field>
       <bcf:field>eventtitleaddon</bcf:field>
@@ -1660,19 +1639,9 @@
       <bcf:field>eprinttype</bcf:field>
       <bcf:field>eventday</bcf:field>
       <bcf:field>eventendday</bcf:field>
-      <bcf:field>eventendhour</bcf:field>
-      <bcf:field>eventendminute</bcf:field>
       <bcf:field>eventendmonth</bcf:field>
-      <bcf:field>eventendseason</bcf:field>
-      <bcf:field>eventendsecond</bcf:field>
-      <bcf:field>eventendtimezone</bcf:field>
       <bcf:field>eventendyear</bcf:field>
-      <bcf:field>eventhour</bcf:field>
-      <bcf:field>eventminute</bcf:field>
       <bcf:field>eventmonth</bcf:field>
-      <bcf:field>eventseason</bcf:field>
-      <bcf:field>eventsecond</bcf:field>
-      <bcf:field>eventtimezone</bcf:field>
       <bcf:field>eventyear</bcf:field>
       <bcf:field>eventtitle</bcf:field>
       <bcf:field>eventtitleaddon</bcf:field>
@@ -1746,24 +1715,6 @@
       <bcf:entrytype>unpublished</bcf:entrytype>
       <bcf:field>addendum</bcf:field>
       <bcf:field>author</bcf:field>
-      <bcf:field>eventday</bcf:field>
-      <bcf:field>eventendday</bcf:field>
-      <bcf:field>eventendhour</bcf:field>
-      <bcf:field>eventendminute</bcf:field>
-      <bcf:field>eventendmonth</bcf:field>
-      <bcf:field>eventendseason</bcf:field>
-      <bcf:field>eventendsecond</bcf:field>
-      <bcf:field>eventendtimezone</bcf:field>
-      <bcf:field>eventendyear</bcf:field>
-      <bcf:field>eventhour</bcf:field>
-      <bcf:field>eventminute</bcf:field>
-      <bcf:field>eventmonth</bcf:field>
-      <bcf:field>eventseason</bcf:field>
-      <bcf:field>eventsecond</bcf:field>
-      <bcf:field>eventtimezone</bcf:field>
-      <bcf:field>eventyear</bcf:field>
-      <bcf:field>eventtitle</bcf:field>
-      <bcf:field>eventtitleaddon</bcf:field>
       <bcf:field>howpublished</bcf:field>
       <bcf:field>language</bcf:field>
       <bcf:field>location</bcf:field>
@@ -1772,8 +1723,6 @@
       <bcf:field>subtitle</bcf:field>
       <bcf:field>title</bcf:field>
       <bcf:field>titleaddon</bcf:field>
-      <bcf:field>type</bcf:field>
-      <bcf:field>venue</bcf:field>
     </bcf:entryfields>
     <bcf:constraints>
       <bcf:entrytype>article</bcf:entrytype>
@@ -2001,26 +1950,29 @@
     <bcf:citekey order="25">Read:2004</bcf:citekey>
     <bcf:citekey order="26">Kark:2017</bcf:citekey>
     <bcf:citekey order="27">Werner:2017</bcf:citekey>
-    <bcf:citekey order="28">itu-431:2015</bcf:citekey>
-    <bcf:citekey order="29">Kark:2017</bcf:citekey>
+    <bcf:citekey order="28">Plassmann:2016</bcf:citekey>
+    <bcf:citekey order="29">itu-431:2015</bcf:citekey>
     <bcf:citekey order="30">Kark:2017</bcf:citekey>
-    <bcf:citekey order="31">bundesnetzagentur-frequenzplan:2016</bcf:citekey>
+    <bcf:citekey order="31">Kark:2017</bcf:citekey>
     <bcf:citekey order="32">bundesnetzagentur-frequenzplan:2016</bcf:citekey>
     <bcf:citekey order="33">bundesnetzagentur-frequenzplan:2016</bcf:citekey>
-    <bcf:citekey order="34">bundesamt-strahlungsschutz:2012</bcf:citekey>
-    <bcf:citekey order="35">bundesnetzagentur-frequenzplan:2016</bcf:citekey>
-    <bcf:citekey order="36">Heuberger:2017</bcf:citekey>
+    <bcf:citekey order="34">bundesnetzagentur-frequenzplan:2016</bcf:citekey>
+    <bcf:citekey order="35">bundesamt-strahlungsschutz:2012</bcf:citekey>
+    <bcf:citekey order="36">bundesnetzagentur-frequenzplan:2016</bcf:citekey>
     <bcf:citekey order="37">Heuberger:2017</bcf:citekey>
     <bcf:citekey order="38">Heuberger:2017</bcf:citekey>
     <bcf:citekey order="39">Heuberger:2017</bcf:citekey>
     <bcf:citekey order="40">Heuberger:2017</bcf:citekey>
     <bcf:citekey order="41">Heuberger:2017</bcf:citekey>
     <bcf:citekey order="42">Heuberger:2017</bcf:citekey>
-    <bcf:citekey order="43">Funktechnik:2018</bcf:citekey>
+    <bcf:citekey order="43">Heuberger:2017</bcf:citekey>
     <bcf:citekey order="44">Funktechnik:2018</bcf:citekey>
-    <bcf:citekey order="45">wimo:2018</bcf:citekey>
-    <bcf:citekey order="46">HackRFOne:2018</bcf:citekey>
+    <bcf:citekey order="45">Funktechnik:2018</bcf:citekey>
+    <bcf:citekey order="46">wimo:2018</bcf:citekey>
     <bcf:citekey order="47">HackRFOne:2018</bcf:citekey>
+    <bcf:citekey order="48">HackRFOne:2018</bcf:citekey>
+    <bcf:citekey order="49">osmocom:2018</bcf:citekey>
+    <bcf:citekey order="50">gr-osmosdr:2018</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
