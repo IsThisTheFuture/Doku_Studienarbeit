@@ -1,11 +1,6 @@
 %!TEX root = ../dokumentation.tex
 
 \chapter{Theoretische Grundlagen}
-\section{Maxwellsche Gleichungen}
-Das Fundament des Elektromagnetismus lässt sich in partiellen Differentialgleichungen zusammenfassen. Dieses Gleichungssystem wird häufig auch als die \" Maxwellsche Gleichungen \" bezeichnet:
-\[div \vec{D} = \rho\]
-\[rot \vec{E} = -\div{}\]
-%TODO
 \section{Elektromagnetische Wellen}
 Als elektromagnetische Welle werden räumlich ausbreitende Wellen bezeichnet, die aus elektrischen und magnetischen Feldern besteht. Die laufende Welle breitet sich entlang der Ausbreitungsgeschwindigkeit mit einer Geschwindigkeit von \[c= 3*10^8 m/s\] aus. Die elektrischen und magnetischen Feldvektoren der Welle stehen orthogonal aufeinander, wie in der Abbildung \ref{elektromagnetische Welle} gut zu erkennen.
 
@@ -22,7 +17,21 @@ Der Frequenzbereich, auch Spektrum einer solchen elektromagnetischen Welle reich
 Die elektromagnetischen Wellen, die auf unsere Erde einwirken werden auch natürliche Strahlung genannt. Sie ermöglicht das Leben auf der Erde, da die Energiezufuhr des Lebens auf der Erde über infrarot Wellen der Sonne gegeben ist.
 Elektromagnetische Wellen benötigen kein Medium, um sich auszubreiten. Sie können sich daher auch über weiteste Entfernungen ausbreiten. Sie bewegen sich im Vakuum unabhängig von ihrer Frequenz mit Lichtgeschwindigkeit fort. Elektromagnetische Wellen können sich aber auch in Materie ausbreiten wie etwa Gas oder Flüssigkeit, jedoch verringert sich dabei ihre Geschwindigkeit.
 
-Die Existenz der elektromagnetischen Wellen folgt aus den Maxwell-Gleichungen. Sie wurden 1886 von H.Hertz erstmals durch den elektrischen Schwingkreis erzeugt.
+Die Existenz der elektromagnetischen Wellen folgt aus den Maxwell-Gleichungen. Sie wurden 1886 von H.Hertz erstmals durch den elektrischen Schwingkreis erzeugt. Diese werden im folgenden Kapitel genauer erklärt.
+
+\section{Maxwellsche Gleichungen}
+
+Die Maxwell-Gleichungen sind grundlegende Gleichungen der Elektrodynamik. Sie dienen zur Beschreibung der Phänomene des Elektromagnetismus und sie sind damit ein wichtiger Teil der Elektrodynamik. Mit Hilfe der Gleichungen können alle elektrischen und magnetischen Effekte beschrieben werden, wie den Zusammenhang elektrischer und magnetischer Felder untereinander. Außerdem die Korrelation von elektrischer Ladungen und elektrischen Strom durch definierte Randbedingungen. Clerk Maxwell beschrieb wie groß die elektrischen und magnetischen Felder sind und damit die wirkenden Kräfte.
+
+
+\textbf{Maxwell-Gleichungen:}
+
+Gaußscher Satz für Elektrizität		\[div \vec{E} = \frac{\rho}{\epsilon}\]		
+Gaußscher Satz für Magnetismus 		\[div \vec{B} = 0\]
+Faradaysches Gesetz					\[rot \vec{E} = -\frac{\partial\vec{B}}{\partial t}\]
+Ampere-Maxwellsches Gesetz			\[rot \vec{B} = \mu\vec{j}+\epsilon\mu\frac{\partial\vec{E}}{\partial t}\]
+
+Die dabei auftretenden Konstanten $\epsilon$ (elektrische Feldkonstante) und $\mu$ (magnetische Feldkonstante) sind im SI-Einheitensystem definiert. Die Abkürzungen div und rot stehen für Divergenz und Rotation. 
 
 \subsection{Eigenschaften einer elektromagnetischen Welle}
 %TODO

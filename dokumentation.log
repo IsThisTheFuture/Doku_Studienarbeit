@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.23)  13 APR 2018 15:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.23)  18 APR 2018 11:34
 entering extended mode
 **./dokumentation.tex
 (dokumentation.tex
@@ -1740,13 +1740,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 14.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 78.
  [4
 
 ])
@@ -1929,419 +1929,475 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 4.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 9.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 9.
-<images/em-welle.png, id=171, 1164.35pt x 660.4675pt>
+<images/em-welle.png, id=175, 1164.35pt x 660.4675pt>
 File: images/em-welle.png Graphic file (type png)
 <use images/em-welle.png>
-Package pdftex.def Info: images/em-welle.png  used on input line 14.
+Package pdftex.def Info: images/em-welle.png  used on input line 9.
 (pdftex.def)             Requested size: 341.43312pt x 193.66718pt.
 
-LaTeX Warning: Citation 'Harten:2017' on page 2 undefined on input line 16.
+LaTeX Warning: Citation 'Harten:2017' on page 2 undefined on input line 11.
 
 
-LaTeX Warning: Citation 'Harten:2017' on page 2 undefined on input line 16.
+LaTeX Warning: Citation 'Harten:2017' on page 2 undefined on input line 11.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 21.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 21.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 21.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 21.
+(babel)             in language  on input line 19.
 [2
 
  <./images/em-welle.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 29.
+(babel)             in language  on input line 39.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 41.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 41.
 
 Overfull \vbox (7.89444pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 44.
 
 [3]
+Overfull \vbox (7.89444pt too high) has occurred while \output is active []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 50.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 50.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 50.
+
+[4]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 51.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 51.
 
 
-LaTeX Warning: Citation 'Werner:2006' on page 4 undefined on input line 35.
+LaTeX Warning: Citation 'Werner:2006' on page 5 undefined on input line 52.
 
 
-LaTeX Warning: Citation 'Dankmeier:2017' on page 4 undefined on input line 40.
+LaTeX Warning: Citation 'Dankmeier:2017' on page 5 undefined on input line 57.
 
-<images/nachrichtenuebertragung-shannon.png, id=190, 1611.01875pt x 490.83376pt
+<images/nachrichtenuebertragung-shannon.png, id=198, 1611.01875pt x 490.83376pt
 >
 File: images/nachrichtenuebertragung-shannon.png Graphic file (type png)
 <use images/nachrichtenuebertragung-shannon.png>
 Package pdftex.def Info: images/nachrichtenuebertragung-shannon.png  used on in
-put line 46.
+put line 63.
 (pdftex.def)             Requested size: 455.24417pt x 138.69823pt.
 
-LaTeX Warning: Citation 'Werner:2017' on page 4 undefined on input line 47.
+LaTeX Warning: Citation 'Werner:2017' on page 5 undefined on input line 64.
 
 
-LaTeX Warning: Citation 'Werner:2017' on page 4 undefined on input line 47.
+LaTeX Warning: Citation 'Werner:2017' on page 5 undefined on input line 64.
 
 
 Overfull \vbox (7.89444pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 78.
 
-[4 <./images/nachrichtenuebertragung-shannon.png>]
+[5 <./images/nachrichtenuebertragung-shannon.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 61.
+(babel)             in language  on input line 89.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 61.
+(babel)             in language  on input line 89.
 
 
-LaTeX Warning: Citation 'Werner:2017' on page 5 undefined on input line 62.
+LaTeX Warning: Citation 'Werner:2017' on page 6 undefined on input line 90.
 
 
-LaTeX Warning: Citation 'Heuberger:2017' on page 5 undefined on input line 68.
+LaTeX Warning: Citation 'Heuberger:2017' on page 6 undefined on input line 96.
 
-<images/kontinuierlich-diskret.png, id=197, 1828.8325pt x 631.35875pt>
+<images/kontinuierlich-diskret.png, id=205, 1828.8325pt x 631.35875pt>
 File: images/kontinuierlich-diskret.png Graphic file (type png)
 <use images/kontinuierlich-diskret.png>
 Package pdftex.def Info: images/kontinuierlich-diskret.png  used on input line 
-72.
+100.
 (pdftex.def)             Requested size: 455.24417pt x 157.1553pt.
 Class scrreprt Info: Workaround for not recommended usage of \\ or
-(scrreprt)           \newlinein caption text  on input line 73.
+(scrreprt)           \newlinein caption text  on input line 101.
 
-LaTeX Warning: Citation 'Heuberger:2017' on page 5 undefined on input line 73.
+LaTeX Warning: Citation 'Heuberger:2017' on page 6 undefined on input line 101.
 
 
-LaTeX Warning: Citation 'Heuberger:2017' on page 5 undefined on input line 73.
+
+LaTeX Warning: Citation 'Heuberger:2017' on page 6 undefined on input line 101.
+
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 110.
 
-LaTeX Warning: Citation 'Werner:2006' on page 5 undefined on input line 81.
+LaTeX Warning: Citation 'Werner:2006' on page 6 undefined on input line 111.
 
 
 Overfull \vbox (7.89444pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 83.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 83.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 83.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 83.
+(babel)             in language  on input line 113.
 
-[5 <./images/kontinuierlich-diskret.png>]
-<images/aliasingsines.png, id=206, 1284.8pt x 428.60126pt>
+[6 <./images/kontinuierlich-diskret.png>]
+<images/aliasingsines.png, id=214, 1284.8pt x 428.60126pt>
 File: images/aliasingsines.png Graphic file (type png)
 <use images/aliasingsines.png>
-Package pdftex.def Info: images/aliasingsines.png  used on input line 86.
+Package pdftex.def Info: images/aliasingsines.png  used on input line 116.
 (pdftex.def)             Requested size: 409.71696pt x 136.67778pt.
 Class scrreprt Info: Workaround for not recommended usage of \\ or
-(scrreprt)           \newlinein caption text  on input line 87.
+(scrreprt)           \newlinein caption text  on input line 117.
 
 
-LaTeX Warning: Citation 'aliasingsampling:2009' on page 6 undefined on input li
-ne 87.
+LaTeX Warning: Citation 'aliasingsampling:2009' on page 7 undefined on input li
+ne 117.
 
 
-LaTeX Warning: Citation 'aliasingsampling:2009' on page 6 undefined on input li
-ne 87.
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 93.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 93.
-
-LaTeX Warning: Citation 'Karrenberg:2017' on page 6 undefined on input line 94.
-
+LaTeX Warning: Citation 'aliasingsampling:2009' on page 7 undefined on input li
+ne 117.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 127.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 127.
+
+LaTeX Warning: Citation 'Karrenberg:2017' on page 7 undefined on input line 128
+.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 134.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 134.
 
 Overfull \vbox (7.89444pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 141.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 141.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 141.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 141.
 
-[6 <./images/aliasingsines.png>]
+[7 <./images/aliasingsines.png>]
 Package acronym Info: Label `acro:FFT' newly defined as it shall be overridden
-although it is yet undefined on input line 109.
+although it is yet undefined on input line 147.
 
 
-LaTeX Warning: Citation 'Heuberger:2017' on page 7 undefined on input line 109.
+LaTeX Warning: Citation 'Heuberger:2017' on page 8 undefined on input line 147.
 
 
 Package acronym Info: Label `acro:DFT' newly defined as it shall be overridden
-although it is yet undefined on input line 109.
+although it is yet undefined on input line 147.
 
-LaTeX Warning: Citation 'Meyer:2017' on page 7 undefined on input line 109.
+LaTeX Warning: Citation 'Meyer:2017' on page 8 undefined on input line 147.
 
 
-LaTeX Warning: Citation 'Heuberger:2017' on page 7 undefined on input line 111.
+LaTeX Warning: Citation 'Heuberger:2017' on page 8 undefined on input line 149.
 
 
 Package acronym Info: Label `acro:SDR' newly defined as it shall be overridden
-although it is yet undefined on input line 116.
+although it is yet undefined on input line 160.
 
-LaTeX Warning: Citation 'Meyer:2017' on page 7 undefined on input line 116.
+LaTeX Warning: Citation 'Meyer:2017' on page 8 undefined on input line 160.
 
 
-LaTeX Warning: Citation 'Heuberger:2017' on page 7 undefined on input line 127.
+LaTeX Warning: Citation 'Heuberger:2017' on page 8 undefined on input line 171.
 
 
 
 Overfull \vbox (7.89444pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 172.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 172.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 172.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 172.
 
-[7]
-<images/FFT.png, id=230, 1768.6075pt x 1268.74pt>
+[8]
+<images/FFT.png, id=238, 1768.6075pt x 1268.74pt>
 File: images/FFT.png Graphic file (type png)
 <use images/FFT.png>
-Package pdftex.def Info: images/FFT.png  used on input line 133.
+Package pdftex.def Info: images/FFT.png  used on input line 177.
 (pdftex.def)             Requested size: 455.24417pt x 326.57352pt.
 
 
-LaTeX Warning: Citation 'Heuberger:2017' on page 8 undefined on input line 134.
+LaTeX Warning: Citation 'Heuberger:2017' on page 9 undefined on input line 178.
 
 
 
-LaTeX Warning: Citation 'Heuberger:2017' on page 8 undefined on input line 134.
+LaTeX Warning: Citation 'Heuberger:2017' on page 9 undefined on input line 178.
 
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 185.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 185.
+
+LaTeX Warning: Citation 'Read:2004' on page 9 undefined on input line 186.
+
+
+LaTeX Warning: Citation 'Werner:2006' on page 9 undefined on input line 186.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
+
+ []
 
 
 Overfull \vbox (7.89444pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 140.
+(babel)             in language  on input line 187.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 140.
+(babel)             in language  on input line 187.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 140.
+(babel)             in language  on input line 187.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 140.
+(babel)             in language  on input line 187.
 
-[8 <./images/FFT.png>]
+[9 <./images/FFT.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 141.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 141.
+(babel)             in language  on input line 189.
+
+
+LaTeX Warning: Citation 'Read:2004' on page 10 undefined on input line 190.
+
+
+LaTeX Warning: Citation 'Kark:2017' on page 10 undefined on input line 192.
+
+
+LaTeX Warning: Citation 'Werner:2017' on page 10 undefined on input line 197.
+
+
+Overfull \vbox (7.89444pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 206.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 206.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 206.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 206.
+
+[10]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 207.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 207.
 Package acronym Info: Label `acro:ITU' newly defined as it shall be overridden
-although it is yet undefined on input line 142.
+although it is yet undefined on input line 209.
 
 
-LaTeX Warning: Citation 'itu-431:2015' on page 9 undefined on input line 142.
+LaTeX Warning: Citation 'itu-431:2015' on page 11 undefined on input line 209.
 
 
-Overfull \hbox (3.17177pt too wide) in paragraph at lines 142--143
+Overfull \hbox (3.17177pt too wide) in paragraph at lines 209--210
 \T1/lmr/m/n/12 (-20) schie-de-ne Sys-te-me zur Klas-si-fi-ka-ti-on so-ge-nann-t
 er Fre-quenz-bän-der ge-bil-det. Die [][][]International
  []
 
-<images/frequenzbereich.png, id=237, 740.7675pt x 854.19125pt>
+<images/frequenzbereich.png, id=252, 740.7675pt x 854.19125pt>
 File: images/frequenzbereich.png Graphic file (type png)
 <use images/frequenzbereich.png>
-Package pdftex.def Info: images/frequenzbereich.png  used on input line 146.
+Package pdftex.def Info: images/frequenzbereich.png  used on input line 213.
 (pdftex.def)             Requested size: 341.43312pt x 393.71478pt.
 
-LaTeX Warning: Citation 'Kark:2017' on page 9 undefined on input line 147.
+LaTeX Warning: Citation 'Kark:2017' on page 11 undefined on input line 214.
 
 
-LaTeX Warning: Citation 'Kark:2017' on page 9 undefined on input line 147.
+LaTeX Warning: Citation 'Kark:2017' on page 11 undefined on input line 214.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 152.
+(babel)             in language  on input line 223.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 152.
+(babel)             in language  on input line 223.
 
-LaTeX Warning: Citation 'bundesnetzagentur-frequenzplan:2016' on page 9 undefin
-ed on input line 153.
+LaTeX Warning: Citation 'bundesnetzagentur-frequenzplan:2016' on page 11 undefi
+ned on input line 224.
 
 
-Overfull \hbox (124.18874pt too wide) in paragraph at lines 153--155
+Overfull \hbox (124.18874pt too wide) in paragraph at lines 224--226
 \T1/lmr/m/n/12 (-20) GHz, wel-che von der Bun-des-netz-agen-tur im so-ge-nann-t
 en Fre-quenz-plan [[]]
  []
 
-<images/freqplan-wlan.png, id=238, 1297.84875pt x 605.26125pt>
+<images/freqplan-wlan.png, id=253, 1297.84875pt x 605.26125pt>
 File: images/freqplan-wlan.png Graphic file (type png)
 <use images/freqplan-wlan.png>
-Package pdftex.def Info: images/freqplan-wlan.png  used on input line 158.
+Package pdftex.def Info: images/freqplan-wlan.png  used on input line 229.
 (pdftex.def)             Requested size: 455.24417pt x 212.30638pt.
 
-LaTeX Warning: Citation 'bundesnetzagentur-frequenzplan:2016' on page 9 undefin
-ed on input line 159.
+LaTeX Warning: Citation 'bundesnetzagentur-frequenzplan:2016' on page 11 undefi
+ned on input line 230.
 
 
-LaTeX Warning: Citation 'bundesnetzagentur-frequenzplan:2016' on page 9 undefin
-ed on input line 159.
+LaTeX Warning: Citation 'bundesnetzagentur-frequenzplan:2016' on page 11 undefi
+ned on input line 230.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--159
+Underfull \hbox (badness 10000) in paragraph at lines 230--230
 [][][]\T1/lmr/m/n/10.95 (+20) Eintrag: 2,4 GHz WLAN im Fre-quenz-plan. Quel-le:
 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 163.
+(babel)             in language  on input line 240.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 163.
+(babel)             in language  on input line 240.
 Package acronym Info: Label `acro:UHF' newly defined as it shall be overridden
-although it is yet undefined on input line 164.
+although it is yet undefined on input line 241.
 
 Overfull \vbox (7.89444pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 251.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 251.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 251.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 251.
 
-[9 <./images/frequenzbereich.png>]
+[11 <./images/frequenzbereich.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 251.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 251.
 
 
-LaTeX Warning: Citation 'bundesamt-strahlungsschutz:2012' on page 10 undefined 
-on input line 167.
+LaTeX Warning: Citation 'bundesamt-strahlungsschutz:2012' on page 12 undefined 
+on input line 252.
 
 
-Overfull \hbox (52.91171pt too wide) in paragraph at lines 167--169
+Overfull \hbox (52.91171pt too wide) in paragraph at lines 252--254
 \T1/lmr/m/n/12 (-20) Es wird im Fre-quenz-be-reich von 2,4 bis 2,4835 GHz be-tr
 ie-ben [[]].
  []
 
 
-LaTeX Warning: Citation 'bundesnetzagentur-frequenzplan:2016' on page 10 undefi
-ned on input line 173.
+LaTeX Warning: Citation 'bundesnetzagentur-frequenzplan:2016' on page 12 undefi
+ned on input line 258.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 175.
+(babel)             in language  on input line 264.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 175.
+(babel)             in language  on input line 264.
 
 Overfull \vbox (7.89444pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 178.
+(babel)             in language  on input line 272.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 178.
+(babel)             in language  on input line 272.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 178.
+(babel)             in language  on input line 272.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 178.
+(babel)             in language  on input line 272.
 
-[10 <./images/freqplan-wlan.png>]
+[12 <./images/freqplan-wlan.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 178.
+(babel)             in language  on input line 272.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 178.
+(babel)             in language  on input line 272.
 
 
-LaTeX Warning: Citation 'Heuberger:2017' on page 11 undefined on input line 179
+LaTeX Warning: Citation 'Heuberger:2017' on page 13 undefined on input line 273
 .
 
 
-LaTeX Warning: Citation 'Heuberger:2017' on page 11 undefined on input line 180
+LaTeX Warning: Citation 'Heuberger:2017' on page 13 undefined on input line 274
 .
 
-<images/sdr.png, id=258, 1750.54pt x 973.6375pt>
+<images/sdr.png, id=274, 1750.54pt x 973.6375pt>
 File: images/sdr.png Graphic file (type png)
 <use images/sdr.png>
-Package pdftex.def Info: images/sdr.png  used on input line 189.
+Package pdftex.def Info: images/sdr.png  used on input line 283.
 (pdftex.def)             Requested size: 409.71696pt x 227.86888pt.
 
-LaTeX Warning: Citation 'Heuberger:2017' on page 11 undefined on input line 190
+LaTeX Warning: Citation 'Heuberger:2017' on page 13 undefined on input line 284
 .
 
 
-LaTeX Warning: Citation 'Heuberger:2017' on page 11 undefined on input line 190
+LaTeX Warning: Citation 'Heuberger:2017' on page 13 undefined on input line 284
 .
 
 
 Overfull \vbox (7.89444pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 290.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 290.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 290.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 196.
+(babel)             in language  on input line 290.
 
-[11 <./images/sdr.png>]
+[13 <./images/sdr.png>]
 Package acronym Info: Label `acro:CRC' newly defined as it shall be overridden
-although it is yet undefined on input line 196.
+although it is yet undefined on input line 290.
 
 
-LaTeX Warning: Citation 'Heuberger:2017' on page 12 undefined on input line 203
+LaTeX Warning: Citation 'Heuberger:2017' on page 14 undefined on input line 297
 .
 
-<images/sdr-nachrichtentechn-blockschaltbild.png, id=266, 1708.3825pt x 604.257
+<images/sdr-nachrichtentechn-blockschaltbild.png, id=282, 1708.3825pt x 604.257
 5pt>
 File: images/sdr-nachrichtentechn-blockschaltbild.png Graphic file (type png)
 <use images/sdr-nachrichtentechn-blockschaltbild.png>
 Package pdftex.def Info: images/sdr-nachrichtentechn-blockschaltbild.png  used 
-on input line 207.
+on input line 301.
 (pdftex.def)             Requested size: 455.24417pt x 161.01262pt.
 
-LaTeX Warning: Citation 'Heuberger:2017' on page 12 undefined on input line 208
+LaTeX Warning: Citation 'Heuberger:2017' on page 14 undefined on input line 302
 .
 
 
-LaTeX Warning: Citation 'Heuberger:2017' on page 12 undefined on input line 208
+LaTeX Warning: Citation 'Heuberger:2017' on page 14 undefined on input line 302
 .
 
 ) (content/03kapitel.tex
@@ -2356,7 +2412,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
 
-[12 <./images/sdr-nachrichtentechn-blockschaltbild.png>]
+[14 <./images/sdr-nachrichtentechn-blockschaltbild.png>]
 chapter 3.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
@@ -2371,97 +2427,97 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 13.
-[13
+(babel)             in language  on input line 15.
+[15
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 16.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 16.
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-<images/SirioSD3000N.png, id=282, 341.275pt x 600.2425pt>
+<images/SirioSD3000N.png, id=299, 341.275pt x 600.2425pt>
 File: images/SirioSD3000N.png Graphic file (type png)
 <use images/SirioSD3000N.png>
-Package pdftex.def Info: images/SirioSD3000N.png  used on input line 19.
+Package pdftex.def Info: images/SirioSD3000N.png  used on input line 21.
 (pdftex.def)             Requested size: 227.62209pt x 400.35606pt.
 
-LaTeX Warning: Citation 'Funktechnik:2018' on page 14 undefined on input line 2
-0.
+LaTeX Warning: Citation 'Funktechnik:2018' on page 16 undefined on input line 2
+2.
 
 
-LaTeX Warning: Citation 'Funktechnik:2018' on page 14 undefined on input line 2
-0.
+LaTeX Warning: Citation 'Funktechnik:2018' on page 16 undefined on input line 2
+2.
 
 
 Overfull \vbox (7.89444pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 25.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 25.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 25.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 25.
 
-[14]
+[16]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 29.
 
 
-LaTeX Warning: Citation 'wimo:2018' on page 15 undefined on input line 32.
+LaTeX Warning: Citation 'wimo:2018' on page 17 undefined on input line 34.
 
-<images/HackRFOne.png, id=287, 903.375pt x 481.04718pt>
+<images/HackRFOne.png, id=304, 903.375pt x 481.04718pt>
 File: images/HackRFOne.png Graphic file (type png)
 <use images/HackRFOne.png>
-Package pdftex.def Info: images/HackRFOne.png  used on input line 35.
+Package pdftex.def Info: images/HackRFOne.png  used on input line 37.
 (pdftex.def)             Requested size: 341.43312pt x 181.81624pt.
 
-LaTeX Warning: Citation 'HackRFOne:2018' on page 15 undefined on input line 36.
+LaTeX Warning: Citation 'HackRFOne:2018' on page 17 undefined on input line 38.
 
 
 
-LaTeX Warning: Citation 'HackRFOne:2018' on page 15 undefined on input line 36.
+LaTeX Warning: Citation 'HackRFOne:2018' on page 17 undefined on input line 38.
 
 
 
 Overfull \vbox (7.89444pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 40.
 
-[15 <./images/SirioSD3000N.png>]) (content/04kapitel.tex
+[17 <./images/SirioSD3000N.png>]) (content/04kapitel.tex
 Overfull \vbox (7.89444pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
@@ -2473,7 +2529,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
 
-[16 <./images/HackRFOne.png>]
+[18 <./images/HackRFOne.png>]
 chapter 4.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
@@ -2488,7 +2544,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
- [17
+ [19
 
 ]
 chapter 5.
@@ -2513,7 +2569,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 100.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 100.
- [18
+ [20
 
 ]
 
@@ -2532,7 +2588,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 112.
 
-[19
+[21
 
 
 
@@ -2552,7 +2608,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 116.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 116.
-[20
+[22
 
 
 ]
@@ -2575,31 +2631,31 @@ Package logreq Info: Writing requests to 'dokumentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33996 strings out of 493305
- 599825 string characters out of 3138868
- 1262915 words of memory out of 3000000
- 36596 multiletter control sequences out of 15000+200000
- 71765 words of font info for 95 fonts, out of 3000000 for 9000
+ 34007 strings out of 493305
+ 599969 string characters out of 3138868
+ 1263025 words of memory out of 3000000
+ 36598 multiletter control sequences out of 15000+200000
+ 71985 words of font info for 97 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  58i,10n,97p,8845b,2267s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fil
-es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fon
-ts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/l
-m-ec.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}<C:/Program 
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
+iKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/d
+vips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex
+.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-
-Output written on dokumentation.pdf (30 pages, 1846879 bytes).
+pe1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/lm/lmro12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
+Output written on dokumentation.pdf (32 pages, 1878578 bytes).
 PDF statistics:
- 501 PDF objects out of 1000 (max. 8388607)
- 108 named destinations out of 1000 (max. 500000)
- 21365 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 530 PDF objects out of 1000 (max. 8388607)
+ 113 named destinations out of 1000 (max. 500000)
+ 21381 words of extra memory for PDF output out of 24883 (max. 10000000)
 
