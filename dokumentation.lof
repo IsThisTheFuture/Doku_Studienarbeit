@@ -19,23 +19,29 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Zeitsignal, gefenstertes Zeitsignal und Spektrum eines diskreten Sinus-Signals}}{9}{figure.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Spektrum elektromagnetischer Wellen und gebr\IeC {\"a}uchliche Bandbezeichnungen}}{11}{figure.2.6}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Amplitudenumtastung eines Digitalsignals}}{11}{figure.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Eintrag: 2,4 GHz WLAN im Frequenzplan}}{12}{figure.2.7}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Frequenz- und Phasenumtastung eines Digitalsignals}}{11}{figure.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Blockschaltbild eines SDR Systems}}{13}{figure.2.8}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Ortskurven der Signale bei AM-, FM- und I/Q-Modulation}}{12}{figure.2.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Nachrichtentechnisches Blockschaltbild eines digitalen \IeC {\"U}bertragungssystems}}{14}{figure.2.9}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Spektrum elektromagnetischer Wellen und gebr\IeC {\"a}uchliche Bandbezeichnungen}}{14}{figure.2.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Eintrag: 2,4 GHz WLAN im Frequenzplan}}{15}{figure.2.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Blockschaltbild eines SDR Systems}}{16}{figure.2.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Nachrichtentechnisches Blockschaltbild eines digitalen \IeC {\"U}bertragungssystems}}{17}{figure.2.12}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Sirio SD 3000N station\IeC {\"a}re Funkantenne}}{17}{figure.3.1}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Sirio SD 3000N station\IeC {\"a}re Funkantenne}}{20}{figure.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Hack RF ONE Platine}}{18}{figure.3.2}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Hack RF ONE Platine}}{21}{figure.3.2}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Implementation eines FM-Radioempf\IeC {\"a}ngers in GNU Radio Companion}}{20}{figure.4.1}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Implementation eines FM-Radioempf\IeC {\"a}ngers in GNU Radio Companion}}{23}{figure.4.1}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

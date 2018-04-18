@@ -196,10 +196,72 @@ Die informationstragenden Signale werden dann bevorzugt einer elektromagnetische
 
 Bei der Modulation wird der Frequenzbereich des Basisbandes, also des zu modulierenden Signals, in einen anderen Frequenzbereich transformiert \cite[vgl. Plaßmann, S. 1204]{Plassmann:2016}.
 
+\subsubsection{AM-Modulation}
+Das Trägersignal, welchem die Informationen des Basisbandsignals aufgeprägt werden sollen, besitzt folgende allgemeine Form:
+\[ x_{HF} (t) = a \cos(\omega_0t + \varphi) \text{ , wobei }\omega_0 = 2\pi f_0 \]
+
+\(f_0\) ist die entsprechende Trägerfrequenz; Die Amplitude \(a\) und die Phase \(\varphi\) stehen für eine Modulation zur Verfügung \cite[vgl. Heuberger, e. a., S. 39]{Heuberger:2017}.
+
+Die \ac{AM}, welche etwa bei AM-Rundfunk Verwendung findet, moduliert lediglich die Amplitude des Trägers. Bei der Amplitudenumtastung (engl. \ac{ASK}) eines digitalen Signals wird den zwei Stellungen von \(u_M\) je eine andere Amplitude \(u_{ASK}\) zugeordnet:
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.4\textwidth]{ask-modulation.png}
+	\caption[Amplitudenumtastung eines Digitalsignals]{Amplitudenumtastung eines Digitalsignals. Quelle: \cite[Plaßmann, S. 1218]{Plassmann:2016}} 
+	\label{ask}
+\end{figure}
+
+
+
+\subsubsection{FM-Modulation}
+Bei der FM Modulation wird die Amplitude des Signals konstant gehalten und stattdessen die Frequenz moduliert:
+\[ x_{HF}(t) = a \cos (\omega_0 t + \varphi)t  \text{  mit } \varphi(t) = \int_{- \infty}^{t} \omega(t_1) dt_1\] 
+Dafür können bei digitalen Signalen einfach zwei Frequenzen \(f_1\) und \(f_2\) verwendet werden:
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.45\textwidth]{fsk-modulation.png}
+	\caption[Frequenz- und Phasenumtastung eines Digitalsignals]{Frequenz- und Phasenumtastung eines Digitalsignals. Quelle: \cite[Plaßmann, S. 1218]{Plassmann:2016}} 
+	\label{fsk}
+\end{figure}
+
+
 
 \subsubsection{I/Q-Modulation}
+\ac{AM} und \ac{FM} lassen sich theoretisch kombinieren um die Übertragungskapazität zu steigern, jedoch wird das in der Praxis nicht getan, da AM und FM unterschiedliches Verhalten aufweisen und die beiden Kanäle somit nicht gleichwertig sind \cite[vgl. Heuberger, e. a., S. 40]{Heuberger:2017}. Um das aber zu erreichen, wird das Additionstheorem 
+\[ \cos (\alpha + \beta) = \cos \alpha \cos \beta - \sin \alpha \sin \beta\] 
+auf die Kombination von AM und FM angewandt:
+\begin{align*}
+	x_{HF}(t) &= a(t) \cos (\omega_0 t + \varphi(t)) \\
+			  &= \underbrace{a(t) \cos \varphi(t)}_{i(t)} \cos \omega_0(t) - \underbrace{a(t) \sin \varphi(t)}_{q(t)} \sin \omega_0t
+\end{align*}
+
+Dabei wird \(i(t) \)  als das \textit{Inphase-Signal} und \(q(t)\) als \textit{Quadratur-Signal} bezeichnet.
+Da die Phase $\varphi(t)$ als Winkel betrachtet und zusammen mit der Amplitude $a(t)$ einen Vektor in der komplexen Zahlenebene ergibt, kann dieser mit Polarkoordinaten repräsentiert werden.
+$i(t)$ und $q(t)$ werden als kartesische Koordinaten aufgefasst.
+Das ermöglicht eine Umrechnung zwischen den beiden Darstellungen:
+\[ i(t) = a(t) \cos \varphi(t),  \quad q(t) = a(t)\sin \varphi(t) \quad \text{und} \quad  a(t) = \sqrt{i^2 (t) + q^2(t)}\]
+\[  \varphi (t) = \arctan \frac{q(t)}{i(t)}  
+					\begin{cases} 
+						0	 & \text{wenn } i(t) \geq 0 \\
+						\pi  & \text{wenn } i(t) < 0
+					\end{cases}
+\]
+
+Abb. \ref{ortskurven} stellt die Ortskurven der 3 Modulationsverfahren grafisch dar:
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{ortskurven.png}
+	\caption[Ortskurven der Signale bei AM-, FM- und I/Q-Modulation]{Ortskurven der Signale bei AM-, FM- und I/Q-Modulation. Quelle: \cite[Heuberger, e. a., S. 141]{Heuberger:2017}} 
+	\label{ortskurven}
+\end{figure}
 
 
+\newpage
+
+Nach der eulerschen Formel ( \( e^{i\varphi} = cos \varphi + i \sin \varphi \) ) lassen sich die realen und imaginären Komponenten des Signals auch folgendermaßen darstellen:
+\[ \underline{x} (t) = i(t) + jq(t) = a(t) e^{j \varphi(t)}\]
+
+Es gilt zu beachten, dass in der Nachrichten- und Elektrotechnik häufig $j$ zur Darstellung von komplexen Zahlen benutzt wird, da $i$ meist bereits durch andere Größen, etwa der Stromstärke, oder wie hier - der \textit{realen} Inphase-Komponente belegt ist.
 
 
 \newpage
