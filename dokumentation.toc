@@ -27,72 +27,72 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.1}Eigenschaften einer elektromagnetischen Welle}{4}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Elektronisches Rauschen}{4}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.2}Elektronisches Rauschen}{5}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Nachrichten- und \IeC {\"U}bertragungstechnik}{5}{section.2.3}
+\contentsline {section}{\numberline {2.3}Nachrichten- und \IeC {\"U}bertragungstechnik}{6}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Signale und Spektren}{6}{section.2.4}
+\contentsline {section}{\numberline {2.4}Signale und Spektren}{7}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}Kontinuierliche und diskrete Signale}{6}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.1}Kontinuierliche und diskrete Signale}{7}{subsection.2.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}Nyquist-Shannon-Abtasttheorem}{7}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.2}Nyquist-Shannon-Abtasttheorem}{8}{subsection.2.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.3}Spektrum eines Signals}{7}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.3}Spektrum eines Signals}{8}{subsection.2.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.4}Fourier-Transformation}{7}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.4}Fourier-Transformation}{8}{subsection.2.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Fensterfunktionen}{8}{section*.10}
+\contentsline {subsubsection}{\nonumberline Fensterfunktionen}{9}{section*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Basisband\IeC {\"u}bertragung und Tr\IeC {\"a}gersignale}{9}{section.2.5}
+\contentsline {section}{\numberline {2.5}Basisband\IeC {\"u}bertragung und Tr\IeC {\"a}gersignale}{10}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.1}Modulationsverfahren}{10}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.1}Modulationsverfahren}{11}{subsection.2.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline AM-Modulation}{10}{section*.12}
+\contentsline {subsubsection}{\nonumberline AM-Modulation}{11}{section*.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline FM-Modulation}{11}{section*.15}
+\contentsline {subsubsection}{\nonumberline FM-Modulation}{12}{section*.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline I/Q-Modulation}{12}{section*.16}
+\contentsline {subsubsection}{\nonumberline I/Q-Modulation}{13}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Frequenzbereiche}{14}{section.2.6}
+\contentsline {section}{\numberline {2.6}Frequenzbereiche}{15}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6.1}Rechtliche Grundlagen}{14}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.1}Rechtliche Grundlagen}{15}{subsection.2.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Anwendungen im Bereich der Dezimeterwelle}{15}{section.2.7}
+\contentsline {section}{\numberline {2.7}Anwendungen im Bereich der Dezimeterwelle}{16}{section.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.1}Bluetooth}{15}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.1}Bluetooth}{16}{subsection.2.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.2}Wireless Local Area Network}{16}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.2}Wireless Local Area Network}{17}{subsection.2.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.8}Software Defined Radio Systeme}{16}{section.2.8}
+\contentsline {section}{\numberline {2.8}Software Defined Radio Systeme}{17}{section.2.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Praxis Kapitel}{18}{chapter.3}
+\contentsline {chapter}{\numberline {3}Praxis Kapitel}{19}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Aufbau/Entwurf}{18}{section.3.1}
+\contentsline {section}{\numberline {3.1}Aufbau/Entwurf}{19}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}SDR Sharp}{18}{section.3.2}
+\contentsline {section}{\numberline {3.2}SDR Sharp}{19}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}GNU Radio}{18}{section.3.3}
+\contentsline {section}{\numberline {3.3}GNU Radio}{19}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Funktionsweise}{18}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.1}Funktionsweise}{19}{subsection.3.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Hardware}{19}{section.3.4}
+\contentsline {section}{\numberline {3.4}Hardware}{20}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.1}Antenne}{19}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.1}Antenne}{20}{subsection.3.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.2}SDR-Ger\IeC {\"a}t}{20}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.2}SDR-Ger\IeC {\"a}t}{21}{subsection.3.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Praxis Kapitel}{22}{chapter.4}
+\contentsline {chapter}{\numberline {4}Praxis Kapitel}{23}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Einrichten der Entwicklungsumgebung}{22}{section.4.1}
+\contentsline {section}{\numberline {4.1}Einrichten der Entwicklungsumgebung}{23}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Grundbausteine in GNU Radio Companion}{22}{section.4.2}
+\contentsline {section}{\numberline {4.2}Grundbausteine in GNU Radio Companion}{23}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Fazit}{24}{chapter.5}
+\contentsline {chapter}{\numberline {5}Fazit}{25}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Zusammenfassung}{24}{section.5.1}
+\contentsline {section}{\numberline {5.1}Zusammenfassung}{25}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Ausblick}{24}{section.5.2}
+\contentsline {section}{\numberline {5.2}Ausblick}{25}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{25}{chapter*.22}
+\contentsline {chapter}{\nonumberline Literatur}{26}{chapter*.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Anhang}{27}{chapter*.23}
+\contentsline {chapter}{\nonumberline Anhang}{28}{chapter*.23}
