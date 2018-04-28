@@ -21,9 +21,10 @@ Firmware Version: 2017.02.1 (API:1.02)
 Part ID Number: 0xa000cb3c 0x00544765
 \end{lstlisting}
 
+
+\newpage
 \section{Grundbausteine in GNU Radio Companion}
-Um das HackRF One als Signalquelle zu verwenden, wird der quelloffene, von \ac{osmocom} \cite{osmocom:2018} entwickelte GNU Radio Block \textit{gr-osmosdr} \cite{gr-osmosdr:2018} benutzt.
-Dieser untersützt das HackRF durch die zuvor installierte Bibliothek \textit{libhackrf}.
+GNU Radio Companion wird am besten durch das klassische FM-Radio Beispiel erklärt:
 
 \begin{figure}[ht]
 	\centering
@@ -31,3 +32,39 @@ Dieser untersützt das HackRF durch die zuvor installierte Bibliothek \textit{li
 	\caption[Implementation eines FM-Radioempfängers in GNU Radio Companion]{Implementation eines FM-Radioempfängers in GNU Radio Companion. Quelle: Eigene Darstellung} 
 	\label{fmradio}
 \end{figure}
+
+Das dargestellte Blockschaltbild realisiert das Empfangen, Demodulieren und Wiedergeben eines FM-Radio Signals. Das Programm bietet zudem die Möglichkeit Frequenz und Lautstärke anzupassen:
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{fmradio-fft.png}
+	\caption[FM Radio FFT-Plot]{FM Radio FFT-Plot. Quelle: Eigene Darstellung} 
+	\label{fmradio-fft}
+\end{figure}
+
+Im Folgenden werden die einzelnen Bausteine näher erläutert.
+
+
+\newpage
+Als Signalquelle können in GNU Radio TCP/UDP Ports, Soundkarten, Dateien bzw. Input-Streams oder \ac{SDR}-Geräte benutzt werden.\newline
+Um das HackRF One als Signalquelle zu verwenden, wird der quelloffene, von \ac{osmocom} \cite{osmocom:2018} entwickelte GNU Radio Block \textit{gr-osmosdr} \cite{gr-osmosdr:2018} benutzt.
+Dieser untersützt das HackRF durch die zuvor installierte Bibliothek \textit{libhackrf}:
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{osmocom-source.png}
+	\caption[osmocom Source Block]{osmocom Source Block. Quelle: Eigene Darstellung} 
+	\label{osmocom-source}
+\end{figure}
+
+\begin{description}
+	\item[ID:] Der Name der Python-Variable des GRC Blocks
+	\item[Output Type:] Der vom Block produzierte Datentyp, in diesem Fall \textit{Complex float32}, da das HackRF One Samples als IQ-Paare darstellt, wobei die I- und Q-Komponente jeweils als Float-Gleitkommazahl repräsentiert werden
+	\item [Sample Rate (sps):] Die Abtastrate $f_a$ in Samples pro Sekunde
+	\item[Ch0 Frequency (Hz):] Die Frequenz des Kanals. Da nur eine Antenne vorhanden ist, wird automatisch Channel 0 benutzt
+	\item[Ch0 Freq. Corr. (ppm):] description %TODO
+	\item[Ch0 RF Gain (dB):] description
+	\item[Ch0 IF Gain (dB):] Intermediate Frequency
+	\item[Ch0 BB Gain (dB):] Baseband
+	\item[Ch0 Bandwidth (Hz):] Bandbreite
+\end{description}
