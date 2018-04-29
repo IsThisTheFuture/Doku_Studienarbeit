@@ -68,3 +68,34 @@ Dieser untersützt das HackRF durch die zuvor installierte Bibliothek \textit{li
 	\item[Ch0 BB Gain (dB):] Baseband
 	\item[Ch0 Bandwidth (Hz):] Bandbreite
 \end{description}
+
+
+
+\newpage
+\section{Identifizieren und Dekodieren eines Signales}
+Signale müssen im Empfänger gemittelt werden, da sie aufgrund der durchgeführten Kanalfilterung ein oszillierendes Verhalten aufweisen, siehe Abb. \ref{mod-send-empf} \cite[vgl. Heuberger, e. a., S. TODO]{heuberger:2017}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{mod-sender-empf.png}
+	\caption[GFSK-Modulationssignale im Sender und im Empfänger]{GFSK-Modulationssignale im Sender und im Empfänger. Quelle: TODO} %TODO Selbst darstellen, am besten anhand eines 433MHz Signals! 
+	\label{mod-send-empf}
+\end{figure}
+
+
+\newpage
+\section{GRC-Flowgraph zur Analyse von Metadaten}
+\textbf{TODO: } GRC Flowgraph mit Optionsfeldern (Frequenz-slider, Parameter für FFT: Bin count/size,Signal-To-Noise Ratio, )\\
+\\
+\textbf{Mögliche Leitfrage: Was sind Metainformationen überhaupt? Welche Davon sind relevant für Software Defined Radio? (Signal-To-Noise, Antennengewinn/Verstärkung/Gain (dB), Quantisierung (Werte, z.B. die Amplitude bei I/Q Signalen), Diskretisierung (zeitlich), Rauschen, etc.)} $\rightarrow$ GRC-Flowgraph erstellen, der diese Metainformationen anzeigt und Einstellungsmöglichkeiten bietet
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{metaanalyse.png}
+	\caption[GRC-Flowgraph zur Analyse von Metadaten]{GRC-Flowgraph zur Analyse von Metadaten. Quelle: Eigene Darstellung, GNU Radio 3.7.11} 
+	\label{metaanalyse}
+\end{figure}
+
+
+
+
