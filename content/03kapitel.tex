@@ -39,7 +39,7 @@ Grundsätzlich gibt es zwei Möglichkeiten ein solches Analysesystem zu betreibe
 Aus Gründen wie Flexibilität und Mobilität entschieden wir uns jedoch dagegen. Eine mobile Antenne, die den Frequenzbereich der Dezimeterwelle abdecken, würde relativ groß und ziemlich teuer sein. Deshalb haben wir uns auf eine stationäre Antenne geeinigt, da diese preislich als auch dem Verwendungszweck dennoch am nächsten kommt. Wir haben uns für die  Sirio SD 3000N entschieden, ihr preis liegt bei 90 Euro und deckt den kompletten Frquenzbereich der Dezimeterwelle ab.\newline %TODO: "wir", "uns" streichen
 %TODO: Was sind genau die Vorteile unserer Antenne? -> Aufzählen
 
-\begin{figure}[H]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.4\textwidth]{SirioSD3000N.png} %TODO: Antenne bzw. Bestandteile beschriften? 
 	\caption[Sirio SD 3000N stationäre Funkantenne]{Sirio SD 3000N stationäre Funkantenne. Quelle: \cite{Funktechnik:2018}} 
@@ -47,6 +47,26 @@ Aus Gründen wie Flexibilität und Mobilität entschieden wir uns jedoch dagegen
 \end{figure}
 
 Aufgrund analytischen Zwecken haben werden zwei Antennen für die Aufgabe erworben, somit können wir an zwei unterschiedlichen Standorten eine Analyse der Metainformationen betrachten. %TODO: Neu schreiben. Das ist ziemlich wirr :D
+
+
+\begin{table}[ht]
+	\centering
+\begin{tabular}{c|c}
+	Modell & Sirio SD 3000N \\
+	\hline
+	Antennentyp & Discone Antenne \\ 
+	\hline 
+	Bandbreite & 300 MHz - 3 GHz \\ 
+	\hline 
+	Länge &  \\ 
+	\hline 
+	Preis in \euro &  \\ 
+	\hline 
+	Installationsart & Stationär \\ 
+
+\end{tabular} 
+	\caption{Produktinformationen der Sirio SD 3000N Antenne}
+\end{table}
 
 
 %TODO: Präsentation vom Hochfrequenztechnik aus Mechtronik siehe WhatsApp
@@ -59,13 +79,36 @@ Da theoretisch nur Signale empfangen werden sollen, würde ein DVB-T-Stick eine 
 
 Das SDR-Gerät muss in Kombination mit der Funkantenne über den kompletten Funkbereich der Dezimeterwelle erstrecken, um die Metainformationen in diesem Bereich zu analysieren. Aus diesem Grund kann ein solchen Gerät für diese Arbeit nicht verwendet werden.
 Ein gutes Preis-Leistungsverhältnis bietet das HackRF One Board \cite{greatscott}. Die HackRF One Platine ist ein flexibles Testmodul für die Funkmesstechnik, das wie ein Software Defined Radio (SDR) arbeitet. Sie ist ein Open Source Hardware Transceiver, der hauptsächlich zu eigenen Versuchen und Messungen für SDRs eignet, außerdem ist dieses Gerät für die HF-Technik und messtechnischen Versuchsaufbauten im Amateurfunk vergleichsweise geringen Preises von rund 300 Euro sehr beliebt.
-Der Hack RF One deckt einen weiten Frequenzbereich von 1 bis 6000 MHz (6 GHz) ab, und erfasst damit sehr viele Frequenzbänder für kommerzielle, experimentelle und Amateurfunk-Anwendungen. Die Hardware bietet eine maximale Abtastrate des Signales von 20MS/s, dadurch werden Messungen und Experimente auch mit breitbandigen Signalen wie DECT, WFM oder WLAN möglich, jedoch nur halbduplex. Der AD-Wandler arbeitet mit 8 Bit Datenbreite und erreicht somit einen theoretischen Dynamikbereich von 48dB. Die digitalisierten I/Q Daten werden auf einem nachgeschalteten CPLD weiterverarbeitet und über den integrierten ARM-Prozessor per USB ausgegeben. Die gesamte Schaltung des HackRF Boards ist sehr stromsparend ausgelegt, sie wird komplett über USB versorgt. Die Platine hat eine Mikro-B USB Buchse. Abschließend lässt sich sagen, dass die oben genannten Gründe für eine Nutzung dieses Gerätes sprechen.\cite{wimo:2018}
-\begin{figure}[H]
+Der Hack RF One deckt einen weiten Frequenzbereich von 1 bis 6000 MHz (6 GHz) ab, und erfasst damit sehr viele Frequenzbänder für kommerzielle, experimentelle und Amateurfunk-Anwendungen. Die Hardware bietet eine maximale Abtastrate des Signales von 20MS/s, dadurch werden Messungen und Experimente auch mit breitbandigen Signalen wie DECT, WFM oder WLAN möglich, jedoch nur halbduplex. Der AD-Wandler arbeitet mit 8 Bit Datenbreite und erreicht somit einen theoretischen Dynamikbereich von 48dB. Die digitalisierten I/Q Daten werden auf einem nachgeschalteten CPLD weiterverarbeitet und über den integrierten ARM-Prozessor per USB ausgegeben. Die gesamte Schaltung des HackRF Boards ist sehr stromsparend ausgelegt, sie wird komplett über USB versorgt. Die Platine hat eine Mikro-B USB Buchse. Abschließend lässt sich sagen, dass die oben genannten Gründe für eine Nutzung dieses Gerätes sprechen \cite{wimo:2018}.
+
+
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.75\textwidth]{HackRFOne.png}
 	\caption[Hack RF ONE Platine]{Hack RF ONE Platine. Quelle: \cite{HackRFOne:2018}} 
 	\label{HackRFOne}
 \end{figure}
+
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{c|c}
+		Modellbezeichnung & HackRF One \\
+		\hline
+		Hersteller & Great Scott Gadgets\\ 
+		\hline 
+		Bandbreite & 20 MHz \\ 
+		\hline 
+		Abtastrate & \( 20 \times 10^{6} \) Hz \\ 
+		\hline 
+		Preis in \euro &  \\ 
+		\hline 
+		Installationsart & Mobil \\ 
+		
+	\end{tabular} 
+	\caption{Produktinformationen des HackRF One}
+\end{table}
+
 
 \begin{figure}[ht]
 	\centering

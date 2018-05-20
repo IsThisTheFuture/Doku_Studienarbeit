@@ -31,6 +31,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
+
 \newcommand{\einstellung}[1]{%
   \expandafter\newcommand\csname #1\endcsname{}
   \expandafter\newcommand\csname setze#1\endcsname[1]{\expandafter\renewcommand\csname#1\endcsname{##1}}
@@ -70,6 +71,8 @@
 
 \usepackage{listings}
 
+% Fuer das € Symbol
+\usepackage{eurosym}
 
 % eine Kommentarumgebung "k" (Handhabe mit \begin{k}<Kommentartext>\end{k},
 % Kommentare werden rot gedruckt). Wird \% vor excludecomment{k} entfernt,
