@@ -1,7 +1,15 @@
 %!TEX root = ../dokumentation.tex
 \chapter{Praxis Kapitel}
 \section{Aufbau/Entwurf}
-%TODO
+Zu Beginn der praktischen Arbeit, wird der technische Versuchsaufbau beschrieben. Mit einer Skizze soll der Aufbau der Aufgabe detaillierte dargestellt werden. Wie in der Abbildung \ref{Technischer Aufbau} angezeigt, wird der Computer über den USB-Anschluss mit dem HackRF One verbunden. Darüber bezieht das SDR-Gerät seine notwendige Spannungsversorgung von 5 Volt.\\
+Die gegenüberliegende Seite befasst sich mit der Inbetriebnahme der ausgewählten Antenne. Diese hat einen N-Buchsen Anschluss und wird an den HackRF One angeschlossen dieser besitzt jedoch nur einen SMA-Anschluss. Dämpfung wird bei diesem Aufbau nicht berücksichtigt, da das Antennenkabel nur 10 Meter beträgt. Somit können die Geräte miteinander Kommunizieren und die empfangen Daten der Antenne bis hin zum Computer übertragen werden.  
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{TechnischerAufbau.png}
+	\caption[Technischer Aufbau]{Technischer Aufbau} 
+	\label{Technischer Aufbau}
+\end{figure}
+
 \section{SDR Sharp}
 SDR Sharp ist eine kostenlose Software von AIRSPY dir ausschließlich für Windows erhältlich ist. Mit dieser Anwendung kann man die empfangenen Rohdaten von USB Geräten auslesen, jedoch kann sie nur mit externer Hardware betrieben werden.  
 %TODO Bild von SDR# hinzufügen
@@ -13,7 +21,7 @@ GNU Radio verarbeitet den Datenstrom, der vom Empfänger kommt, und bereitet Dat
 Um mit GNU Radio eine SDR-Anwendung zu bauen, muss man Blöcke, die die einzelnen Funktionseinheiten darstellen, miteinander zu einem Graphen kombinieren. Sollte ein benötigter Block nicht verfügbar sein, kann man diesen mittels einem Tool selbst hinzufügen. Beim Starten des Graphen ruft GNU Radio nun jeden Block nacheinander auf und stellt sicher, dass Daten von einem Block zum Nächsten weitergereicht werden. Ergebnisse  können  durch  Graphical  User  Interface  (GUI)-Blöcke dargestellt werden. Diese nutzen die freien und plattformübergreifenden GUI-Toolkits.
 \section{Hardware}
 \subsection{Antenne}
-Eine Antenne die aus der Aufgabenstellung hervorgeht, muss dementsprechend auch den Frequenzbereich der Dezimeterwelle abdeckt. Zu erst war die Überlegung eine mobile Antenne zu benutzen, somit könnte man die Analysefunktion des Gerätes auch unterwegs nutzen. Aus Gründen wie Flexibilität und Mobilität entschieden wir uns jedoch dagegen. Eine mobile Antenne, die den Frequenzbereich der Dezimeterwelle abdecken, würde relativ groß und ziemlich teuer sein. Deshalb haben wir uns auf eine stationäre Antenne geeinigt, da diese preislich als auch dem Verwendungszweck dennoch am Nähsten kommt. Wir haben uns für die  Sirio SD 3000N entschieden, ihr preis liegt bei 90 Euro und deckt den kompletten Frquenzbereich der Dezimeterwelle ab.\newline
+Eine Antenne die aus der Aufgabenstellung hervorgeht, muss dementsprechend auch den Frequenzbereich der Dezimeterwelle abdeckt. Zu erst war die Überlegung eine mobile Antenne zu benutzen, somit könnte man die Analysefunktion des Gerätes auch unterwegs nutzen. Aus Gründen wie Flexibilität und Mobilität entschieden wir uns jedoch dagegen. Eine mobile Antenne, die den Frequenzbereich der Dezimeterwelle abdecken, würde relativ groß und ziemlich teuer sein. Deshalb haben wir uns auf eine stationäre Antenne geeinigt, da diese preislich als auch dem Verwendungszweck dennoch am Nähsten kommt. Wir haben uns für die  Sirio SD 3000N entschieden, ihr preis liegt bei 90 Euro und deckt den kompletten Frequenzbereich der Dezimeterwelle ab.\newline
 
 \begin{figure}[H]
 	\centering
@@ -21,6 +29,14 @@ Eine Antenne die aus der Aufgabenstellung hervorgeht, muss dementsprechend auch 
 	\caption[Sirio SD 3000N stationäre Funkantenne]{Sirio SD 3000N stationäre Funkantenne. Quelle: \cite{Funktechnik:2018}} 
 	\label{Sirio SD 3000N Antenne}
 \end{figure}
+
+Ganz allgemein kann man Antennen als Koppelelemente zwischen geführten und ungeführten elektromagnetischen Wellen, d. h. als Wandler zwischen Leitungs- und Freiraumwellen, auffassen. Quelle ist immer ein elektrischer oder magnetischer Dipol. Durch eine (Raum-)Transformation im Nahbereich, bei der die Richtungen der Felder (innerhalb der Fortpflanzungsgeschwindigkeit) gedreht werden, entsteht im Fernbereich die gelöste Wellenfront einer elektromagnetischen Welle. 
+
+Elektromagnetische Wellen bestehen aus polarisierten elektrischen und magnetischen Feldern, die sich durch Kopplung wechselseitig erzeugen und im Vakuum ohne Verluste als Transversalwellen räumlich ausbreiten. Bei vorgegebenen Randbedingungen liefern die Maxwellschen Gleichungen eine exakte Beschreibung. In der Praxis berechnet man die Abstrahlung der Energie aber durch Näherungsverfahren. 
+
+Eine Antenne erzeugt immer sowohl elektrische als auch magnetische Felder. Die Grafik erläutert am Beispiel einer resonanten Dipolantenne, wie aus einem Schwingkreis aus Kondensator und Spule (Start der Animation) durch räumliche Erweiterung (ausklappen der Stäbe, bzw. Erzeugung der Raumtransformation durch 90°-Drehung des elektrischen Feldes) eine Antenne entsteht: Die Leiterstäbe werden dabei je um ±90° nach außen gedreht und zwischen den Stäben wirken elektrische Felder (blau gezeichnet); längs der Leiterstäbe wirken magnetische Felder (rot als Kreis gezeichnet). Die Felder breiten sich nicht unendlich schnell, sondern mit Lichtgeschwindigkeit aus und innerhalb dieses sog. „Informationsdurchmessers“ mit v ≤ c sind die Felder über Ursache und Wirkung gekoppelt (Durchmesser der Kugel: λ/2). Wird die Antenne resonant angeregt, bilden sich geschlossene Feldlinien; das sich ändernde elektrische Feld erzeugt zugehörige magnetische Feldlinien, das sich ändernde magnetische Feld erzeugt zugehörige elektrische Feldlinien. Im Nahbereich der Antenne bildet sich ein Blindfeld, d. h., die Ausbreitung der Felder geschieht von der Quelle weg und wieder zurück. Das sich ausbreitende Feld verliert am Randbereich die Kopplung an die Antenne, wenn sich die Richtung der Feldvektoren umkehrt. Die Felder werden durch die Umkehr abgestoßen und können nicht mehr zurück zur Antenne. Eine elektromagnetische Welle wird in den Raum abgestrahlt. Außerhalb des „Informationsdurchmessers“ (Fernfeld) gibt es keine Kopplung an die Antenne mehr, da die Lichtgeschwindigkeit für die Übertragung von Informationen nicht überschritten werden kann. 
+
+
 
 Auf Grund analytischen Zwecken haben werden zwei Antennen für die Aufgabe erworben, somit können wir an zwei unterschiedlichen Standorten eine Analyse der Metainformationen betrachten.
 Präsentation vom Hochfrequenztechnik aus Mechtronik siehe WhatsApp

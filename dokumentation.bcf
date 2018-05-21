@@ -2029,13 +2029,17 @@
     <bcf:citekey order="53">Heuberger:2017</bcf:citekey>
     <bcf:citekey order="54">Heuberger:2017</bcf:citekey>
     <bcf:citekey order="55">Heuberger:2017</bcf:citekey>
-    <bcf:citekey order="56">Funktechnik:2018</bcf:citekey>
+    <bcf:citekey order="56">Heuberger:2017</bcf:citekey>
     <bcf:citekey order="57">Funktechnik:2018</bcf:citekey>
-    <bcf:citekey order="58">wimo:2018</bcf:citekey>
-    <bcf:citekey order="59">HackRFOne:2018</bcf:citekey>
+    <bcf:citekey order="58">Funktechnik:2018</bcf:citekey>
+    <bcf:citekey order="59">wimo:2018</bcf:citekey>
     <bcf:citekey order="60">HackRFOne:2018</bcf:citekey>
-    <bcf:citekey order="61">osmocom:2018</bcf:citekey>
-    <bcf:citekey order="62">gr-osmosdr:2018</bcf:citekey>
+    <bcf:citekey order="61">HackRFOne:2018</bcf:citekey>
+    <bcf:citekey order="62">hackrf-wiki:2016</bcf:citekey>
+    <bcf:citekey order="63">hackrf-wiki:2016</bcf:citekey>
+    <bcf:citekey order="64">osmocom:2018</bcf:citekey>
+    <bcf:citekey order="65">gr-osmosdr:2018</bcf:citekey>
+    <bcf:citekey order="66">heuberger:2017</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

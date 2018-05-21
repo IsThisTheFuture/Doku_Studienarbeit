@@ -71,6 +71,42 @@ Dieser untersützt das HackRF durch die zuvor installierte Bibliothek \textit{li
 
 
 
+
+
+
+\section{Erarbeiten der relevanten Metainformationen}
+\subsubsection{Signal-Rausch-Verhältnis}
+\subsubsection{Antennengewinn}
+\subsubsection{Quantisierung}
+\subsubsection{Diskretisierung}
+\subsubsection{Frequenz}
+\subsubsection{DC Offset}
+Durch die Überführung eines modulierten Signals zurück ins Basisband entsteht im FFT-Plot um die Nullfrequenz eine deutlich wahrnehmbare Spitze:
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{dc-offset.png}
+	\caption[DC Offset]{DC Offset. Quelle: Eigene Darstellung} 
+	\label{dc-offset}
+\end{figure}
+
+Es gibt verschiedene Wege damit umzugehen:
+\begin{enumerate}
+	\item Für einige Anwendungen kann das DC Offset vernachlässigt werden
+	\item 
+	\item 
+\end{enumerate}
+
+\subsubsection{Bandbreite}
+
+\section{Spektralanalyse der Dezimeterwelle}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{spektrum.png}
+	\caption[Spektralanalyse der Dezimeterwelle]{Spektralanalyse der Dezimeterwelle. Quelle: Eigene Darstellung} 
+	\label{spektralanalyse}
+\end{figure}
+
+
 \newpage
 \section{Identifizieren und Dekodieren eines Signales}
 Signale müssen im Empfänger gemittelt werden, da sie aufgrund der durchgeführten Kanalfilterung ein oszillierendes Verhalten aufweisen, siehe Abb. \ref{mod-send-empf} \cite[vgl. Heuberger, e. a., S. TODO]{heuberger:2017}.
