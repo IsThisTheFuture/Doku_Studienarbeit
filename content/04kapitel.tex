@@ -1,6 +1,10 @@
 %!TEX root = ../dokumentation.tex
 
 \chapter{Praxis Kapitel}
+In diesem Kapitel wird die softwareseitige Umsetzung der Studienarbeit beschrieben. Zuerst wird auf die Einrichtung der Entwicklungsumgebung eingegangen und sichergestellt, dass die installierte Hardware korrekt funktioniert. Anschließend wird ein beispielhafter GNU Radio Companion Flowgraph erstellt um sich mit dem Programm vertraut zu machen und die Grundlage für das zu entwickelnde Analyseprogramm zu schaffen.\\
+Aus den gewonnen Erkenntnissen wird eine QT-GUI Bedienmaske erstellt, welche es ermöglicht die eingangs beschriebenen Metainformationen zu visualisieren. Die Oberfläche bietet ebenfalls entsprechende \enquote{Stellschrauben} um das zu betrachtende Signal im jeweiligen Anwendungskontext zu betrachten. 
+
+
 \section{Einrichten der Entwicklungsumgebung}
 Für den täglichen Gebrauch ist es nicht empfehlenswert Binaries als Root-User auszuführen. Um das HackRF One mit einem regulären Nutzer auf einem Linux System nutzen zu können, ist es notwendig eine entsprechende udev-Regel für das Gerät zu schreiben:
 
@@ -9,7 +13,7 @@ ATTR{idVendor}=="1d50", ATTR{idProduct}=="6089", SYMLINK+="hackrf-one-%k", MODE=
 \end{lstlisting}
 
 Die Datei mit der Regel wird unter /etc/udev/rules.d/ abgelegt. Verbindet man das Gerät nun mit dem Computer, wird ein Symlink unter /dev/ angelegt und Mitglieder der Gruppe \textit{plugdev} haben Zugriff darauf. 
-Die erfolgreiche Installation kann durch das Ausführen des Kommandos \textbf{hackrf\_info} als User ohne root-Berechtigung überprüft werden:
+Die erfolgreiche Installation kann durch das Ausführen des Kommandos \textit{hackrf\_info} als User ohne root-Berechtigung überprüft werden:
 \begin{lstlisting}[caption=Das Kommando "hackrf\_info" wird zum Test auf dem System ausgeführt, label=hackrfinfo]
 hackrf_info version: git-a4c57ef
 libhackrf version: git-a4c57ef (0.5)
@@ -21,6 +25,35 @@ Firmware Version: 2017.02.1 (API:1.02)
 Part ID Number: 0xa000cb3c 0x00544765
 \end{lstlisting}
 
+\newpage
+Um sicherzustellen, dass das Hostsystem mit der vollen Samplerate des HackRF One umgehen kann, wird das Binary \textit{hackrf\_transfer} ausgeführt und entsprechend parametrisiert:
+
+\begin{lstlisting}[caption=Empfangen von Daten mit hackrf\_transfer, label=hackrf-receive]
+$ hackrf_transfer -r /tmp/hackRF-20M.received -f 2400000 -l 16 -g 16 -s 20000000
+# -r := Recieve    -f := Zielfrequenz    -l := RX LNA (IF) gain    
+# -g := RX VGA (baseband) gain   -s := Sample Rate (Hz)
+call hackrf_set_sample_rate(20000000 Hz/20.000 MHz)
+call hackrf_set_hw_sync_mode(0)
+call hackrf_set_freq(2400000 Hz/2.400 MHz)
+Stop with Ctrl-C
+39.8 MiB / 1.000 sec = 39.8 MiB/second
+40.1 MiB / 1.001 sec = 40.1 MiB/second
+40.1 MiB / 1.000 sec = 40.1 MiB/second
+39.8 MiB / 1.000 sec = 39.8 MiB/second
+40.1 MiB / 1.000 sec = 40.1 MiB/second
+39.8 MiB / 1.000 sec = 39.8 MiB/second
+40.1 MiB / 1.000 sec = 40.1 MiB/second
+^CCaught signal 2
+17.3 MiB / 0.435 sec = 39.7 MiB/second
+
+Exiting...
+Total time: 7.43705 s
+hackrf_stop_rx() done
+hackrf_close() done
+hackrf_exit() done
+fclose(fd) done
+exit
+\end{lstlisting}
 
 \newpage
 \section{Grundbausteine in GNU Radio Companion}
