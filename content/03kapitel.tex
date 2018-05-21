@@ -6,10 +6,15 @@ Um möglichst viele Dienste im Frequenzbereich der Dezimeterwelle analysieren zu
 	\item Die Antenne sollte möglichst breitbandig sein. Sie muss mindestens den vorgegeben Bereich zwischen 300 MHz und 3000 MHz abdecken.
 	\item Um ein Signal vollständig zu erfassen muss auch das digitale Empfängersystem eine ausreichende Kanalbandbreite aufweisen.
 	\item Die Abtastrate des Systems muss gemäß Abschnitt \ref{abtasttheorem} ausreichend hoch sein um das Signal rekonstruieren zu können.
+	\item Der Dynamikumfang des Systems muss ausreichend groß sein. Dabei ist die untere Grenze erfassbarer Signale das Grundrauschen im System und dessen Umgebung; der Bereich nach oben wird hingegen durch die maximal erfassbare Signalgröße eingeschränkt. %TODO: Irgendo muss der Dynamikumfang erklärt werden. -> Sascha?
 	\item Das Das System muss mit einem Unix-ähnlichem Betriebssystem oder mit Microsoft Windows bedienbar sein.
+	\item Das System soll unter wirtschaftlichem Gesichtspunkt entworfen werden.
 \end{itemize}%TODO: Gibt es noch mehr Anforderungen? Kosten, etc?
 
-Die aufgeführten Anforderungen werden bei der Planung des Systems, besonders bei der Auswahl der Hardware, berücksichtigt. 
+Die aufgeführten Anforderungen werden bei der Planung des Systems, besonders bei der Auswahl der Hardware, berücksichtigt. Auf den folgenden Seiten wird auf die einzelnen Punkte näher eingegangen. 
+
+Zunächst wird jedoch im Verlauf des Kapitels das Frequenzspektrum der Dezimeterwelle und die rechtlichen Rahmenbedingungen für Dienste in diesem Bereich untersucht, um mögliche Rückschlüsse auf das zu entwerfende System ziehen zu können.
+
 
 
 \newpage
@@ -184,12 +189,15 @@ Der Hack RF One deckt einen weiten Frequenzbereich von 1 bis 6000 MHz (6 GHz) ab
 		\hline 
 		Bandbreite & 20 MHz \\ 
 		\hline 
+		Dynamikumfang & 48 dB \\ %http://www.dolstra.nl/Ham-radio/SDR_Tranceivers/HackRF%20One%20SDR/HackRF%20One%20SDR.htm
+		\hline 
 		Abtastrate & \( 20 \times 10^{6} \) Hz \\ 
 		\hline 
 		Preis in \euro &  \\ 
 		\hline 
 		Installationsart & Mobil \\ 
-		
+		\hline 
+		RX/TX & RX/TX halb-duplex \\ 
 	\end{tabular} 
 	\caption{Produktinformationen des HackRF One}
 \end{table}
