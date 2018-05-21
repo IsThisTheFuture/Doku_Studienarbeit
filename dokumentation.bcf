@@ -2030,16 +2030,19 @@
     <bcf:citekey order="54">Heuberger:2017</bcf:citekey>
     <bcf:citekey order="55">Heuberger:2017</bcf:citekey>
     <bcf:citekey order="56">Heuberger:2017</bcf:citekey>
-    <bcf:citekey order="57">Funktechnik:2018</bcf:citekey>
-    <bcf:citekey order="58">Funktechnik:2018</bcf:citekey>
-    <bcf:citekey order="59">wimo:2018</bcf:citekey>
-    <bcf:citekey order="60">HackRFOne:2018</bcf:citekey>
-    <bcf:citekey order="61">HackRFOne:2018</bcf:citekey>
-    <bcf:citekey order="62">hackrf-wiki:2016</bcf:citekey>
-    <bcf:citekey order="63">hackrf-wiki:2016</bcf:citekey>
-    <bcf:citekey order="64">osmocom:2018</bcf:citekey>
-    <bcf:citekey order="65">gr-osmosdr:2018</bcf:citekey>
-    <bcf:citekey order="66">heuberger:2017</bcf:citekey>
+    <bcf:citekey order="57">airspy:2018</bcf:citekey>
+    <bcf:citekey order="58">gnuradio</bcf:citekey>
+    <bcf:citekey order="59">Funktechnik:2018</bcf:citekey>
+    <bcf:citekey order="60">Funktechnik:2018</bcf:citekey>
+    <bcf:citekey order="61">greatscott</bcf:citekey>
+    <bcf:citekey order="62">wimo:2018</bcf:citekey>
+    <bcf:citekey order="63">HackRFOne:2018</bcf:citekey>
+    <bcf:citekey order="64">HackRFOne:2018</bcf:citekey>
+    <bcf:citekey order="65">hackrf-wiki:2016</bcf:citekey>
+    <bcf:citekey order="66">hackrf-wiki:2016</bcf:citekey>
+    <bcf:citekey order="67">osmocom:2018</bcf:citekey>
+    <bcf:citekey order="68">gr-osmosdr:2018</bcf:citekey>
+    <bcf:citekey order="69">heuberger:2017</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
