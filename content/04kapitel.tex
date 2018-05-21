@@ -131,10 +131,19 @@ Durch die Überführung eines modulierten Signals zurück ins Basisband entsteht
 
 Es gibt verschiedene Wege damit umzugehen:
 \begin{enumerate}
-	\item Für einige Anwendungen kann das DC Offset vernachlässigt werden
-	\item 
-	\item 
+	\item Für einige Anwendungen kann das DC Offset einfach vernachlässigt werden.
+	\item Das DC Offset lässt sich für viele Signalarten umgehen indem die hohe Bandbreite des HackRF ausgenutzt wird. 
+	Dazu stellt man nicht die Zielfrequenz ein, sondern eine außerhalb liegende Frequenz, so dass das eigentlich zu erfassende Signal von 0 Hz  weggeschoben wird. Weil das Signal natürlich vollständig in der erfassten Bandbreite enthalten sein muss, erhöht sich die Menge der zu analysierenden Daten und damit auch die CPU Auslastung. Die Bandbreite des SDR Gerätes sollte also bestenfalls nur so groß sein wie nötig um unnötige Last zu vermeiden.
+	\item Das DC Offset lässt sich über Software korrigieren bzw. abschwächen. Das führt unter Umständen dazu dass auch Frequenzen nahe 0 Hz ungewollterweise modifiziert werden. Das Signal wird hierdurch also leicht verfälscht. Einige Spektralanalyseprogramme (GQRX, SDR\#) bieten dieses Feature an.
 \end{enumerate}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{dc-offset-correction.png}
+	\caption[DC Offset Korrektur]{DC Offset Korrektur. Quelle: Eigene Darstellung} 
+	\label{dc-offset-correction}
+\end{figure}
+
 
 \subsubsection{Bandbreite}
 \subsection{Empfängerempfindlichkeit}
