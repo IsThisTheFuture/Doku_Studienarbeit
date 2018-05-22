@@ -141,18 +141,6 @@ Es gibt verschiedene Wege damit umzugehen:
 
 
 \newpage
-\section{Identifizieren und Dekodieren eines Signales}
-Signale müssen im Empfänger gemittelt werden, da sie aufgrund der durchgeführten Kanalfilterung ein oszillierendes Verhalten aufweisen, siehe Abb. \ref{mod-send-empf} \cite[vgl. Heuberger, e. a., S. TODO]{heuberger:2017}.
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.8\textwidth]{mod-sender-empf.png}
-	\caption[GFSK-Modulationssignale im Sender und im Empfänger]{GFSK-Modulationssignale im Sender und im Empfänger. Quelle: TODO} %TODO Selbst darstellen, am besten anhand eines 433MHz Signals! 
-	\label{mod-send-empf}
-\end{figure}
-
-
-\newpage
 \section{GRC-Flowgraph zur Analyse von Metadaten}
 \textbf{TODO: } GRC Flowgraph mit Optionsfeldern (Frequenz-slider, Parameter für FFT: Bin count/size,Signal-To-Noise Ratio, )\\
 \\
@@ -167,4 +155,15 @@ Signale müssen im Empfänger gemittelt werden, da sie aufgrund der durchgeführ
 
 
 
+\section{Identifizieren und Dekodieren eines Signales}
+Signale müssen im Empfänger gemittelt werden, da sie aufgrund der durchgeführten Kanalfilterung ein oszillierendes Verhalten aufweisen, siehe Abb. \ref{mod-send-empf} \cite[vgl. Heuberger, e. a., S. TODO]{heuberger:2017}.
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{mod-sender-empf.png}
+	\caption[GFSK-Modulationssignale im Sender und im Empfänger]{GFSK-Modulationssignale im Sender und im Empfänger. Quelle: TODO} %TODO Selbst darstellen, am besten anhand eines 433MHz Signals! 
+	\label{mod-send-empf}
+\end{figure}
+
+
+\newpage

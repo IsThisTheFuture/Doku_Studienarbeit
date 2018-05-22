@@ -58,14 +58,12 @@ Wie oben beschrieben besteht Licht aus elektrischen und magnetischen Feldern, di
 Rauschen im Allgemeinen ist der Oberbegriff für Störspannungen, die ein Nutzsignal überlagern. Es wird als unerwünschtes Signal bezeichnet, das in Kommunikationssystem leider allgegenwärtig ist. Das Rauschen behindert den Empfang von Nachrichten bei der Übertragung, deshalb ist es erforderlich diesen Nebeneffekt zu begrenzen. Rauschen kann mehrere Ursachen haben, die alle durch physikalische Gesetzmäßigkeiten begründet werden können. Üblicherweise sind  Rauschen zufällig auftretende Störspannungen, die keine  Phasen oder Frequenzbeziehung zueinander haben. Dabei wird zwischen äußeren und inneren Rauschquellen unterscheiden.\newline
 
 Rauschen im Allgemeinen ist der Oberbegriff für Störspannungen, die ein Nutzsignal überlagern. Es wird als unerwünschtes Signal bezeichnet, das in Kommunikationssystemen aber allgegenwärtig ist. Rauschen verhindert den Empfang von Nachrichten in ihrer ursprünglichen Form bei Übertragungen, deshalb ist es erforderlich diesen Nebeneffekt zu begrenzen. Rauschen kann mehrere Ursachen haben, die alle durch physikalische Gesetzmäßigkeiten begründet werden können. Üblicherweise wird Rauschen verursacht durch zufällig auftretende Störspannungen, die keine  Phasen oder Frequenzbeziehung zueinander haben.
-%TODO
-
 
 äußere Rauschquellen: 
 \begin{itemize}
 	\item Hintergrundrauschen
 	\item Kosmisches Rauschen
-	\item Terresrisches Rauschen
+	\item Terrestrisches Rauschen
 \end{itemize}
 innere Rauschquellen:
 \begin{itemize}
@@ -123,10 +121,9 @@ mit \(f = 50 \text{ Hz} \) dargestellt und mit dem diskreten Signal
 	\caption[Sinusfunktion als kontinuierliches und als diskretes Signal]{Sinusfunktion als kontinuierliches und als diskretes Signal. \newline Quelle: \cite[Heuberger, e. a., S. 12]{Heuberger:2017}} 
 	\label{kontinuierlich_diskret}
 \end{figure}
+
 %\subsection{Analoge und digitale Signale}
 %Digitale Signale sind sowohl werte- als auch zeitdiskret.
-
-
 
 
 \subsection{Nyquist-Shannon-Abtasttheorem}
@@ -217,7 +214,7 @@ Bei der Übertragung von Sprachsignalen, welche (bei Männern) durchschnittlich 
 \[ \frac{\lambda}{2} = \frac{c}{2f} = \frac{3*10^8 \text{ m/s}}{2*120 \text{ Hz}} = 1.250.000 \text{ m}\]
 
 Da eine Antenne dieser Größe utopisch ist, können die zu übertragenden Informationen einfach auf höhere Frequenzen (mit entsprechend kleineren Wellenlängen) verschoben werden. Hierbei spricht man von \textit{Modulation}.
-Die informationstragenden Signale werden dann bevorzugt einer elektromagnetischen, sinusförmigen Welle über die Amplitude, der Phase und/oder der Frequenz aufgeprägt \cite[vgl. Werner, S. 242f]{Werner:2017}. %TODO: "... der Phase und/oder der Frequenz" 
+Die informationstragenden Signale werden dann bevorzugt einer elektromagnetischen, sinusförmigen Welle über die Amplitude, der Phase und/oder der Frequenz aufgeprägt \cite[vgl. Werner, S. 242f]{Werner:2017}. 
 
 Bei der Modulation wird der Frequenzbereich des Basisbandes, also des zu modulierenden Signals, in einen anderen Frequenzbereich transformiert \cite[vgl. Plaßmann, S. 1204]{Plassmann:2016}.
 
@@ -296,7 +293,6 @@ Besonders hervorzuheben ist bei \ac{SDR} Systemen, dass ihre Hardware größtent
 Abbildung \ref{sdr-blockschaltbild} zeigt den Aufbau eines \ac{SDR} Systems als Blockschaltbild, in dem sowohl Sender und Empfänger als SDR realisiert sind.
 Für jedes Element im Sender gibt es ein entsprechendes Element im Empfänger, welches die Senderoperationen rückgängig macht, um die ursprünglichen Daten rekonstruieren zu können.
 
-%TODO: Hab ich mal so formuliert, aber keine Ahnung ob das auch so bleibt oder genau zutrifft. -> Evtl. umformulieren!
 Da sich diese Studienarbeit mit dem Empfangen und Auswerten von Signalen, aber nicht dem Senden befasst, wird im weiteren Verlauf des Dokumentes hauptsächlich die Seite des Empfängersystems und der Übertragungsstrecke betrachtet.
 
 \begin{figure}[ht]
