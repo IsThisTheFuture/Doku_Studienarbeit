@@ -55,6 +55,12 @@ fclose(fd) done
 exit
 \end{lstlisting}
 
+Das ausgeführte Kommando nutzt die HackRF-Bibliothek zum Ansprechen des Gerätes. 
+Mit \textit{hackrf\_transfer} kann sowohl empfangen, als auch gesendet werden. 
+Hier wird die Frequenz \(f = 2,4\) GHz mit einer Abtastrate  \( f_a = 20 \) MHz gesampled.
+Das Ergebnis wird in einer Datei abgespeichert. \\
+Es ist zu erkennen, dass das Gerät die maximale Abtastrate
+
 \newpage
 \section{Grundbausteine in GNU Radio Companion}
 GNU Radio Companion wird am besten durch das klassische FM-Radio Beispiel erklärt:
@@ -108,8 +114,9 @@ Dieser untersützt das HackRF durch die zuvor installierte Bibliothek \textit{li
 
 
 \section{Erarbeiten der relevanten Metainformationen}
-\subsubsection{Signal-Rausch-Verhältnis}
+
 \subsubsection{Antennengewinn}
+\subsubsection{Signalleistung}
 \subsubsection{Quantisierung}
 \subsubsection{Diskretisierung}
 \subsubsection{Frequenz}
@@ -124,20 +131,42 @@ Durch die Überführung eines modulierten Signals zurück ins Basisband entsteht
 
 Es gibt verschiedene Wege damit umzugehen:
 \begin{enumerate}
-	\item Für einige Anwendungen kann das DC Offset vernachlässigt werden
-	\item 
-	\item 
+	\item Für einige Anwendungen kann das DC Offset einfach vernachlässigt werden.
+	\item Das DC Offset lässt sich für viele Signalarten umgehen indem die hohe Bandbreite des HackRF ausgenutzt wird. 
+	Dazu stellt man nicht die Zielfrequenz ein, sondern eine außerhalb liegende Frequenz, so dass das eigentlich zu erfassende Signal von 0 Hz  weggeschoben wird. Weil das Signal natürlich vollständig in der erfassten Bandbreite enthalten sein muss, erhöht sich die Menge der zu analysierenden Daten und damit auch die CPU Auslastung. Die Bandbreite des SDR Gerätes sollte also bestenfalls nur so groß sein wie nötig um unnötige Last zu vermeiden.
+	\item Das DC Offset lässt sich über Software korrigieren bzw. abschwächen. Das führt unter Umständen dazu dass auch Frequenzen nahe 0 Hz ungewollterweise modifiziert werden. Das Signal wird hierdurch also leicht verfälscht. Einige Spektralanalyseprogramme (GQRX, SDR\#) bieten dieses Feature an.
 \end{enumerate}
 
-\subsubsection{Bandbreite}
-
-\section{Spektralanalyse der Dezimeterwelle}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=\textwidth]{spektrum.png}
-	\caption[Spektralanalyse der Dezimeterwelle]{Spektralanalyse der Dezimeterwelle. Quelle: Eigene Darstellung} 
-	\label{spektralanalyse}
+	\includegraphics[width=0.7\textwidth]{dc-offset-correction.png}
+	\caption[DC Offset Korrektur]{DC Offset Korrektur. Quelle: Eigene Darstellung} 
+	\label{dc-offset-correction}
 \end{figure}
+
+
+\subsubsection{Bandbreite}
+\subsection{Empfängerempfindlichkeit}
+\subsubsection{Signal-Rausch-Verhältnis}
+Das Signal-Rausch-Verhältnis (engl.: \enquote{Signal-to-Noise Ratio}) gibt das Verhältnis eines Nutzsignals 
+zu einem Rauschsignal an, von dem es überlagert ist. Das Rauschen kann dabei durch das Empfängersystem selbst, 
+sowie durch Störungen im Übertragungskanal verursacht worden sein. %TODO: Es gibt glaub mehrere Definitionen
+
+\[ S/N = \frac{\text{Nutzsignalleistung}}{\text{Rauschsignalleistung}} = \frac{P_{Signal}}{P_{Rauschen}} \]
+
+
+Für den Fall \(P_{Signal} \leq P_{Rauschen}\), also wenn gilt: 
+Die Signalleistung ist kleiner oder gleich der Rauschsignalleistung, kann ein Signal in der Regel nicht erkannt werden.
+Damit dies gelingt, muss die Energie des Signals addiert mit der des Rauschsignals größer sein als ein festgelegter Schwellwert.
+Der Schwellwert wird wesentlich höher gelegt als das durchschnittliche Rauschniveau, um die beiden deutlich von einander unterscheiden zu können.
+Es bietet sich also an das Verhältnis in Dezibel auszudrücken:
+\[ S/N = 10 \lg \Big( \frac{P_{Signal}}{P_{Rauschen}} \Big) \text{dB}\] 
+
+
+
+Das minimale Signal-Rausch-Verhältnis \(S/N_{min}\) gibt diesen Schwellwert an, der mindestens erreicht werden muss um das Signal zu erkennen. 
+%TODO: Nutzsignalleistung und Rauschsignalleistung definieren
+
 
 
 \newpage

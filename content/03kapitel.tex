@@ -7,9 +7,23 @@ Um möglichst viele Dienste im Frequenzbereich der Dezimeterwelle analysieren zu
 	\item Um ein Signal vollständig zu erfassen muss auch das digitale Empfängersystem eine ausreichende Kanalbandbreite aufweisen.
 	\item Die Abtastrate des Systems muss gemäß Abschnitt \ref{abtasttheorem} ausreichend hoch sein um das Signal rekonstruieren zu können.
 	\item Das System muss mit einem Unix-ähnlichem Betriebssystem oder mit Microsoft Windows bedienbar sein.
+	\item Der Dynamikumfang des Systems muss ausreichend groß sein. Dabei ist die untere Grenze erfassbarer Signale das Grundrauschen im System und dessen Umgebung; der Bereich nach oben wird hingegen durch die maximal erfassbare Signalgröße eingeschränkt. %TODO: Irgendo muss der Dynamikumfang erklärt werden. -> Sascha Dynamik eschreibt das Verhältnis zwischen dem größtöglichen zum kleinsmöglichen Pegel bei 40 dB liegt der Unterschied zwischen den Werten bei 1:10 000.
+	\item Das System soll unter wirtschaftlichem Gesichtspunkt entworfen werden.
 \end{itemize}%TODO: Gibt es noch mehr Anforderungen? Kosten, etc? Datenblatt der Antenne und was aus den Fingern saugen was tolles Schreiben
 
-Die aufgeführten Anforderungen werden bei der Planung des Systems, besonders bei der Auswahl der Hardware, berücksichtigt. 
+Die aufgeführten Anforderungen werden bei der Planung des Systems, besonders bei der Auswahl der Hardware, berücksichtigt. Auf den folgenden Seiten wird auf die einzelnen Punkte näher eingegangen. 
+
+Zunächst wird jedoch im Verlauf des Kapitels das Frequenzspektrum der Dezimeterwelle und die rechtlichen Rahmenbedingungen für Dienste in diesem Bereich untersucht, um mögliche Rückschlüsse auf das zu entwerfende System ziehen zu können.
+
+
+%Die Angabe des Spektrums bietet folgende Vorteile: 
+
+%Das Ergebnis ist in der Regel deutlich präziser. Wenngleich das Oszilloskop wohl das
+%wichtigste Messinstrument der Elektrotechnik ist, arbeitet es vergleichsweise ungenau. Es
+%liefert dem Anwender einen groben Überblick über die Form des Signals. Bei den ge-
+%genwärtig verbreiteten Digitalspeicheroszilloskopen mit 8-bit-Wandler ist die Dynamik
+%schon aufgrund der Analog-Digital-Wandlung auf bestenfalls 48dB begrenzt; bei guten
+%Spectrum Analyzern erreicht man hingegen 120dB und mehr.
 
 
 \newpage
@@ -42,36 +56,33 @@ Dort werden die Frequenzbereiche nach Frequenznutzung (Amateurfunk, Seefunk, WLA
 
 
 
-
-
-
-
 \section{Anwendungen im Bereich der Dezimeterwelle}
 Das Frequenzband von 300 MHz bis 3 GHz, auch \ac{UHF}-Band genannt, ist ein Frequenzbereich in dem die Wellen eine Länge von zehn Dezimeter bis einem Dezimeter besitzen:
 \( \lambda = \frac{c}{f} = \frac{3*10^8 \text{ m/s}}{300 \text{ MHz}} = 1\text{ m}\)
 und
-\( \frac{3*10^8 \text{ m/s}}{3000 \text{ MHz}} = 0.1\text{ m}\)
+\( \frac{3*10^8 \text{ m/s}}{3000 \text{ MHz}} = 0.1\text{ m}\).
+Der damit untersuchte Frequenzbereich erstreckt sich von 300 MHz bis 3 GHz. Darunter befinden sich die gängigsten Anwendungen, die im folgenden detaillierte beschrieben werden.
 
+In dem oben genannten Frequenzbereich liegen folgende Anwendungen:
 
-
-
-
-
-\subsection{Bluetooth}
-Bluetooth ist eine Übertragungstechnik für kabellose Kommunikation über kurze Distanzen. Es wird im Frequenzbereich von 2,4 bis 2,4835 GHz betrieben \cite[Bundesamt für Strahlenschutz, S. 1]{bundesamt-strahlungsschutz:2012}. Insgesamt gibt es unter Bluetoothgeräten drei verschiedene Sendeleistungsklassen:
 \begin{description}
-	\item[Klasse 1: bis 1,0 mW] Reichweite: bis 10m 
-	\item [Klasse 2: bis 2,5 mW] Reichweite: 10m und mehr
-	\item [Klasse 3: bis 100 mW] Reichweite: 100m und mehr
+	\item [Amateurfunkdienste]{}
+	\item [Mobile Landfunkdienst] {}
+	\item [Wettersatelliten] {}
+	\item [DECT] {Digital Enhanced Cordless Telecommunications ist ein internationaler Standard für Telekommunikations mittels Funktechnik häufig bei Schnurlostelefonen. Dieser Standard arbeitet grundsätzlich verbindungsorientiert und ist primär für Telefonie innerhalb von Gebäuden ausgelegt. Deren Reichweite beträgt ca. 30-50 Meter. DECT beschreibt eine reine Zugangstechnologie im Gegensatz zu herkömmlichen Mobilfunksystemen. Der Frequenzbereich bei DECT liegt bei 1880 MHz-1900 MHz.}
+	\item [GSM] {}
+	\item [GPS] {}
+	\item [Bluetooth] {Bluetooth ist ein entwickelter Industriestandard für die Datenübertragung zwischen Geräten über kurze Distanz}
+	\item [WLAN] {}
 \end{description}
-Die Aufteilung des Frequenzbereiches von 0 kHz bis 3000 GHz wird von der Bundesnetzagentur im sogenannten Frequenzplan \cite[Bundesnetzagentur]{bundesnetzagentur-frequenzplan:2016} gemäß § 54 TKG festgehalten.
 
-
-
-
-
-\subsection{Wireless Local Area Network}
-Unter dem Begriff Wireless Local Network (WLAN) versteht man ein kabelloses lokales Netzwerk, welches meist an Orten eingesetzt wird, bei der kabelgebundene Datenübertraung zu teuer, umständlich oder umkomfortabel wäre.
+\section{Spektralanalyse der Dezimeterwelle}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{spektrum.png}
+	\caption[Spektralanalyse der Dezimeterwelle]{Spektralanalyse der Dezimeterwelle. Quelle: Eigene Darstellung} 
+	\label{spektralanalyse}
+\end{figure}
 
 
 \section{Aufbau/Entwurf}
@@ -93,12 +104,13 @@ So lassen sich einige Modulationsarten relativ schnell und rein visuell identifi
 \section{GNU Radio}
 GNU Radio \cite{gnuradio} ist ein freies, quelloffenes Entwicklerwerkzeug zur Implementierung von Software Defined Radio mittels Signalverarbeitungsblöcken. Es kann mit externer Funkhardware oder als Simulation ohne zusätzliche Hardware genutzt werden. GNU Radio ist im Hobbybereich weit verbreitet, wird aber auch in der Wissenschaft und im kommerziellen Bereich genutzt. GNU Radio Programme können zusätzlich durch selbst programmierte Ergänzungsblöcke erweitert werden. Die können wahlweise in den Programmiersprachen Python oder C++ geschrieben werden, wobei sich besonders für echtzeitkritische Signalverarbeitungen letzteres anbietet.\\
 GNU Radio bietet zusätzlich eine grafische Oberfläche mit \ac{GRC}, die es ermöglicht Blockschaltbilder als Flowgraph darzustellen.
-%TODO Bild von GNU Radio hinzufügen
 
 \subsection{Funktionsweise}
 GNU Radio verarbeitet den Datenstrom, der vom Empfänger kommt, oder bereitet Daten vor, um diese zu senden. Dabei ist die gesamte Datenverarbeitung in Blöcke eingeteilt, die  beliebig  zusammengestellt  werden können. GNU Radio liefert eine Vielzahl von Filtern, Kanal-Codes, Synchronisationselementen, Equalizern, Demodulatoren, und weitere gängige Werkzeuge der Nachrichten- und Funktechnik. Diese Blöcke stellen die Hardwarekomponenten klassischer Funkhardware dar. Falls nötig können auch selbst Blöcke hinzugefügt werden. Dabei sollte darauf geachtet werden, dass ein Block genau eine Aufgabe erledigt, damit er so vielseitig wie möglich eingesetzt werden kann. GNU Radio bietet die Möglichkeit, diese Blöcke miteinander zu verbinden und regelt dadurch den Datenfluss zwischen verbundenen Blöcken. \\
+
 Für die digitale Verarbeitung von Daten kommen in GNU Radio verschiedene Datentypen zum Einsatz: Der Datenstrom des Empfängers besteht in den meisten Fällen aus komplexen Zahlen, also einem Datentyp, bei dem jedes Datum aus zwei Float-Werten, dem Imaginärteil und dem Realteil, besteht (siehe Abschnitt \ref{iq}). \\
 Als Ein- oder Ausgänge eines Blocks können jedoch verschiedene Datentypen zum Einsatz kommen, üblicherweise Short, Byte, Integer und Float. Der Datentyp am Eingang und Ausgang eines Blockes muss dabei nicht gleich sein.\\
+
 Um mit GNU Radio eine SDR-Anwendung zu erstellen, muss man Blöcke, die die einzelnen Funktionseinheiten darstellen, miteinander zu einem Graphen kombinieren. Sollte ein benötigter Block nicht verfügbar sein, kann man diesen mittels einem Tool selbst hinzufügen. Beim Starten des Graphen ruft GNU Radio nun jeden Block nacheinander auf und stellt sicher, dass Daten von einem Block zum Nächsten weitergereicht werden. Ergebnisse  können  durch  Graphical  User  Interface  (GUI)-Blöcke dargestellt werden. Diese nutzen die freien und plattformübergreifenden GUI-Toolkits.
 
 
@@ -107,7 +119,9 @@ Um mit GNU Radio eine SDR-Anwendung zu erstellen, muss man Blöcke, die die einz
 \subsection{Antenne} %TODO: Sollen wir eine von den Antennen, die wir uns anfangs auchgesucht haben mit unserer vergleichen und eine Entscheidungsmatrix aufstellen?  SO dass man sieht, dass wir uns Alternativen angeschaut haben?
 Eine Antenne die aus der Aufgabenstellung hervorgeht, muss dementsprechend den Frequenzbereich der Dezimeterwelle abdecken. 
 Grundsätzlich gibt es zwei Möglichkeiten ein solches Analysesystem zu betreiben: Mit stationärer oder mobiler Antenne. Letzteres bietet die Möglichkeit das Gerät auch unterwegs nutzen. 
-Aus Gründen wie Flexibilität und Mobilität entschieden wir uns jedoch dagegen. Eine mobile Antenne, die den Frequenzbereich der Dezimeterwelle abdecken, würde relativ groß und ziemlich teuer sein. Deshalb haben wir uns auf eine stationäre Antenne geeinigt, da diese preislich als auch dem Verwendungszweck dennoch am nächsten kommt. Wir haben uns für die  Sirio SD 3000N entschieden, ihr Preis liegt bei 90 Euro und deckt den kompletten Frquenzbereich der Dezimeterwelle ab.\newline %TODO: "wir", "uns" streichen
+Aus Gründen wie Flexibilität und Mobilität wurde dagegen argumentiert. Eine mobile Antenne, die den Frequenzbereich der Dezimeterwelle abdeckt, würde relativ groß und ziemlich teuer im Vergleich sein. Deshalb kam solch eine Lösungsmöglichkeit nicht in Frage, sondern nur eine stationäre Antenne, da diese preislich 
+als auch dem Verwendungszweck dennoch am Nähsten kommt. Die Anforderungen an die Antenne ind :
+Größe, Frequenzebereich Datenblatt Die  Sirio SD 3000N erfüllt alle Anforderungen der Aufgabe und ihr Preis liegt bei 90 Euro, was sich optimal in das Preisleistungsverhätlnis integriert.
 %TODO: Was sind genau die Vorteile unserer Antenne? -> Aufzählen
 
 \begin{figure}[ht]
@@ -129,22 +143,20 @@ Auf Grund analytischen Zwecken haben werden zwei Antennen für die Aufgabe erwor
 Präsentation vom Hochfrequenztechnik aus Mechtronik siehe WhatsApp
 
 
-Aufgrund analytischen Zwecken haben werden zwei Antennen für die Aufgabe erworben, somit können wir an zwei unterschiedlichen Standorten eine Analyse der Metainformationen betrachten. %TODO: Neu schreiben. Das ist ziemlich wirr :D
-
 \begin{table}[ht]
 	\centering
 \begin{tabular}{c|c}
-	Modell & Sirio SD 3000N \\
+	Modell & Sirio SD 3000N\\
 	\hline
-	Antennentyp & Discone Antenne \\ 
+	Antennentyp & Discone Antenne\\ 
 	\hline 
-	Bandbreite & 300 MHz - 3 GHz \\ 
+	Bandbreite & 300 MHz - 3 GHz\\ 
 	\hline 
-	Länge &  \\ 
+	Länge &  72 cm\\ 
 	\hline 
-	Preis in \euro &  \\ 
+	Preis in \euro &  90 \euro \\ 
 	\hline 
-	Installationsart & Stationär \\ 
+	Installationsart & Stationär\\ 
 
 \end{tabular} 
 	\caption{Produktinformationen der Sirio SD 3000N Antenne}
@@ -154,14 +166,41 @@ Aufgrund analytischen Zwecken haben werden zwei Antennen für die Aufgabe erworb
 %TODO: Präsentation vom Hochfrequenztechnik aus Mechtronik siehe WhatsApp
 
 \subsection{SDR-Gerät} %TODO: Struktur in den Text bringen. Absätze, Aufzählungen, etc
-Ein Software Defined Radio Gerät, das man experimentell betreiben kann, reicht von mehreren tausend Euro teuren Forschungsgeräte bis zu kostenlosen Geräten, da selbst mittels einem Mikrofoneingang der Soundkarte am Computers, manche Signale empfangen werden können. Die Geräte unterscheiden sich hauptsächlich im Frequenzbereich, der maximalen Bandbreite und der Abtastrate. \\
-Beim Computer kommen häufig Universal Serial Bus (USB), Ethernet als Schnittstelle zum  Einsatz.
-Da theoretisch nur Signale empfangen werden sollen, würde ein DVB-T-Stick eine günstige Option darstellen. Mithilfe eines entsprechenden Treibers kann der Stick mit GNU Radio genutzt werden, jedoch deckt sich der Frequenzbereich des Gerätes nicht, mit dem innerhalb der Aufgabenstellung der Dezimeterwelle.
+Ein Software Defined Radio Gerät, das man experimentell betreiben kann, reicht von mehreren tausend Euro teuren Forschungsgeräte bis zu kostenlosen Geräten, da selbst mittels einem Mikrofoneingang der Soundkarte am Computers, manche Signale empfangen werden können. Die Geräte unterscheiden sich hauptsächlich in Fähigkeiten wie:
+\begin{itemize}
+	\item Frequenzbereich
+	\item maximale Bandbreite
+	\item Abtastrate
+\end{itemize}
 
+Beim Computer kommen häufig Universal Serial Bus (USB) und Ethernet als Schnittstelle zum  Einsatz.
+Da nur Empfängersignale geachtet werden soll, würde ein handelsüblicher DVB-T-Stick eine günstige Option darstellen. Mithilfe des entsprechenden Treibers kann der Stick mit GNU Radio genutzt werden, jedoch deckt sich der Frequenzbereich des Gerätes nicht, mit dem innerhalb der Aufgabenstellung der Dezimeterwelle.\\
+Das SDR-Gerät muss in Kombination mit der Funkantenne über den kompletten Frequenzbereich der Dezimeterwelle erstrecken, um die Metainformationen in diesem Bereich zu analysieren. Aus diesem Grund kann ein solchen Gerät für diese Arbeit nicht verwendet werden. Aus der Tabelle können die groben Daten des DVB-T Sticks entnommen werden.\\
 
-Das SDR-Gerät muss in Kombination mit der Funkantenne über den kompletten Funkbereich der Dezimeterwelle erstrecken, um die Metainformationen in diesem Bereich zu analysieren. Aus diesem Grund kann ein solchen Gerät für diese Arbeit nicht verwendet werden.
-Ein gutes Preis-Leistungsverhältnis bietet das HackRF One Board \cite{greatscott}. Die HackRF One Platine ist ein flexibles Testmodul für die Funkmesstechnik, das wie ein Software Defined Radio (SDR) arbeitet. Sie ist ein Open Source Hardware Transceiver, der hauptsächlich zu eigenen Versuchen und Messungen für SDRs eignet, außerdem ist dieses Gerät für die HF-Technik und messtechnischen Versuchsaufbauten im Amateurfunk vergleichsweise geringen Preises von rund 300 Euro sehr beliebt.
-Der Hack RF One deckt einen weiten Frequenzbereich von 1 bis 6000 MHz (6 GHz) ab, und erfasst damit sehr viele Frequenzbänder für kommerzielle, experimentelle und Amateurfunk-Anwendungen. Die Hardware bietet eine maximale Abtastrate des Signales von 20MS/s, dadurch werden Messungen und Experimente auch mit breitbandigen Signalen wie DECT, WFM oder WLAN möglich, jedoch nur halbduplex. Der AD-Wandler arbeitet mit 8 Bit Datenbreite und erreicht somit einen theoretischen Dynamikbereich von 48dB. Die digitalisierten I/Q Daten werden auf einem nachgeschalteten CPLD weiterverarbeitet und über den integrierten ARM-Prozessor per USB ausgegeben. Die gesamte Schaltung des HackRF Boards ist sehr stromsparend ausgelegt, sie wird komplett über USB versorgt. Die Platine hat eine Mikro-B USB Buchse. Abschließend lässt sich sagen, dass die oben genannten Gründe für eine Nutzung dieses Gerätes sprechen \cite{wimo:2018}.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{c|c}
+		Modellbezeichnung & RTL2832U\\
+		\hline
+		Hersteller & NooElec\\ 
+		\hline 
+		Frequenzbereich & 25 MHz - 1750 MHz \\ 
+		\hline 
+		Preis in \euro & 20 \euro \\ 
+		\hline 
+		Installationsart & Mobil \\ 
+		\hline 
+		RX/TX & RX Receiver \\ 
+	\end{tabular} 
+	\caption{Produktinformationen des HackRF One}
+\end{table}
+
+Ein gutes Preis-Leistungsverhältnis bietet das HackRF One Board \cite{greatscott}. Die HackRF One Platine ist ein flexibles Testmodul für die Funkmesstechnik, das wie ein Software Defined Radio (SDR) arbeitet. Sie ist ein Open Source Hardware Transceiver, der hauptsächlich zu eigenen Versuchen und Messungen für SDRs eignet, außerdem ist dieses Gerät für die HF-Technik und messtechnischen Versuchsaufbauten im Amateurfunk vergleichsweise geringen Preises von rund 300 Euro sehr beliebt.\\
+Der Hack RF One deckt einen weiten Frequenzbereich von 1 bis 6000 MHz (6 GHz) ab, und erfasst damit sehr viele Frequenzbänder für kommerzielle, experimentelle und Amateurfunk-Anwendungen. Die Hardware bietet eine maximale Abtastrate des Signales von 20MS/s, dadurch werden Messungen und Experimente auch mit breitbandigen Signalen wie DECT, WFM oder WLAN möglich, jedoch nur halbduplex. Der AD-Wandler arbeitet mit 8 Bit Datenbreite und erreicht somit einen theoretischen Dynamikbereich von 48dB. Die digitalisierten I/Q Daten werden auf einem nachgeschalteten CPLD weiterverarbeitet und über den integrierten ARM-Prozessor per USB ausgegeben. Die gesamte Schaltung des HackRF Boards ist sehr stromsparend ausgelegt, sie wird komplett über USB versorgt. Die Platine hat eine Mikro-B USB Buchse. Abschließend lässt sich sagen, dass die oben genannten Gründe für eine Nutzung dieses Gerätes sprechen \cite{wimo:2018}.\\
+
+Eine teure aber auch qualitative Variante bietet das keine Ahnung muss %TODO: Welches Gerät
+
+Abschließend lässt sich das Ergebnis in einer Tabelle visualisieren, darin werden die groben Gesichtspunkte der jeweiligen Komponenten verglichen und auf die Aufgabenstellung untersucht.\\
 
 
 \begin{figure}[ht]
@@ -175,18 +214,21 @@ Der Hack RF One deckt einen weiten Frequenzbereich von 1 bis 6000 MHz (6 GHz) ab
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{c|c}
-		Modellbezeichnung & HackRF One \\
+		Modellbezeichnung & HackRF One  \\
 		\hline
 		Hersteller & Great Scott Gadgets\\ 
 		\hline 
 		Bandbreite & 20 MHz \\ 
 		\hline 
+		Dynamikumfang & 48 dB \\ %http://www.dolstra.nl/Ham-radio/SDR_Tranceivers/HackRF%20One%20SDR/HackRF%20One%20SDR.htm
+		\hline 
 		Abtastrate & \( 20 \times 10^{6} \) Hz \\ 
 		\hline 
-		Preis in \euro &  \\ 
+		Preis in \euro &  300 \euro\\ 
 		\hline 
 		Installationsart & Mobil \\ 
-		
+		\hline 
+		RX/TX & RX/TX halb-duplex \\ 
 	\end{tabular} 
 	\caption{Produktinformationen des HackRF One}
 \end{table}

@@ -9,6 +9,17 @@ Diese Studienarbeit befasst sich mit dem Erfassen und Auswerten von Signalen in 
 
 %\end{description}	
 
+\textbf{Was ist die Empfängerempfindlichkeit (Receiver Sensitivity) des HackRF?}\\
+\url{http://www.phys.hawaii.edu/~anita/new/papers/militaryHandbook/rcvr_sen.pdf}
+
+
+\textbf{What is the minimum signal power level that can be detected by HackRF?\\
+A:}
+
+This isn't a question that can be answered for a general purpose SDR platform such as HackRF. Any answer would be very specific to a particular application. For example, an answerable question might be: What is the minimum power level in dBm of modulation M at frequency F that can be detected by HackRF One with software S under configuration C at a bit error rate of no more than E%? Changing any of those variables (M, F, S, C, or E) would change the answer to the question. Even a seemingly minor software update might result in a significantly different answer. To learn the exact answer for a specific application, you would have to measure it yourself.
+
+HackRF's concrete specifications include operating frequency range, maximum sample rate, and dynamic range in bits. These specifications can be used to roughly determine the suitability of HackRF for a given application. Testing is required to finely measure performance in an application. Performance can typically be enhanced significantly by selecting an appropriate antenna, external amplifier, and/or external filter for the application.
+
 \section{Zielsetzung}
 Ziel der Studienarbeit ist es die Frage zu klären, was Metainformationen im Kontext von \ac{SDR} bedeuten und welche Informationen zur Realisierung eines generischen Gerätes zur Analyse einer möglichst hohen Anzahl von Signalen innerhalb der Dezimeterwelle erforderlich sind.\\
 
