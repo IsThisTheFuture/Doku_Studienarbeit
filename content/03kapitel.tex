@@ -8,8 +8,8 @@ Um möglichst viele Dienste im Frequenzbereich der Dezimeterwelle analysieren zu
 	\item Die Abtastrate des Systems muss gemäß Abschnitt \ref{abtasttheorem} ausreichend hoch sein um das Signal rekonstruieren zu können.
 	\item Das System muss mit einem Unix-ähnlichem Betriebssystem oder mit Microsoft Windows bedienbar sein.
 	\item Der Dynamikumfang des Systems muss ausreichend groß sein. Dabei ist die untere Grenze erfassbarer Signale das Grundrauschen im System und dessen Umgebung; der Bereich nach oben wird hingegen durch die maximal erfassbare Signalgröße eingeschränkt. %TODO: Irgendo muss der Dynamikumfang erklärt werden. -> Sascha Dynamik eschreibt das Verhältnis zwischen dem größtöglichen zum kleinsmöglichen Pegel bei 40 dB liegt der Unterschied zwischen den Werten bei 1:10 000.
-	\item Das System soll unter wirtschaftlichem Gesichtspunkt entworfen werden.
-\end{itemize}%TODO: Gibt es noch mehr Anforderungen? Kosten, etc? Datenblatt der Antenne und was aus den Fingern saugen was tolles Schreiben
+	\item Das System soll unter wirtschaftlichem Gesichtspunkt entworfen werden. Bedeutet ausreichende Funktionen unter Betrachtung der preislichen Situation.
+\end{itemize}
 
 Die aufgeführten Anforderungen werden bei der Planung des Systems, besonders bei der Auswahl der Hardware, berücksichtigt. Auf den folgenden Seiten wird auf die einzelnen Punkte näher eingegangen. 
 
@@ -55,7 +55,6 @@ Dort werden die Frequenzbereiche nach Frequenznutzung (Amateurfunk, Seefunk, WLA
 \end{figure}
 
 
-
 \section{Anwendungen im Bereich der Dezimeterwelle}
 Das Frequenzband von 300 MHz bis 3 GHz, auch \ac{UHF}-Band genannt, ist ein Frequenzbereich in dem die Wellen eine Länge von zehn Dezimeter bis einem Dezimeter besitzen:
 \( \lambda = \frac{c}{f} = \frac{3*10^8 \text{ m/s}}{300 \text{ MHz}} = 1\text{ m}\)
@@ -66,14 +65,12 @@ Der damit untersuchte Frequenzbereich erstreckt sich von 300 MHz bis 3 GHz. Daru
 In dem oben genannten Frequenzbereich liegen folgende Anwendungen:
 
 \begin{description}
-	\item [Amateurfunkdienste]{}
-	\item [Mobile Landfunkdienst] {}
-	\item [Wettersatelliten] {}
-	\item [DECT] {Digital Enhanced Cordless Telecommunications ist ein internationaler Standard für Telekommunikations mittels Funktechnik häufig bei Schnurlostelefonen. Dieser Standard arbeitet grundsätzlich verbindungsorientiert und ist primär für Telefonie innerhalb von Gebäuden ausgelegt. Deren Reichweite beträgt ca. 30-50 Meter. DECT beschreibt eine reine Zugangstechnologie im Gegensatz zu herkömmlichen Mobilfunksystemen. Der Frequenzbereich bei DECT liegt bei 1880 MHz-1900 MHz.}
-	\item [GSM] {}
-	\item [GPS] {}
-	\item [Bluetooth] {Bluetooth ist ein entwickelter Industriestandard für die Datenübertragung zwischen Geräten über kurze Distanz}
-	\item [WLAN] {}
+	\item [GSM 400]{In diesem Frequenzbereich von 380 Mhz - 496 MHz befindet sich der digitale BOS-Funk. Der BOS-Funk ist ein nichtöffentlicher mobiler UKW-Funkdienst. Dieser wird von Behörden und Organisationen mit Sicherheitsaufgaben verwendet. Über diese Technik können Einsatzkräfte miteinander kommunizieren oder direkt alarmiert werden.}
+	\item [SRD] {Short Range Devices sind Funkanwendungen die Jedermann für Sprach und Datenübertragung verwenden kann. Darunter liegen Geräte wie der Autoschlüssel, Wetterstationen und weitere Anwendungen im Smart Home Bereich. Diese Funktechnik liegt im Bereich von 443 MHz. Um in Zukunft die Störung innerhalb dieser Technik zu verringern  wurde das 860 Mhz-Band festgelegt. Dieses wurde in mehrere Subbänder unterteilt, um gegenseitige Störungen zu vermeiden. Dieser Bereich erstreckt sich von 863 MHz - 870 MHz. Jedes dieser Subbänder hat für die Nutzung besondere Parameter vorgesehen. Darunter kommunizieren Geräte wie Funk-Alarmanlagen und gewisse "Internet of Things"- Geräte.}
+	\item [GSM 900] {GSM steht für Global System for Mobile Communications. Das ist ein Mobilfunkstandard für Mobilfunknetze. Hauptsächlich wird dieses Netz für Telefonie und Datenübertragung wie Kurzmitteilungen (SMS). GSM wurde als mobile Alternative zum ISDN Telefonnetz entwickelt. Das GSM Netz bietet die technische Grundlage der D- und E-Netze.  }
+	\item [GPS] {}%TODO}
+	\item [DECT] {Digital Enhanced Cordless Telecommunications ist ein internationaler Standard für Telekommunikation mittels Funktechnik häufig bei Mobiltelefonen. Dieser Standard arbeitet grundsätzlich verbindungsorientiert und ist primär für Telefonie innerhalb von Gebäuden ausgelegt. Deren Reichweite beträgt ca. 30-50 Meter. DECT beschreibt eine reine Zugangstechnologie im Gegensatz zu herkömmlichen Mobilfunksystemen. Der Frequenzbereich bei DECT liegt bei 1880 MHz-1900 MHz.}
+	\item [ISM] {ISM steht für (Industrial, Scientific and Medical) darunter bezeichnet man die Hochfrequenz-Geräte in der Industrie, Wissenschaft, Medizin und häuslichen Bereichen eingesetzt werden}
 \end{description}
 
 \section{Spektralanalyse der Dezimeterwelle}
@@ -98,8 +95,7 @@ Die gegenüberliegende Seite befasst sich mit der Inbetriebnahme der ausgewählt
 \section{SDR Sharp}
 SDR\# (gesprochen: \enquote{SDR Sharp}) ist eine kostenlose Software von Airspy \cite{airspy:2018}, die ausschließlich für Microsoft Windows erhältlich ist. Mit dieser Anwendung lassen sich u. a. mittels Software Defined Radio Systemen empfangene Signale auslesen und etwa im Frequenzbereich oder in einem Wasserfalldiagramm visualisieren.
 So lassen sich einige Modulationsarten relativ schnell und rein visuell identifizieren.
-%TODO Bild von SDR# hinzufügen: Am besten ein FM Radiosignal, und erklären woran man die FM Modulation erkennt.
-
+%TODO Bild von SDR# hinzufügen: Am besten ein FM Radiosignal, und erklären woran man die FM Modulation erkennt. Nur zuhause möglich.
 
 \section{GNU Radio}
 GNU Radio \cite{gnuradio} ist ein freies, quelloffenes Entwicklerwerkzeug zur Implementierung von Software Defined Radio mittels Signalverarbeitungsblöcken. Es kann mit externer Funkhardware oder als Simulation ohne zusätzliche Hardware genutzt werden. GNU Radio ist im Hobbybereich weit verbreitet, wird aber auch in der Wissenschaft und im kommerziellen Bereich genutzt. GNU Radio Programme können zusätzlich durch selbst programmierte Ergänzungsblöcke erweitert werden. Die können wahlweise in den Programmiersprachen Python oder C++ geschrieben werden, wobei sich besonders für echtzeitkritische Signalverarbeitungen letzteres anbietet.\\
@@ -117,53 +113,49 @@ Um mit GNU Radio eine SDR-Anwendung zu erstellen, muss man Blöcke, die die einz
 \section{Hardware}
 
 \subsection{Antenne} %TODO: Sollen wir eine von den Antennen, die wir uns anfangs auchgesucht haben mit unserer vergleichen und eine Entscheidungsmatrix aufstellen?  SO dass man sieht, dass wir uns Alternativen angeschaut haben?
-Eine Antenne die aus der Aufgabenstellung hervorgeht, muss dementsprechend den Frequenzbereich der Dezimeterwelle abdecken. 
-Grundsätzlich gibt es zwei Möglichkeiten ein solches Analysesystem zu betreiben: Mit stationärer oder mobiler Antenne. Letzteres bietet die Möglichkeit das Gerät auch unterwegs nutzen. 
-Aus Gründen wie Flexibilität und Mobilität wurde dagegen argumentiert. Eine mobile Antenne, die den Frequenzbereich der Dezimeterwelle abdeckt, würde relativ groß und ziemlich teuer im Vergleich sein. Deshalb kam solch eine Lösungsmöglichkeit nicht in Frage, sondern nur eine stationäre Antenne, da diese preislich 
-als auch dem Verwendungszweck dennoch am Nähsten kommt. Die Anforderungen an die Antenne ind :
-Größe, Frequenzebereich Datenblatt Die  Sirio SD 3000N erfüllt alle Anforderungen der Aufgabe und ihr Preis liegt bei 90 Euro, was sich optimal in das Preisleistungsverhätlnis integriert.
-%TODO: Was sind genau die Vorteile unserer Antenne? -> Aufzählen
+
+Ganz allgemein kann man Antennen als Koppelelemente zwischen geführten und ungeführten elektromagnetischen Wellen, d. h. als Wandler zwischen Leitungs- und Freiraumwellen, auffassen. Quelle ist immer ein elektrischer oder magnetischer Dipol. Durch eine (Raum-)Transformation im Nahbereich, bei der die Richtungen der Felder (innerhalb der Fortpflanzungsgeschwindigkeit) gedreht werden, entsteht im Fernbereich die gelöste Wellenfront einer elektromagnetischen Welle. 
+
+Elektromagnetische Wellen bestehen aus polarisierten elektrischen und magnetischen Feldern, die sich durch Kopplung wechselseitig erzeugen und im Vakuum ohne Verluste als Transversalwellen räumlich ausbreiten. Bei vorgegebenen Randbedingungen liefern die Maxwellschen Gleichungen eine exakte Beschreibung. In der Praxis berechnet man die Abstrahlung der Energie aber meist durch Näherungsverfahren. 
+
+Eine Antenne die aus der Aufgabenstellung hervorgeht, muss dementsprechend den Frequenzbereich der Dezimeterwelle abdecken. Grundsätzlich gibt es zwei Möglichkeiten ein solches Analysesystem zu betreiben: Mit stationärer oder mobiler Antenne.
+
+Eine mobile Antennenlösung, die den oben genannten Anforderung gerecht wird wäre die xy Antenne. Sie ist eine Logarithmisch Periodische Breitband Antenne. Eine LPDA besteht aus einer Anzahl von Dipolantennen, deren Länge und Abstand zur Strahlungsrichtung hin abnehmen. Ein großer Vorteil dieser Technik ist die hohe Bandbreite der Antenne. Damit deckt Sie den Frequenzbereich der Aufgabe ab. Ein massiver Nachteil dieser Antennenart ist die Richtwirkung, dabei empfängt diese Arte der Antenne die Signale besser, wenn Sie zum Signal ausgerichtet wird. Ein weiterer negativer Faktor sind die enormen Kosten. Mit ca 400 \€ ist dieses Antenne in der oberen Preisregion angesiedelt. In der nachfolgenden Tabelle sind die technischen Daten der Antenne zu erkennen. 
+  
+
+%Tabelle für Antennen anlegen
+
+Die Sirio SD 3000N ist eine stationäre Lösungsmöglichkeit, welche den zuvor genannten Anforderungen gerecht wird. Diese Antenne wird als eine Discone-Antenne bezeichnet. Ihr Vorteil besteht aus Ihrem Aufbau, sie wird auch als breitbandige Rundstrahlantenne bezeichnet. Ihr wesentlicher Vorteil liegt im niedrigen Abstrahlwinkel und die Grenzfrequenzen werden durch die Abmessungen der Antenne begrenzt. Durch Ihre Breitbandigkeit wird die Discone-Antenne häufig für Funküberwachungsaufgaben verwendet. Im Gegensatz zu der LPDA ist die Wirkrichtung des Signal bei dieser Technik nicht von Nöten. Da diese Antenne bei einer preislichen Budget von 90 \€ liegt ist sie deutlich günstiger und reicht für die genannten Anforderung vollkommen aus.
+
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.4\textwidth]{SirioSD3000N.png} %TODO: Antenne bzw. Bestandteile beschriften? 
+	\includegraphics[width=0.4\textwidth]{SirioSD3000N.png}
 	\caption[Sirio SD 3000N stationäre Funkantenne]{Sirio SD 3000N stationäre Funkantenne. Quelle: \cite{Funktechnik:2018}} 
 	\label{Sirio SD 3000N Antenne}
 \end{figure}
 
-Ganz allgemein kann man Antennen als Koppelelemente zwischen geführten und ungeführten elektromagnetischen Wellen, d. h. als Wandler zwischen Leitungs- und Freiraumwellen, auffassen. Quelle ist immer ein elektrischer oder magnetischer Dipol. Durch eine (Raum-)Transformation im Nahbereich, bei der die Richtungen der Felder (innerhalb der Fortpflanzungsgeschwindigkeit) gedreht werden, entsteht im Fernbereich die gelöste Wellenfront einer elektromagnetischen Welle. 
-
-Elektromagnetische Wellen bestehen aus polarisierten elektrischen und magnetischen Feldern, die sich durch Kopplung wechselseitig erzeugen und im Vakuum ohne Verluste als Transversalwellen räumlich ausbreiten. Bei vorgegebenen Randbedingungen liefern die Maxwellschen Gleichungen eine exakte Beschreibung. In der Praxis berechnet man die Abstrahlung der Energie aber durch Näherungsverfahren. 
-
-%Eine Antenne erzeugt immer sowohl elektrische als auch magnetische Felder. Die Grafik erläutert am Beispiel einer resonanten Dipolantenne, wie aus einem Schwingkreis aus Kondensator und Spule (Start der Animation) durch räumliche Erweiterung (ausklappen der Stäbe, bzw. Erzeugung der Raumtransformation durch 90-Drehung des elektrischen Feldes) eine Antenne entsteht: Die Leiterstäbe werden dabei je um ±90 nach außen gedreht und zwischen den Stäben wirken elektrische Felder (blau gezeichnet); längs der Leiterstäbe wirken magnetische Felder (rot als Kreis gezeichnet). Die Felder breiten sich nicht unendlich schnell, sondern mit Lichtgeschwindigkeit aus und innerhalb dieses sog. „Informationsdurchmessers“ mit v ≤ c sind die Felder über Ursache und Wirkung gekoppelt (Durchmesser der Kugel: λ/2). Wird die Antenne resonant angeregt, bilden sich geschlossene Feldlinien; das sich ändernde elektrische Feld erzeugt zugehörige magnetische Feldlinien, das sich ändernde magnetische Feld erzeugt zugehörige elektrische Feldlinien. Im Nahbereich der Antenne bildet sich ein Blindfeld, d. h., die Ausbreitung der Felder geschieht von der Quelle weg und wieder zurück. Das sich ausbreitende Feld verliert am Randbereich die Kopplung an die Antenne, wenn sich die Richtung der Feldvektoren umkehrt. Die Felder werden durch die Umkehr abgestoßen und können nicht mehr zurück zur Antenne. Eine elektromagnetische Welle wird in den Raum abgestrahlt. Außerhalb des „Informationsdurchmessers“ (Fernfeld) gibt es keine Kopplung an die Antenne mehr, da die Lichtgeschwindigkeit für die Übertragung von Informationen nicht überschritten werden kann. 
-
-
-
-Auf Grund analytischen Zwecken haben werden zwei Antennen für die Aufgabe erworben, somit können wir an zwei unterschiedlichen Standorten eine Analyse der Metainformationen betrachten.
-Präsentation vom Hochfrequenztechnik aus Mechtronik siehe WhatsApp
-
+Im Folgenden Abschnitt beschreibt die Ausarbeitung einer Entscheidungsmatrix in der eine mobile und stationäre Antenne für den Anwendungsbereich verglichen werden. 
 
 \begin{table}[ht]
 	\centering
-\begin{tabular}{c|c}
-	Modell & Sirio SD 3000N\\
-	\hline
-	Antennentyp & Discone Antenne\\ 
-	\hline 
-	Bandbreite & 300 MHz - 3 GHz\\ 
-	\hline 
-	Länge &  72 cm\\ 
-	\hline 
-	Preis in \euro &  90 \euro \\ 
-	\hline 
-	Installationsart & Stationär\\ 
-
-\end{tabular} 
+	\begin{tabular}{c|c}
+		Modell & Sirio SD 3000N\\
+		\hline
+		Antennentyp & Discone Antenne\\ 
+		\hline 
+		Bandbreite & 300 MHz - 3 GHz\\ 
+		\hline 
+		Länge &  72 cm\\ 
+		\hline 
+		Preis in \euro &  90 \euro \\ 
+		\hline 
+		Installationsart & Stationär\\ 
+		
+	\end{tabular} 
 	\caption{Produktinformationen der Sirio SD 3000N Antenne}
 \end{table}
 
-
-%TODO: Präsentation vom Hochfrequenztechnik aus Mechtronik siehe WhatsApp
 
 \subsection{SDR-Gerät} %TODO: Struktur in den Text bringen. Absätze, Aufzählungen, etc
 Ein Software Defined Radio Gerät, das man experimentell betreiben kann, reicht von mehreren tausend Euro teuren Forschungsgeräte bis zu kostenlosen Geräten, da selbst mittels einem Mikrofoneingang der Soundkarte am Computers, manche Signale empfangen werden können. Die Geräte unterscheiden sich hauptsächlich in Fähigkeiten wie:
@@ -176,7 +168,7 @@ Ein Software Defined Radio Gerät, das man experimentell betreiben kann, reicht 
 Beim Computer kommen häufig Universal Serial Bus (USB) und Ethernet als Schnittstelle zum  Einsatz.
 Da nur Empfängersignale geachtet werden soll, würde ein handelsüblicher DVB-T-Stick eine günstige Option darstellen. Mithilfe des entsprechenden Treibers kann der Stick mit GNU Radio genutzt werden, jedoch deckt sich der Frequenzbereich des Gerätes nicht, mit dem innerhalb der Aufgabenstellung der Dezimeterwelle.\\
 Das SDR-Gerät muss in Kombination mit der Funkantenne über den kompletten Frequenzbereich der Dezimeterwelle erstrecken, um die Metainformationen in diesem Bereich zu analysieren. Aus diesem Grund kann ein solchen Gerät für diese Arbeit nicht verwendet werden. Aus der Tabelle können die groben Daten des DVB-T Sticks entnommen werden.\\
-
+%TODO: Bild hinzufügen
 \begin{table}[h]
 	\centering
 	\begin{tabular}{c|c}
@@ -196,19 +188,16 @@ Das SDR-Gerät muss in Kombination mit der Funkantenne über den kompletten Freq
 \end{table}
 
 Ein gutes Preis-Leistungsverhältnis bietet das HackRF One Board \cite{greatscott}. Die HackRF One Platine ist ein flexibles Testmodul für die Funkmesstechnik, das wie ein Software Defined Radio (SDR) arbeitet. Sie ist ein Open Source Hardware Transceiver, der hauptsächlich zu eigenen Versuchen und Messungen für SDRs eignet, außerdem ist dieses Gerät für die HF-Technik und messtechnischen Versuchsaufbauten im Amateurfunk vergleichsweise geringen Preises von rund 300 Euro sehr beliebt.\\
-Der Hack RF One deckt einen weiten Frequenzbereich von 1 bis 6000 MHz (6 GHz) ab, und erfasst damit sehr viele Frequenzbänder für kommerzielle, experimentelle und Amateurfunk-Anwendungen. Die Hardware bietet eine maximale Abtastrate des Signales von 20MS/s, dadurch werden Messungen und Experimente auch mit breitbandigen Signalen wie DECT, WFM oder WLAN möglich, jedoch nur halbduplex. Der AD-Wandler arbeitet mit 8 Bit Datenbreite und erreicht somit einen theoretischen Dynamikbereich von 48dB. Die digitalisierten I/Q Daten werden auf einem nachgeschalteten CPLD weiterverarbeitet und über den integrierten ARM-Prozessor per USB ausgegeben. Die gesamte Schaltung des HackRF Boards ist sehr stromsparend ausgelegt, sie wird komplett über USB versorgt. Die Platine hat eine Mikro-B USB Buchse. Abschließend lässt sich sagen, dass die oben genannten Gründe für eine Nutzung dieses Gerätes sprechen \cite{wimo:2018}.\\
 
-Eine teure aber auch qualitative Variante bietet das keine Ahnung muss %TODO: Welches Gerät
-
-Abschließend lässt sich das Ergebnis in einer Tabelle visualisieren, darin werden die groben Gesichtspunkte der jeweiligen Komponenten verglichen und auf die Aufgabenstellung untersucht.\\
-
-
-\begin{figure}[ht]
+Der Hack RF One deckt einen weiten Frequenzbereich von 1 bis 6000 MHz (6 GHz) ab, und erfasst damit sehr viele Frequenzbänder für kommerzielle, experimentelle und Amateurfunk-Anwendungen. Die Hardware bietet eine maximale Abtastrate des Signales von 20MS/s, dadurch werden Messungen und Experimente auch mit breitbandigen Signalen wie DECT, WFM oder WLAN möglich, jedoch nur halbduplex. Der AD-Wandler arbeitet mit 8 Bit Datenbreite und erreicht somit einen theoretischen Dynamikbereich von 48dB. Die digitalisierten I/Q Daten werden auf einem nachgeschalteten CPLD weiterverarbeitet und über den integrierten ARM-Prozessor per USB ausgegeben. Die gesamte Schaltung des HackRF Boards ist sehr stromsparend ausgelegt, sie wird komplett über USB versorgt. Die Platine hat eine Mikro-B USB Buchse. Abschließend lässt sich sagen, dass die oben genannten Gründe für eine optimal Nutzung dieses Gerätes sprechen \cite{wimo:2018}.\\
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.75\textwidth]{HackRFOne.png}
 	\caption[Hack RF ONE Platine]{Hack RF ONE Platine. Quelle: \cite{HackRFOne:2018}} 
 	\label{HackRFOne}
 \end{figure}
+
+
 
 
 \begin{table}[ht]
@@ -232,6 +221,8 @@ Abschließend lässt sich das Ergebnis in einer Tabelle visualisieren, darin wer
 	\end{tabular} 
 	\caption{Produktinformationen des HackRF One}
 \end{table}
+
+Abschließend lässt sich das Ergebnis in einer Tabelle visualisieren, darin werden die groben Gesichtspunkte der jeweiligen Komponenten verglichen und auf die Aufgabenstellung untersucht.\\
 
 
 \begin{figure}[ht]
