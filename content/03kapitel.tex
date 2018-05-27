@@ -73,35 +73,18 @@ In dem oben genannten Frequenzbereich liegen folgende Anwendungen:
 	\item [\ac{ISM}] {ISM steht für (Industrial, Scientific and Medical) darunter bezeichnet man die Hochfrequenz-Geräte in der Industrie, Wissenschaft, Medizin und häuslichen Bereichen eingesetzt werden. Die bekanntesten Anwendungen sind WLAN und Bluetooth.}
 \end{description}
 
-\section{Spektralanalyse der Dezimeterwelle}
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=\textwidth]{spektrum.png}
-	\caption[Spektralanalyse der Dezimeterwelle]{Spektralanalyse der Dezimeterwelle. Quelle: Eigene Darstellung} 
-	\label{spektralanalyse}
-\end{figure}
 
-
-\section{Aufbau/Entwurf}
-Zu Beginn der praktischen Arbeit, wird der technische Versuchsaufbau beschrieben. Mit einer Skizze soll der Aufbau der Aufgabe detaillierte dargestellt werden. Wie in der Abbildung \ref{Technischer Aufbau} angezeigt, wird der Computer über den \ac{USB}-Anschluss mit dem HackRF One verbunden. Darüber bezieht das SDR-Gerät seine notwendige Spannungsversorgung von 5 Volt.\\
-Die gegenüberliegende Seite befasst sich mit der Inbetriebnahme der ausgewählten Antenne. Diese hat einen N-Buchsen Anschluss und wird an den HackRF One angeschlossen dieser besitzt jedoch nur einen SMA-Anschluss. Dämpfung wird bei diesem Aufbau nicht berücksichtigt, da das Antennenkabel nur 10 Meter beträgt. Somit können die Geräte miteinander Kommunizieren und die empfangen Daten der Antenne bis hin zum Computer übertragen werden.  
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1.0\textwidth]{TechnischerAufbau.png}
-	\caption[Technischer Aufbau]{Technischer Aufbau} 
-	\label{Technischer Aufbau}
-\end{figure}
-
-\section{SDR Sharp}
+\section{Software}
+\subsection{SDR Sharp}
 SDR\# (gesprochen: \enquote{SDR Sharp}) ist eine kostenlose Software von Airspy \cite{airspy:2018}, die ausschließlich für Microsoft Windows erhältlich ist. Mit dieser Anwendung lassen sich u. a. mittels Software Defined Radio Systemen empfangene Signale auslesen und etwa im Frequenzbereich oder in einem Wasserfalldiagramm visualisieren.
 So lassen sich einige Modulationsarten relativ schnell und rein visuell identifizieren.
 %TODO Bild von SDR# hinzufügen: Am besten ein FM Radiosignal, und erklären woran man die FM Modulation erkennt. Nur zuhause möglich.
 
-\section{GNU Radio}
+\subsection{GNU Radio}
 GNU Radio \cite{gnuradio} ist ein freies, quelloffenes Entwicklerwerkzeug zur Implementierung von Software Defined Radio mittels Signalverarbeitungsblöcken. Es kann mit externer Funkhardware oder als Simulation ohne zusätzliche Hardware genutzt werden. GNU Radio ist im Hobbybereich weit verbreitet, wird aber auch in der Wissenschaft und im kommerziellen Bereich genutzt. GNU Radio Programme können zusätzlich durch selbst programmierte Ergänzungsblöcke erweitert werden. Die können wahlweise in den Programmiersprachen Python oder C++ geschrieben werden, wobei sich besonders für echtzeitkritische Signalverarbeitungen letzteres anbietet.\\
 GNU Radio bietet zusätzlich eine grafische Oberfläche mit \ac{GRC}, die es ermöglicht Blockschaltbilder als Flowgraph darzustellen.
 
-\subsection{Funktionsweise}
+\subsubsection{Funktionsweise}
 GNU Radio verarbeitet den Datenstrom, der vom Empfänger kommt, oder bereitet Daten vor, um diese zu senden. Dabei ist die gesamte Datenverarbeitung in Blöcke eingeteilt, die  beliebig  zusammengestellt  werden können. GNU Radio liefert eine Vielzahl von Filtern, Kanal-Codes, Synchronisationselementen, Equalizern, Demodulatoren, und weitere gängige Werkzeuge der Nachrichten- und Funktechnik. Diese Blöcke stellen die Hardwarekomponenten klassischer Funkhardware dar. Falls nötig können auch selbst Blöcke hinzugefügt werden. Dabei sollte darauf geachtet werden, dass ein Block genau eine Aufgabe erledigt, damit er so vielseitig wie möglich eingesetzt werden kann. GNU Radio bietet die Möglichkeit, diese Blöcke miteinander zu verbinden und regelt dadurch den Datenfluss zwischen verbundenen Blöcken. \\
 
 Für die digitale Verarbeitung von Daten kommen in GNU Radio verschiedene Datentypen zum Einsatz: Der Datenstrom des Empfängers besteht in den meisten Fällen aus komplexen Zahlen, also einem Datentyp, bei dem jedes Datum aus zwei Float-Werten, dem Imaginärteil und dem Realteil, besteht (siehe Abschnitt \ref{iq}). \\
@@ -258,9 +241,29 @@ Abschließend lässt sich das ein eindeutiges Ergebnis zu Stande kam, da die gew
 
 Technisch realisiert ist das Frontend des HackRF One durch einen Qorvo RFFC5072 Synthesizer mit einem integrierten 6 GHz RF Mixer \cite{qorvo}.
 Die Verarbeitung im Basisband bzw. in einer Zwischenfrequenz erfolgt durch einen MAX2837 Transceiver von Maxim Integrated \cite{max2837}, gefolgt von einem AD-/DA- Wandler der gleichen Firma \cite{max5864}, der das Empfangene Signal digitalisiert oder das zu sendende Signal in die analoge Domäne überführt.
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{hackrf-blockdiagram-frontend-baseband.png}
 	\caption[Hack RF One Frontend/Baseband]{Hack RF One Frontend/Baseband. Quelle: \cite{hackrf-wiki:2016}} 
 	\label{HackRFOne-Blockschaltbild}
+\end{figure}
+
+
+\section{Aufbau/Entwurf}
+Zu Beginn der praktischen Arbeit, wird der technische Versuchsaufbau beschrieben. Mit einer Skizze soll der Aufbau der Aufgabe detaillierte dargestellt werden. Wie in der Abbildung \ref{Technischer Aufbau} angezeigt, wird der Computer über den \ac{USB}-Anschluss mit dem HackRF One verbunden. Darüber bezieht das SDR-Gerät seine notwendige Spannungsversorgung von 5 Volt.\\
+Die gegenüberliegende Seite befasst sich mit der Inbetriebnahme der ausgewählten Antenne. Diese hat einen N-Buchsen Anschluss und wird an den HackRF One angeschlossen dieser besitzt jedoch nur einen SMA-Anschluss. Dämpfung wird bei diesem Aufbau nicht berücksichtigt, da das Antennenkabel nur 10 Meter beträgt. Somit können die Geräte miteinander Kommunizieren und die empfangen Daten der Antenne bis hin zum Computer übertragen werden.  
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{TechnischerAufbau.png}
+	\caption[Technischer Aufbau]{Technischer Aufbau} 
+	\label{Technischer Aufbau}
+\end{figure}
+
+
+\section{Spektralanalyse der Dezimeterwelle}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{spektrum.png}
+	\caption[Spektralanalyse der Dezimeterwelle]{Spektralanalyse der Dezimeterwelle. Quelle: Eigene Darstellung} 
+	\label{spektralanalyse}
 \end{figure}
