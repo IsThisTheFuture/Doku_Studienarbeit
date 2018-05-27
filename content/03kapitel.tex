@@ -54,8 +54,8 @@ In dem oben genannten Frequenzbereich liegen folgende Anwendungen:
 
 \begin{description}
 	\item [GSM 400]{In diesem Frequenzbereich von 380 Mhz - 496 MHz befindet sich der digitale \ac{BOS}-Funk. Der BOS-Funk ist ein nichtöffentlicher mobiler \ac{UKW}-Funkdienst. Über diese Technik können Einsatzkräfte miteinander kommunizieren oder direkt alarmiert werden.}
-	\item [\ac{SRD}] {Short Range Devices sind Funkanwendungen die Jedermann für Sprach und Datenübertragung verwenden kann. Darunter liegen Geräte wie der Autoschlüssel, Wetterstationen und weitere Anwendungen im Smart Home Bereich. Diese Funktechnik liegt im Bereich von 443 MHz. Um in Zukunft die Störung innerhalb dieser Technik zu verringern  wurde das 860 Mhz-Band festgelegt. Dieses wurde in mehrere Subbänder unterteilt, um gegenseitige Störungen zu vermeiden. Dieser Bereich erstreckt sich von 863 MHz - 870 MHz. Jedes dieser Subbänder hat für die Nutzung besondere Parameter vorgesehen. Darunter kommunizieren Geräte wie Funk-Alarmanlagen und gewisse "Internet of Things"- Geräte.}
-	\item [\ac{GSM} 900] {GSM ist ein Mobilfunkstandard für Mobilfunknetze. Hauptsächlich wird dieses Netz für Telefonie und Datenübertragung wie Kurzmitteilungen (SMS). GSM wurde als mobile Alternative zum ISDN Telefonnetz entwickelt. Das GSM Netz bietet die technische Grundlage der D- und E-Netze.  }
+	\item [\ac{SRD}] {Short Range Devices sind Funkanwendungen die Jedermann für Sprach und Datenübertragung verwenden kann. Darunter liegen Geräte wie der Autoschlüssel, Wetterstationen und weitere Anwendungen im Smart Home Bereich. Diese Funktechnik liegt im Bereich von 443 MHz. Um in Zukunft die Störung innerhalb dieser Technik zu verringern  wurde das 860 Mhz-Band festgelegt. Dieses wurde in mehrere Subbänder unterteilt, um gegenseitige Störungen zu vermeiden. Dieser Bereich erstreckt sich von 863 MHz - 870 MHz. Jedes dieser Subbänder hat für die Nutzung besondere Parameter vorgesehen. Darunter kommunizieren Geräte wie Funk-Alarmanlagen und gewisse ``Internet of Things''- Geräte.}
+	\item [\ac{GSM} 900] {GSM ist ein Mobilfunkstandard für Mobilfunknetze. Hauptsächlich wird dieses Netz für Telefonie und Datenübertragung wie Kurzmitteilungen (SMS) verwendet. GSM wurde als mobile Alternative zum ISDN Telefonnetz entwickelt. Das GSM Netz bietet die technische Grundlage der D- und E-Netze.  }
 	\item [\ac{GPS}] {Das GPS ist ein globales Navigationssatellitensystem zur Positionsbestimmung. Die Kommunikation der spezifischen Daten wie Position und Uhrzeit erfolgt auf der Frequenz 1227,60 Mhz. Zur genauen Positionsbestimmung muss ein Empfänger die Signale von vier Satelliten gleichzeitig empfangen. Im Empfangsgerät werden die Signallaufzeiten gemessen und unter Berücksichtigung der Uhrfehler, die aktuelle Position und Höhe errechnet.}
 	\item [\ac{DECT}] {DECT ist ein internationaler Standard für Telekommunikation mittels Funktechnik häufig bei Mobiltelefonen. Dieser Standard arbeitet grundsätzlich verbindungsorientiert und ist primär für Telefonie innerhalb von Gebäuden ausgelegt. Deren Reichweite beträgt ca. 30-50 Meter. DECT beschreibt eine reine Zugangstechnologie im Gegensatz zu herkömmlichen Mobilfunksystemen. Der Frequenzbereich bei DECT liegt bei 1880 MHz-1900 MHz.}
 	\item [\ac{ISM}] {ISM bezeichnet die Hochfrequenz-Geräte, die für Industrie, Wissenschaft, Medizin und häuslichen Bereichen eingesetzt werden. Die bekanntesten Anwendungen darunter sind  WLAN und Bluetooth.}
@@ -163,7 +163,7 @@ Im Folgenden Abschnitt beschreibt eine Tabelle die technischen Daten der Sirio S
 
 
 \subsection{SDR-Gerät} 
-Ein Software Defined Radio Gerät, das man experimentell betreiben kann, reicht von mehreren tausend Euro teuren Forschungsgeräte bis zu kostenlosen Geräten, da selbst mittels einem Mikrofoneingang der Soundkarte am Computers, manche Signale empfangen werden können. Die Geräte unterscheiden sich hauptsächlich in Fähigkeiten wie:
+Ein Software Defined Radio Gerät, das man experimentell betreiben kann, reicht von mehreren tausend Euro teuren Forschungsgeräten bis zu kostenlosen Geräten, da selbst mittels einem Mikrofoneingang der Soundkarte am Computer, manche Signale empfangen werden können. Die Geräte unterscheiden sich hauptsächlich in Fähigkeiten wie:
 
 \begin{itemize}
 	\item Frequenzbereich
@@ -172,7 +172,7 @@ Ein Software Defined Radio Gerät, das man experimentell betreiben kann, reicht 
 \end{itemize}
 
 Beim Computer kommen häufig Universal Serial Bus (USB) und Ethernet als Schnittstelle zum  Einsatz.
-Da nur Empfängersignale betrachtet werden sollen, würde ein handelsüblicher DVB-T-Stick eine günstige Option darstellen. Mithilfe des entsprechenden Treibers kann der Stick mit GNU Radio genutzt werden, jedoch deckt sich der Frequenzbereich des Gerätes nicht, mit dem innerhalb der Aufgabenstellung beschriebenen Dezimeterwelle.\\
+Da nur Empfängersignale betrachtet werden sollen, würde ein handelsüblicher DVB-T-Stick eine günstige Option darstellen. Mithilfe des entsprechenden Treibers kann der Stick mit GNU Radio genutzt werden, jedoch deckt sich der Frequenzbereich des Gerätes nicht mit dem innerhalb der Aufgabenstellung beschriebenen Dezimeterwelle.\\
 
 \begin{figure}[H]
 	\centering
@@ -181,7 +181,7 @@ Da nur Empfängersignale betrachtet werden sollen, würde ein handelsüblicher D
 	\label{NooElec}
 \end{figure}
 
-Das SDR-Gerät muss in Kombination mit der Funkantenne über den kompletten Frequenzbereich der Dezimeterwelle erstrecken, um die Metainformationen in diesem Bereich zu analysieren. Aus diesem Grund kann ein solchen Gerät für diese Arbeit nicht verwendet werden. Aus der Tabelle können die groben Daten des DVB-T Sticks entnommen werden.\\
+Das SDR-Gerät muss sich in Kombination mit der Funkantenne über den kompletten Frequenzbereich der Dezimeterwelle erstrecken, um die Metainformationen in diesem Bereich zu analysieren. Aus diesem Grund kann ein solches Gerät für diese Arbeit nicht verwendet werden. Aus der Tabelle können die groben Daten des DVB-T Sticks entnommen werden.\\
 
 \begin{table}[h]
 	\centering
@@ -201,7 +201,7 @@ Das SDR-Gerät muss in Kombination mit der Funkantenne über den kompletten Freq
 	\caption{Produktinformationen des HackRF One}
 \end{table}
 
-Ein gutes Preis-Leistungsverhältnis bietet das HackRF One Board \cite{greatscott}. Die HackRF One Platine ist ein flexibles Testmodul für die Funkmesstechnik, das wie ein Software Defined Radio (SDR) arbeitet. Sie ist ein Open Source Hardware Transceiver, der hauptsächlich zu eigenen Versuchen und Messungen für SDRs eignet, außerdem ist dieses Gerät für die HF-Technik und messtechnischen Versuchsaufbauten im Amateurfunk vergleichsweise geringen Preises von rund 300 Euro sehr beliebt.\\
+Ein gutes Preis-Leistungsverhältnis bietet das HackRF One Board \cite{greatscott}. Die HackRF One Platine ist ein flexibles Testmodul für die Funkmesstechnik, das wie ein Software Defined Radio (SDR) arbeitet. Sie ist ein Open Source Hardware Transceiver, der sich hauptsächlich zu eigenen Versuchen und Messungen für SDRs eignet, außerdem ist dieses Gerät für die Hochfrequenztechnik und im Amateurfunkbereich für seinen vergleichsweise geringen Preises von rund 300 Euro sehr beliebt.\\
 
 \begin{figure}[H]
 	\centering
@@ -234,7 +234,7 @@ Der Hack RF One deckt einen weiten Frequenzbereich von 1 bis 6000 MHz (6 GHz) ab
 	\caption{Produktinformationen des HackRF One}
 \end{table}
 
-Abschließend lässt sich das ein eindeutiges Ergebnis zu Stande kam, da die gewünschten Anforderungen nur durch den HackRF One gegeben sind. Was die Entscheidung, ein geeignetes SDR-Gerät deutliche simpler gestaltete.\\
+Zum Ende hin kam ein eindeutiges Ergebnis zu Stande, das die gewünschten Anforderungen nur durch den HackRF One erfüllt werden. Was die Entscheidung, welches das geeignete SDR-Gerät sie, deutlich vereinfachte. Alternativgeräte, die die Anforderungen erfüllen befanden sich in der der Preisklasse diese auf diesem Weg zu erwerben.\\
 
 Technisch realisiert ist das Frontend des HackRF One durch einen Qorvo RFFC5072 Synthesizer mit einem integrierten 6 GHz RF Mixer \cite{qorvo}.
 Die Verarbeitung im Basisband bzw. in einer Zwischenfrequenz erfolgt durch einen MAX2837 Transceiver von Maxim Integrated \cite{max2837}, gefolgt von einem AD-/DA- Wandler der gleichen Firma \cite{max5864}, der das Empfangene Signal digitalisiert oder das zu sendende Signal in die analoge Domäne überführt.
