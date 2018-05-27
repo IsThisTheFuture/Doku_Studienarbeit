@@ -7,7 +7,7 @@ Um möglichst viele Dienste im Frequenzbereich der Dezimeterwelle analysieren zu
 	\item Um ein Signal vollständig zu erfassen muss auch das digitale Empfängersystem eine ausreichende Kanalbandbreite aufweisen.
 	\item Die Abtastrate des Systems muss gemäß Abschnitt \ref{abtasttheorem} ausreichend hoch sein um das Signal rekonstruieren zu können.
 	\item Das System muss mit einem Unix-ähnlichem Betriebssystem oder mit Microsoft Windows bedienbar sein.
-	\item Der Dynamikumfang des Systems muss ausreichend groß sein. Dabei ist die untere Grenze erfassbarer Signale das Grundrauschen im System und dessen Umgebung; der Bereich nach oben wird hingegen durch die maximal erfassbare Signalgröße eingeschränkt. %TODO: Irgendo muss der Dynamikumfang erklärt werden. -> Sascha Dynamik eschreibt das Verhältnis zwischen dem größtöglichen zum kleinsmöglichen Pegel bei 40 dB liegt der Unterschied zwischen den Werten bei 1:10 000.
+	\item Der Dynamikumfang des Systems muss ausreichend groß sein. Das bedeutet, dass das Differenz zwischen dem größtmöglichen zum kleinstmöglichen Pegel im Verhältnis zueinander stehen muss. Der grobe Richtwert von 40 dB liegt der Unterschied zwischen den Werten bei 1:10 000. Dabei ist die untere Grenze erfassbarer Signale das Grundrauschen im System und dessen Umgebung; der Bereich nach oben wird hingegen durch die maximal erfassbare Signalgröße eingeschränkt.
 	\item Das System soll unter wirtschaftlichem Gesichtspunkt entworfen werden. Bedeutet ausreichende Funktionen unter Betrachtung der preislichen Situation.
 \end{itemize}
 
@@ -65,12 +65,12 @@ Der damit untersuchte Frequenzbereich erstreckt sich von 300 MHz bis 3 GHz. Daru
 In dem oben genannten Frequenzbereich liegen folgende Anwendungen:
 
 \begin{description}
-	\item [GSM 400]{In diesem Frequenzbereich von 380 Mhz - 496 MHz befindet sich der digitale BOS-Funk. Der BOS-Funk ist ein nichtöffentlicher mobiler UKW-Funkdienst. Dieser wird von Behörden und Organisationen mit Sicherheitsaufgaben verwendet. Über diese Technik können Einsatzkräfte miteinander kommunizieren oder direkt alarmiert werden.}
-	\item [SRD] {Short Range Devices sind Funkanwendungen die Jedermann für Sprach und Datenübertragung verwenden kann. Darunter liegen Geräte wie der Autoschlüssel, Wetterstationen und weitere Anwendungen im Smart Home Bereich. Diese Funktechnik liegt im Bereich von 443 MHz. Um in Zukunft die Störung innerhalb dieser Technik zu verringern  wurde das 860 Mhz-Band festgelegt. Dieses wurde in mehrere Subbänder unterteilt, um gegenseitige Störungen zu vermeiden. Dieser Bereich erstreckt sich von 863 MHz - 870 MHz. Jedes dieser Subbänder hat für die Nutzung besondere Parameter vorgesehen. Darunter kommunizieren Geräte wie Funk-Alarmanlagen und gewisse "Internet of Things"- Geräte.}
-	\item [GSM 900] {GSM steht für Global System for Mobile Communications. Das ist ein Mobilfunkstandard für Mobilfunknetze. Hauptsächlich wird dieses Netz für Telefonie und Datenübertragung wie Kurzmitteilungen (SMS). GSM wurde als mobile Alternative zum ISDN Telefonnetz entwickelt. Das GSM Netz bietet die technische Grundlage der D- und E-Netze.  }
+	\item [GSM 400]{In diesem Frequenzbereich von 380 Mhz - 496 MHz befindet sich der digitale \ac{BOS}-Funk. Der BOS-Funk ist ein nichtöffentlicher mobiler \ac{UKW}-Funkdienst. Dieser wird von Behörden und Organisationen mit Sicherheitsaufgaben verwendet. Über diese Technik können Einsatzkräfte miteinander kommunizieren oder direkt alarmiert werden.}
+	\item [\ac{SRD}] {Short Range Devices sind Funkanwendungen die Jedermann für Sprach und Datenübertragung verwenden kann. Darunter liegen Geräte wie der Autoschlüssel, Wetterstationen und weitere Anwendungen im Smart Home Bereich. Diese Funktechnik liegt im Bereich von 443 MHz. Um in Zukunft die Störung innerhalb dieser Technik zu verringern  wurde das 860 Mhz-Band festgelegt. Dieses wurde in mehrere Subbänder unterteilt, um gegenseitige Störungen zu vermeiden. Dieser Bereich erstreckt sich von 863 MHz - 870 MHz. Jedes dieser Subbänder hat für die Nutzung besondere Parameter vorgesehen. Darunter kommunizieren Geräte wie Funk-Alarmanlagen und gewisse "Internet of Things"- Geräte.}
+	\item [\ac{GSM} 900] {GSM steht für Global System for Mobile Communications. Das ist ein Mobilfunkstandard für Mobilfunknetze. Hauptsächlich wird dieses Netz für Telefonie und Datenübertragung wie Kurzmitteilungen (SMS). GSM wurde als mobile Alternative zum ISDN Telefonnetz entwickelt. Das GSM Netz bietet die technische Grundlage der D- und E-Netze.  }
 	\item [GPS] {}%TODO}
 	\item [DECT] {Digital Enhanced Cordless Telecommunications ist ein internationaler Standard für Telekommunikation mittels Funktechnik häufig bei Mobiltelefonen. Dieser Standard arbeitet grundsätzlich verbindungsorientiert und ist primär für Telefonie innerhalb von Gebäuden ausgelegt. Deren Reichweite beträgt ca. 30-50 Meter. DECT beschreibt eine reine Zugangstechnologie im Gegensatz zu herkömmlichen Mobilfunksystemen. Der Frequenzbereich bei DECT liegt bei 1880 MHz-1900 MHz.}
-	\item [ISM] {ISM steht für (Industrial, Scientific and Medical) darunter bezeichnet man die Hochfrequenz-Geräte in der Industrie, Wissenschaft, Medizin und häuslichen Bereichen eingesetzt werden}
+	\item [\ac{ISM}] {ISM steht für (Industrial, Scientific and Medical) darunter bezeichnet man die Hochfrequenz-Geräte in der Industrie, Wissenschaft, Medizin und häuslichen Bereichen eingesetzt werden. Die bekanntesten Anwendungen sind WLAN und Bluetooth.}
 \end{description}
 
 \section{Spektralanalyse der Dezimeterwelle}
@@ -83,7 +83,7 @@ In dem oben genannten Frequenzbereich liegen folgende Anwendungen:
 
 
 \section{Aufbau/Entwurf}
-Zu Beginn der praktischen Arbeit, wird der technische Versuchsaufbau beschrieben. Mit einer Skizze soll der Aufbau der Aufgabe detaillierte dargestellt werden. Wie in der Abbildung \ref{Technischer Aufbau} angezeigt, wird der Computer über den USB-Anschluss mit dem HackRF One verbunden. Darüber bezieht das SDR-Gerät seine notwendige Spannungsversorgung von 5 Volt.\\
+Zu Beginn der praktischen Arbeit, wird der technische Versuchsaufbau beschrieben. Mit einer Skizze soll der Aufbau der Aufgabe detaillierte dargestellt werden. Wie in der Abbildung \ref{Technischer Aufbau} angezeigt, wird der Computer über den \ac{USB}-Anschluss mit dem HackRF One verbunden. Darüber bezieht das SDR-Gerät seine notwendige Spannungsversorgung von 5 Volt.\\
 Die gegenüberliegende Seite befasst sich mit der Inbetriebnahme der ausgewählten Antenne. Diese hat einen N-Buchsen Anschluss und wird an den HackRF One angeschlossen dieser besitzt jedoch nur einen SMA-Anschluss. Dämpfung wird bei diesem Aufbau nicht berücksichtigt, da das Antennenkabel nur 10 Meter beträgt. Somit können die Geräte miteinander Kommunizieren und die empfangen Daten der Antenne bis hin zum Computer übertragen werden.  
 \begin{figure}[H]
 	\centering
@@ -112,7 +112,7 @@ Um mit GNU Radio eine SDR-Anwendung zu erstellen, muss man Blöcke, die die einz
 
 \section{Hardware}
 
-\subsection{Antenne} %TODO: Sollen wir eine von den Antennen, die wir uns anfangs auchgesucht haben mit unserer vergleichen und eine Entscheidungsmatrix aufstellen?  SO dass man sieht, dass wir uns Alternativen angeschaut haben?
+\subsection{Antenne} 
 
 Ganz allgemein kann man Antennen als Koppelelemente zwischen geführten und ungeführten elektromagnetischen Wellen, d. h. als Wandler zwischen Leitungs- und Freiraumwellen, auffassen. Quelle ist immer ein elektrischer oder magnetischer Dipol. Durch eine (Raum-)Transformation im Nahbereich, bei der die Richtungen der Felder (innerhalb der Fortpflanzungsgeschwindigkeit) gedreht werden, entsteht im Fernbereich die gelöste Wellenfront einer elektromagnetischen Welle. 
 
@@ -120,7 +120,7 @@ Elektromagnetische Wellen bestehen aus polarisierten elektrischen und magnetisch
 
 Eine Antenne die aus der Aufgabenstellung hervorgeht, muss dementsprechend den Frequenzbereich der Dezimeterwelle abdecken. Grundsätzlich gibt es zwei Möglichkeiten ein solches Analysesystem zu betreiben: Mit stationärer oder mobiler Antenne.
 
-Eine mobile Antennenlösung, die den oben genannten Anforderung gerecht wird wäre die HyperLOG 4040 Antenne. Sie ist eine Logarithmisch Periodische Breitband Antenne. Eine LPDA besteht aus einer Anzahl von Dipolantennen, deren Länge und Abstand zur Strahlungsrichtung hin abnehmen. Ein großer Vorteil dieser Technik ist die hohe Bandbreite der Antenne. Damit deckt Sie den Frequenzbereich der Aufgabe ab. Ein massiver Nachteil dieser Antennenart ist die Richtwirkung, dabei empfängt diese Arte der Antenne die Signale besser, wenn Sie zum Signal ausgerichtet wird. Ein weiterer negativer Faktor sind die enormen Kosten. Mit ca 350 \euro ist dieses Antenne in der oberen Preisregion angesiedelt. In der nachfolgenden Tabelle sind die technischen Daten der Antenne zu erkennen. 
+Eine mobile Antennenlösung, die den oben genannten Anforderung gerecht wird wäre die HyperLOG 4040 Antenne. Sie ist eine Logarithmisch Periodische Breitband Antenne. Eine LPDA besteht aus einer Anzahl von Dipolantennen, deren Länge und Abstand zur Strahlungsrichtung hin abnehmen. Ein großer Vorteil dieser Technik ist die hohe Bandbreite der Antenne. Damit deckt Sie den Frequenzbereich der Aufgabe ab. Ein massiver Nachteil dieser Antennenart ist die Richtwirkung, dabei empfängt diese Arte der Antenne die Signale besser, wenn Sie zum Signal ausgerichtet wird. Ein weiterer negativer Faktor sind die enormen Kosten. Mit ca 350\euro ist diese Antenne in der oberen Preisregion angesiedelt. In der nachfolgenden Tabelle sind die technischen Daten der Antenne zu erkennen. 
 
 \begin{figure}[H]
 	\centering
@@ -182,8 +182,9 @@ Im Folgenden Abschnitt beschreibt eine Tabelle die technischen Daten der Sirio S
 \end{table}
 
 
-\subsection{SDR-Gerät} %TODO: Struktur in den Text bringen. Absätze, Aufzählungen, etc
+\subsection{SDR-Gerät} 
 Ein Software Defined Radio Gerät, das man experimentell betreiben kann, reicht von mehreren tausend Euro teuren Forschungsgeräte bis zu kostenlosen Geräten, da selbst mittels einem Mikrofoneingang der Soundkarte am Computers, manche Signale empfangen werden können. Die Geräte unterscheiden sich hauptsächlich in Fähigkeiten wie:
+
 \begin{itemize}
 	\item Frequenzbereich
 	\item maximale Bandbreite
@@ -191,9 +192,17 @@ Ein Software Defined Radio Gerät, das man experimentell betreiben kann, reicht 
 \end{itemize}
 
 Beim Computer kommen häufig Universal Serial Bus (USB) und Ethernet als Schnittstelle zum  Einsatz.
-Da nur Empfängersignale geachtet werden soll, würde ein handelsüblicher DVB-T-Stick eine günstige Option darstellen. Mithilfe des entsprechenden Treibers kann der Stick mit GNU Radio genutzt werden, jedoch deckt sich der Frequenzbereich des Gerätes nicht, mit dem innerhalb der Aufgabenstellung der Dezimeterwelle.\\
+Da nur Empfängersignale betrachtet werden sollen, würde ein handelsüblicher DVB-T-Stick eine günstige Option darstellen. Mithilfe des entsprechenden Treibers kann der Stick mit GNU Radio genutzt werden, jedoch deckt sich der Frequenzbereich des Gerätes nicht, mit dem innerhalb der Aufgabenstellung beschriebenen Dezimeterwelle.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{NooElec.png}
+	\caption[NooElec DVB-T Stick]{NooElec DVB-T Sick. Quelle: \cite{NooElec:2018}} 
+	\label{NooElec}
+\end{figure}
+
 Das SDR-Gerät muss in Kombination mit der Funkantenne über den kompletten Frequenzbereich der Dezimeterwelle erstrecken, um die Metainformationen in diesem Bereich zu analysieren. Aus diesem Grund kann ein solchen Gerät für diese Arbeit nicht verwendet werden. Aus der Tabelle können die groben Daten des DVB-T Sticks entnommen werden.\\
-%TODO: Bild hinzufügen
+
 \begin{table}[h]
 	\centering
 	\begin{tabular}{c|c}
@@ -214,7 +223,6 @@ Das SDR-Gerät muss in Kombination mit der Funkantenne über den kompletten Freq
 
 Ein gutes Preis-Leistungsverhältnis bietet das HackRF One Board \cite{greatscott}. Die HackRF One Platine ist ein flexibles Testmodul für die Funkmesstechnik, das wie ein Software Defined Radio (SDR) arbeitet. Sie ist ein Open Source Hardware Transceiver, der hauptsächlich zu eigenen Versuchen und Messungen für SDRs eignet, außerdem ist dieses Gerät für die HF-Technik und messtechnischen Versuchsaufbauten im Amateurfunk vergleichsweise geringen Preises von rund 300 Euro sehr beliebt.\\
 
-Der Hack RF One deckt einen weiten Frequenzbereich von 1 bis 6000 MHz (6 GHz) ab, und erfasst damit sehr viele Frequenzbänder für kommerzielle, experimentelle und Amateurfunk-Anwendungen. Die Hardware bietet eine maximale Abtastrate des Signales von 20MS/s, dadurch werden Messungen und Experimente auch mit breitbandigen Signalen wie DECT, WFM oder WLAN möglich, jedoch nur halbduplex. Der AD-Wandler arbeitet mit 8 Bit Datenbreite und erreicht somit einen theoretischen Dynamikbereich von 48dB. Die digitalisierten I/Q Daten werden auf einem nachgeschalteten CPLD weiterverarbeitet und über den integrierten ARM-Prozessor per USB ausgegeben. Die gesamte Schaltung des HackRF Boards ist sehr stromsparend ausgelegt, sie wird komplett über USB versorgt. Die Platine hat eine Mikro-B USB Buchse. Abschließend lässt sich sagen, dass die oben genannten Gründe für eine optimal Nutzung dieses Gerätes sprechen \cite{wimo:2018}.\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.75\textwidth]{HackRFOne.png}
@@ -222,8 +230,7 @@ Der Hack RF One deckt einen weiten Frequenzbereich von 1 bis 6000 MHz (6 GHz) ab
 	\label{HackRFOne}
 \end{figure}
 
-
-
+Der Hack RF One deckt einen weiten Frequenzbereich von 1 bis 6000 MHz (6 GHz) ab, und erfasst damit sehr viele Frequenzbänder für kommerzielle, experimentelle und Amateurfunk-Anwendungen. Die Hardware bietet eine maximale Abtastrate des Signales von 20MS/s, dadurch werden Messungen und Experimente auch mit breitbandigen Signalen wie DECT, WFM oder WLAN möglich, jedoch nur halbduplex. Der AD-Wandler arbeitet mit 8 Bit Datenbreite und erreicht somit einen theoretischen Dynamikbereich von 48dB. Die digitalisierten I/Q Daten werden auf einem nachgeschalteten CPLD weiterverarbeitet und über den integrierten ARM-Prozessor per USB ausgegeben. Die gesamte Schaltung des HackRF Boards ist sehr stromsparend ausgelegt, sie wird komplett über USB versorgt. Die Platine hat eine Mikro-B USB Buchse. Abschließend lässt sich sagen, dass die oben genannten Gründe für eine optimal Nutzung dieses Gerätes sprechen \cite{wimo:2018}.\\
 
 \begin{table}[ht]
 	\centering
@@ -247,7 +254,7 @@ Der Hack RF One deckt einen weiten Frequenzbereich von 1 bis 6000 MHz (6 GHz) ab
 	\caption{Produktinformationen des HackRF One}
 \end{table}
 
-Abschließend lässt sich das Ergebnis in einer Tabelle visualisieren, darin werden die groben Gesichtspunkte der jeweiligen Komponenten verglichen und auf die Aufgabenstellung untersucht.\\
+Abschließend lässt sich das ein eindeutiges Ergebnis zu Stande kam, da die gewünschten Anforderungen nur durch den HackRF One gegeben sind. Was die Entscheidung, ein geeignetes SDR-Gerät deutliche simpler gestaltete.\\
 
 
 \begin{figure}[ht]
