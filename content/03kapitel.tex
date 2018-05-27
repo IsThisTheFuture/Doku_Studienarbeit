@@ -16,16 +16,6 @@ Die aufgeführten Anforderungen werden bei der Planung des Systems, besonders be
 Zunächst wird jedoch im Verlauf des Kapitels das Frequenzspektrum der Dezimeterwelle und die rechtlichen Rahmenbedingungen für Dienste in diesem Bereich untersucht, um mögliche Rückschlüsse auf das zu entwerfende System ziehen zu können.
 
 
-%Die Angabe des Spektrums bietet folgende Vorteile: 
-
-%Das Ergebnis ist in der Regel deutlich präziser. Wenngleich das Oszilloskop wohl das
-%wichtigste Messinstrument der Elektrotechnik ist, arbeitet es vergleichsweise ungenau. Es
-%liefert dem Anwender einen groben Überblick über die Form des Signals. Bei den ge-
-%genwärtig verbreiteten Digitalspeicheroszilloskopen mit 8-bit-Wandler ist die Dynamik
-%schon aufgrund der Analog-Digital-Wandlung auf bestenfalls 48dB begrenzt; bei guten
-%Spectrum Analyzern erreicht man hingegen 120dB und mehr.
-
-
 \newpage
 \section{Das Frequenzspektrum}
 \label{section-frequenzbereiche}
@@ -41,9 +31,7 @@ Zur Orientierung im Spektrum elektromagnetischer Wellen haben sich international
 
 
 
-
-
-\subsection{Rechtliche Grundlagen} %TODO
+\subsection{Rechtliche Grundlagen}
 In Deutschland gilt rechtlich zudem die Aufteilung des Frequenzbereiches von 9 kHz bis 3000 GHz, welche von der Bundesnetzagentur im sogenannten Frequenzplan \cite[Bundesnetzagentur, 2016]{bundesnetzagentur-frequenzplan:2016} gemäß § 54 TKG festgehalten wird.
 Dort werden die Frequenzbereiche nach Frequenznutzung (Amateurfunk, Seefunk, WLAN, etc.) eingeteilt und entsprechende Nutzungsbestimmungen spezifiziert:
 
@@ -65,20 +53,29 @@ Der damit untersuchte Frequenzbereich erstreckt sich von 300 MHz bis 3 GHz. Daru
 In dem oben genannten Frequenzbereich liegen folgende Anwendungen:
 
 \begin{description}
-	\item [GSM 400]{In diesem Frequenzbereich von 380 Mhz - 496 MHz befindet sich der digitale \ac{BOS}-Funk. Der BOS-Funk ist ein nichtöffentlicher mobiler \ac{UKW}-Funkdienst. Dieser wird von Behörden und Organisationen mit Sicherheitsaufgaben verwendet. Über diese Technik können Einsatzkräfte miteinander kommunizieren oder direkt alarmiert werden.}
+	\item [GSM 400]{In diesem Frequenzbereich von 380 Mhz - 496 MHz befindet sich der digitale \ac{BOS}-Funk. Der BOS-Funk ist ein nichtöffentlicher mobiler \ac{UKW}-Funkdienst. Über diese Technik können Einsatzkräfte miteinander kommunizieren oder direkt alarmiert werden.}
 	\item [\ac{SRD}] {Short Range Devices sind Funkanwendungen die Jedermann für Sprach und Datenübertragung verwenden kann. Darunter liegen Geräte wie der Autoschlüssel, Wetterstationen und weitere Anwendungen im Smart Home Bereich. Diese Funktechnik liegt im Bereich von 443 MHz. Um in Zukunft die Störung innerhalb dieser Technik zu verringern  wurde das 860 Mhz-Band festgelegt. Dieses wurde in mehrere Subbänder unterteilt, um gegenseitige Störungen zu vermeiden. Dieser Bereich erstreckt sich von 863 MHz - 870 MHz. Jedes dieser Subbänder hat für die Nutzung besondere Parameter vorgesehen. Darunter kommunizieren Geräte wie Funk-Alarmanlagen und gewisse "Internet of Things"- Geräte.}
-	\item [\ac{GSM} 900] {GSM steht für Global System for Mobile Communications. Das ist ein Mobilfunkstandard für Mobilfunknetze. Hauptsächlich wird dieses Netz für Telefonie und Datenübertragung wie Kurzmitteilungen (SMS). GSM wurde als mobile Alternative zum ISDN Telefonnetz entwickelt. Das GSM Netz bietet die technische Grundlage der D- und E-Netze.  }
-	\item [GPS] {}%TODO}
-	\item [DECT] {Digital Enhanced Cordless Telecommunications ist ein internationaler Standard für Telekommunikation mittels Funktechnik häufig bei Mobiltelefonen. Dieser Standard arbeitet grundsätzlich verbindungsorientiert und ist primär für Telefonie innerhalb von Gebäuden ausgelegt. Deren Reichweite beträgt ca. 30-50 Meter. DECT beschreibt eine reine Zugangstechnologie im Gegensatz zu herkömmlichen Mobilfunksystemen. Der Frequenzbereich bei DECT liegt bei 1880 MHz-1900 MHz.}
-	\item [\ac{ISM}] {ISM steht für (Industrial, Scientific and Medical) darunter bezeichnet man die Hochfrequenz-Geräte in der Industrie, Wissenschaft, Medizin und häuslichen Bereichen eingesetzt werden. Die bekanntesten Anwendungen sind WLAN und Bluetooth.}
+	\item [\ac{GSM} 900] {GSM ist ein Mobilfunkstandard für Mobilfunknetze. Hauptsächlich wird dieses Netz für Telefonie und Datenübertragung wie Kurzmitteilungen (SMS). GSM wurde als mobile Alternative zum ISDN Telefonnetz entwickelt. Das GSM Netz bietet die technische Grundlage der D- und E-Netze.  }
+	\item [\ac{GPS}] {Das GPS ist ein globales Navigationssatellitensystem zur Positionsbestimmung. Die Kommunikation der spezifischen Daten wie Position und Uhrzeit erfolgt auf der Frequenz 1227,60 Mhz. Zur genauen Positionsbestimmung muss ein Empfänger die Signale von vier Satelliten gleichzeitig empfangen. Im Empfangsgerät werden die Signallaufzeiten gemessen und unter Berücksichtigung der Uhrfehler, die aktuelle Position und Höhe errechnet.}
+	\item [\ac{DECT}] {DECT ist ein internationaler Standard für Telekommunikation mittels Funktechnik häufig bei Mobiltelefonen. Dieser Standard arbeitet grundsätzlich verbindungsorientiert und ist primär für Telefonie innerhalb von Gebäuden ausgelegt. Deren Reichweite beträgt ca. 30-50 Meter. DECT beschreibt eine reine Zugangstechnologie im Gegensatz zu herkömmlichen Mobilfunksystemen. Der Frequenzbereich bei DECT liegt bei 1880 MHz-1900 MHz.}
+	\item [\ac{ISM}] {ISM bezeichnet die Hochfrequenz-Geräte, die für Industrie, Wissenschaft, Medizin und häuslichen Bereichen eingesetzt werden. Die bekanntesten Anwendungen darunter sind  WLAN und Bluetooth.}
 \end{description}
 
 
 \section{Software}
 \subsection{SDR Sharp}
 SDR\# (gesprochen: \enquote{SDR Sharp}) ist eine kostenlose Software von Airspy \cite{airspy:2018}, die ausschließlich für Microsoft Windows erhältlich ist. Mit dieser Anwendung lassen sich u. a. mittels Software Defined Radio Systemen empfangene Signale auslesen und etwa im Frequenzbereich oder in einem Wasserfalldiagramm visualisieren.
-So lassen sich einige Modulationsarten relativ schnell und rein visuell identifizieren.
-%TODO Bild von SDR# hinzufügen: Am besten ein FM Radiosignal, und erklären woran man die FM Modulation erkennt. Nur zuhause möglich.
+So lassen sich einige Modulationsarten relativ schnell testen. 
+
+In der Abbildung \ref{SDRSharp}  ist die Oberfläche von SDR\# zu erkennen. Im oben drittel des Bereichs ist das erkannte Signal dargestellt. Auf der linken Seite können unterschiedliche Einstellung vorgenommen werden. Eine essenzielle Eigenschaft ist das einstellen der Modulationsart. Damit kann sehr leicht getestet werden, ob bei dem empfangenen Signal es sich um eine Frequenzmodulation oder Amplitudenmodulation handelt. Im unteren rechten Bereich wird ein Fenster angezeigt, das den Namen Audio Spektrum trägt. In der Abbildung ist ein Audio Spektrum zu erkennen, was bedeutet, dass etwas zu hören ist. Im Gegensatz zu der Amplitudenmodulation wird in diesem Fenster somit gar nichts angezeigt. Somit kann durch eine Aufnahme des Signals mit unterschiedlichen Modulationsarten getestet werden, wie das Signal aufgebaut wird und dekodiert werden kann.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{SdrSharp.png}
+	\caption[SDR Sharp: Modulationsartbestimmung an einem konkreten Beispiel]{SDR Sharp: Modulationsartbestimmung an einem konkreten Beispiel} 
+	\label{SDRSharp}
+\end{figure}
+
 
 \subsection{GNU Radio}
 GNU Radio \cite{gnuradio} ist ein freies, quelloffenes Entwicklerwerkzeug zur Implementierung von Software Defined Radio mittels Signalverarbeitungsblöcken. Es kann mit externer Funkhardware oder als Simulation ohne zusätzliche Hardware genutzt werden. GNU Radio ist im Hobbybereich weit verbreitet, wird aber auch in der Wissenschaft und im kommerziellen Bereich genutzt. GNU Radio Programme können zusätzlich durch selbst programmierte Ergänzungsblöcke erweitert werden. Die können wahlweise in den Programmiersprachen Python oder C++ geschrieben werden, wobei sich besonders für echtzeitkritische Signalverarbeitungen letzteres anbietet.\\
@@ -248,7 +245,7 @@ Die Verarbeitung im Basisband bzw. in einer Zwischenfrequenz erfolgt durch einen
 	\label{HackRFOne-Blockschaltbild}
 \end{figure}
 
-
+\newpage
 \section{Aufbau/Entwurf}
 Zu Beginn der praktischen Arbeit, wird der technische Versuchsaufbau beschrieben. Mit einer Skizze soll der Aufbau der Aufgabe detaillierte dargestellt werden. Wie in der Abbildung \ref{Technischer Aufbau} angezeigt, wird der Computer über den \ac{USB}-Anschluss mit dem HackRF One verbunden. Darüber bezieht das SDR-Gerät seine notwendige Spannungsversorgung von 5 Volt.\\
 Die gegenüberliegende Seite befasst sich mit der Inbetriebnahme der ausgewählten Antenne. Diese hat einen N-Buchsen Anschluss und wird an den HackRF One angeschlossen dieser besitzt jedoch nur einen SMA-Anschluss. Dämpfung wird bei diesem Aufbau nicht berücksichtigt, da das Antennenkabel nur 10 Meter beträgt. Somit können die Geräte miteinander Kommunizieren und die empfangen Daten der Antenne bis hin zum Computer übertragen werden.  
@@ -259,8 +256,11 @@ Die gegenüberliegende Seite befasst sich mit der Inbetriebnahme der ausgewählt
 	\label{Technischer Aufbau}
 \end{figure}
 
-
+\newpage
 \section{Spektralanalyse der Dezimeterwelle}
+Die Abbildung \ref{spektralanalyse} zeigt das komplette Spektrum der Dezimeterwelle. Dabei wird erkannt welche Anwendungen in diesem Frequenzbereich liegen. Um eine solche Übersicht zu erschaffen, musste ein Interator über den Frequenzbereich genutzt werden. Der HackRF One bietet einen sogenannten Sweep Mode. Nach Installation und Inbetriebnahme dieses Modus konnte ein kompletter Bereich innerhalb von Sekunden gescannt werden. Die unten gezeigt Abbildung zeigt das komplette Spektrum der Dezimeterwelle mit den empfangenen Signalen auf den jeweiligen Frequenzen. Somit konnte eine Übersicht erstellt werden, auf welchen Frequenzen ein Signal empfangen wurde.\\
+
+Wie sehr gut zu erkennen liegen viele und starke Signale in den Frequenzbereich 443 Mhz, 868 Mhz, 900 Mhz (GSM 900) und 1,2 GHz (GPS) weitere lokale Maxima der Kurve liegen bei 1,8 GHz - 2,2 GHz (Mobiler Landesfunkdienst UMTS) und 2,4 GHz (WLAN, Bluetooth)
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{spektrum.png}

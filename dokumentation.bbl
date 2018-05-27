@@ -40,7 +40,7 @@
       \strng{authornamehash}{e04ee1c0a3e255cba45b1c039a40e29a}
       \strng{authorfullhash}{e04ee1c0a3e255cba45b1c039a40e29a}
       \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-662-49753-1}
@@ -99,7 +99,7 @@
       \strng{authornamehash}{1eafb42d00d725d92e794723934a9a70}
       \strng{authorfullhash}{e2bd0f7bc90bc432ea597fca5580b499}
       \field{sortinit}{3}
-      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9783527812608}
@@ -110,6 +110,33 @@
       \endverb
       \verb{url}
       \verb https://books.google.de/books?id=ldM3DwAAQBAJ
+      \endverb
+    \endentry
+    \entry{uniwien:2018}{online}{}
+      \name{author}{1}{}{%
+        {{hash=7fe74a31513170fd6e98abfe34eda537}{%
+           family={Wien},
+           familyi={W\bibinitperiod},
+           given={Universität},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{7fe74a31513170fd6e98abfe34eda537}
+      \strng{fullhash}{7fe74a31513170fd6e98abfe34eda537}
+      \strng{bibnamehash}{7fe74a31513170fd6e98abfe34eda537}
+      \strng{authorbibnamehash}{7fe74a31513170fd6e98abfe34eda537}
+      \strng{authornamehash}{7fe74a31513170fd6e98abfe34eda537}
+      \strng{authorfullhash}{7fe74a31513170fd6e98abfe34eda537}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Welleneigenschaften}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.univie.ac.at/mikroskopie/1_grundlagen/optik/wellenoptik/2_welleneigenschaften.htm
+      \endverb
+      \verb{url}
+      \verb https://www.univie.ac.at/mikroskopie/1_grundlagen/optik/wellenoptik/2_welleneigenschaften.htm
       \endverb
     \endentry
     \entry{Werner:2006}{book}{}
@@ -132,8 +159,8 @@
       \strng{authorbibnamehash}{15811b5ec1fe33466f28bf87a7c290c3}
       \strng{authornamehash}{15811b5ec1fe33466f28bf87a7c290c3}
       \strng{authorfullhash}{15811b5ec1fe33466f28bf87a7c290c3}
-      \field{sortinit}{4}
-      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-528-04126-7}
@@ -160,8 +187,8 @@
       \strng{authorbibnamehash}{04d1f08a0399197d7946759d6159777d}
       \strng{authornamehash}{04d1f08a0399197d7946759d6159777d}
       \strng{authorfullhash}{04d1f08a0399197d7946759d6159777d}
-      \field{sortinit}{5}
-      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-8348-1674-0}
@@ -197,8 +224,8 @@
       \strng{authorbibnamehash}{15811b5ec1fe33466f28bf87a7c290c3}
       \strng{authornamehash}{15811b5ec1fe33466f28bf87a7c290c3}
       \strng{authorfullhash}{15811b5ec1fe33466f28bf87a7c290c3}
-      \field{sortinit}{6}
-      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-8348-2580-3}
@@ -239,8 +266,8 @@
       \strng{authorbibnamehash}{5379122af88e4286c232380363f7aeab}
       \strng{authornamehash}{5379122af88e4286c232380363f7aeab}
       \strng{authorfullhash}{5379122af88e4286c232380363f7aeab}
-      \field{sortinit}{9}
-      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-662-53233-1}
@@ -271,7 +298,7 @@
       \strng{authornamehash}{c25005eec6c69a2413a902ae1b36aded}
       \strng{authorfullhash}{c25005eec6c69a2413a902ae1b36aded}
       \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Two different sinusoids that fit the same set of samples}
@@ -304,7 +331,7 @@
       \strng{authornamehash}{9efbe0c7d22c50bb628b4be07c9bdf73}
       \strng{authorfullhash}{9efbe0c7d22c50bb628b4be07c9bdf73}
       \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-662-52658-3}
@@ -340,8 +367,8 @@
       \strng{authorbibnamehash}{35bb028d5fbc3a7234937100de2c2eb0}
       \strng{authornamehash}{35bb028d5fbc3a7234937100de2c2eb0}
       \strng{authorfullhash}{35bb028d5fbc3a7234937100de2c2eb0}
-      \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-658-18320-2}
@@ -378,7 +405,7 @@
       \strng{authornamehash}{c72bb000f7167dd342cc024b9dcd9906}
       \strng{authorfullhash}{c72bb000f7167dd342cc024b9dcd9906}
       \field{sortinit}{2}
-      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{3-8273-7100-7}
@@ -405,8 +432,8 @@
       \strng{authorbibnamehash}{ad04d9ec79375087d511e86080bd2a95}
       \strng{authornamehash}{ad04d9ec79375087d511e86080bd2a95}
       \strng{authorfullhash}{ad04d9ec79375087d511e86080bd2a95}
-      \field{sortinit}{2}
-      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-658-13964-3}
@@ -457,8 +484,8 @@
       \strng{editorbibnamehash}{b1e3e378a1fd9350f5c00e43404c6710}
       \strng{editornamehash}{b1e3e378a1fd9350f5c00e43404c6710}
       \strng{editorfullhash}{b1e3e378a1fd9350f5c00e43404c6710}
-      \field{sortinit}{2}
-      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Stichworte zum Kapitel: {Ü}bersicht; Sinustr{ä}ger - mit Analogsignal moduliert (Amplitudenmodulation): Verfahren, Sonderformen (ESB, SSB, RM, Quadraturmodulation u. a.), Demodulation; Winkelmodulation: Frequenz- und Phasenmodulation, Demodulation; Sinustr{ä}ger - mit Digitalsignal moduliert: Amplitudenumtastung, Frequenzumtastung, Phasenumtastung, Demodulation; Pulstr{ä}ger - uncodiert: Pulsamplituden-, Pulsfrequenz-, Pulsphasen-, Pulsdauer-Modulation, Demodulation; Pulscode-Modulation: Prinzip, Codierungsverfahren, Quantisierungsger{ä}usch, Kompandierung, Abtast-Halte-Glied, Aliasing-Effekt.}
@@ -492,8 +519,8 @@
       \strng{authorbibnamehash}{3be298f6e9ed21f9bf33ee9fa48aaa52}
       \strng{authornamehash}{3be298f6e9ed21f9bf33ee9fa48aaa52}
       \strng{authorfullhash}{3be298f6e9ed21f9bf33ee9fa48aaa52}
-      \field{sortinit}{2}
-      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Recommendation ITU-R V.431-8. Nomenclature of the frequency and wavelength bands used in telecommunications}
@@ -521,8 +548,8 @@
       \strng{authorbibnamehash}{f14c047a6d7b5ab04859ac05104798dc}
       \strng{authornamehash}{f14c047a6d7b5ab04859ac05104798dc}
       \strng{authorfullhash}{f14c047a6d7b5ab04859ac05104798dc}
-      \field{sortinit}{3}
-      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Fre­quenz­plan}
@@ -534,33 +561,38 @@
       \verb https://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Frequenzen/Grundlagen/Frequenzplan/frequenzplan-node.html
       \endverb
     \endentry
-    \entry{bundesamt-strahlungsschutz:2012}{online}{}
-      \name{author}{1}{}{%
-        {{hash=8f676b4da4e5e1add7d623491df2ae62}{%
-           family={Strahlungsschutz},
-           familyi={S\bibinitperiod},
-           given={Bundesamt},
-           giveni={B\bibinitperiod},
-           prefix={für},
-           prefixi={f\bibinitperiod}}}%
-      }
-      \strng{namehash}{8f676b4da4e5e1add7d623491df2ae62}
-      \strng{fullhash}{8f676b4da4e5e1add7d623491df2ae62}
-      \strng{bibnamehash}{8f676b4da4e5e1add7d623491df2ae62}
-      \strng{authorbibnamehash}{8f676b4da4e5e1add7d623491df2ae62}
-      \strng{authornamehash}{8f676b4da4e5e1add7d623491df2ae62}
-      \strng{authorfullhash}{8f676b4da4e5e1add7d623491df2ae62}
-      \field{sortinit}{3}
-      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
-      \field{labelnamesource}{author}
+    \entry{airspy:2018}{online}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labeltitlesource}{title}
-      \field{title}{Sprach- und Datenübertragung per Funk: Bluetooth und WLAN}
-      \field{year}{2012}
+      \field{title}{Airspy Low Cost High Performance SDR}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.bfs.de/SharedDocs/Downloads/BfS/DE/broschueren/emf/info-bluethooth-und-wlan.pdf?__blob=publicationFile&v=4
+      \verb https://airspy.com/
       \endverb
       \verb{url}
-      \verb https://www.bfs.de/SharedDocs/Downloads/BfS/DE/broschueren/emf/info-bluethooth-und-wlan.pdf?__blob=publicationFile&v=4
+      \verb https://airspy.com/
+      \endverb
+    \endentry
+    \entry{gnuradio}{online}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labeltitlesource}{title}
+      \field{title}{GNU Radio}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.gnuradio.org/
+      \endverb
+      \verb{url}
+      \verb https://www.gnuradio.org/
       \endverb
     \endentry
     \entry{Funktechnik:2018}{online}{}
@@ -577,8 +609,8 @@
       \strng{authorbibnamehash}{247f4709d5c20d6d5cb343066d0106c3}
       \strng{authornamehash}{247f4709d5c20d6d5cb343066d0106c3}
       \strng{authorfullhash}{247f4709d5c20d6d5cb343066d0106c3}
-      \field{sortinit}{4}
-      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Sirio SD 3000N}
@@ -590,29 +622,46 @@
       \verb https://www.funktechnik-bielefeld.de/sirio-sd-3000n-discone-stationsantenne-fuer-300-3000-mhz
       \endverb
     \endentry
-    \entry{wimo:2018}{online}{}
+    \entry{NooElec:2018}{online}{}
       \name{author}{1}{}{%
-        {{hash=0263a72303694fe1d8a4a264abd88928}{%
-           family={Wimo},
-           familyi={W\bibinitperiod}}}%
+        {{hash=714ff8af37f42be57ee30ae24abbcfb9}{%
+           family={NooElec},
+           familyi={N\bibinitperiod}}}%
       }
-      \strng{namehash}{0263a72303694fe1d8a4a264abd88928}
-      \strng{fullhash}{0263a72303694fe1d8a4a264abd88928}
-      \strng{bibnamehash}{0263a72303694fe1d8a4a264abd88928}
-      \strng{authorbibnamehash}{0263a72303694fe1d8a4a264abd88928}
-      \strng{authornamehash}{0263a72303694fe1d8a4a264abd88928}
-      \strng{authorfullhash}{0263a72303694fe1d8a4a264abd88928}
-      \field{sortinit}{4}
-      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \strng{namehash}{714ff8af37f42be57ee30ae24abbcfb9}
+      \strng{fullhash}{714ff8af37f42be57ee30ae24abbcfb9}
+      \strng{bibnamehash}{714ff8af37f42be57ee30ae24abbcfb9}
+      \strng{authorbibnamehash}{714ff8af37f42be57ee30ae24abbcfb9}
+      \strng{authornamehash}{714ff8af37f42be57ee30ae24abbcfb9}
+      \strng{authorfullhash}{714ff8af37f42be57ee30ae24abbcfb9}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Hack RF One}
+      \field{title}{NooElec DVB-T Stick}
       \field{year}{2018}
       \verb{urlraw}
-      \verb http://www.wimo.com/hackrf-sdr_d.html
+      \verb http://www.nooelec.com/store/sdr/sdr-receivers/nesdr-mini2-rtl2832u-r820t2.html
       \endverb
       \verb{url}
-      \verb http://www.wimo.com/hackrf-sdr_d.html
+      \verb http://www.nooelec.com/store/sdr/sdr-receivers/nesdr-mini2-rtl2832u-r820t2.html
+      \endverb
+    \endentry
+    \entry{greatscott}{online}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labeltitlesource}{title}
+      \field{title}{HackRD One, Great Scott Gadgets}
+      \field{urlday}{21}
+      \field{urlmonth}{5}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://greatscottgadgets.com/hackrf/
+      \endverb
+      \verb{url}
+      \verb https://greatscottgadgets.com/hackrf/
       \endverb
     \endentry
     \entry{HackRFOne:2018}{online}{}
@@ -627,8 +676,8 @@
       \strng{authorbibnamehash}{0263a72303694fe1d8a4a264abd88928}
       \strng{authornamehash}{0263a72303694fe1d8a4a264abd88928}
       \strng{authorfullhash}{0263a72303694fe1d8a4a264abd88928}
-      \field{sortinit}{4}
-      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Hack RF One}
@@ -640,9 +689,147 @@
       \verb https://www.google.de/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiT_P_Qs7faAhWiMewKHUSCDLEQjRx6BAgAEAU&url=http%3A%2F%2Fwww.wimo.com%2Fhackrf-sdr_d.html&psig=AOvVaw3F2NrypAJSJgEbVIZ-9Jpz&ust=1523714136900811
       \endverb
     \endentry
+    \entry{wimo:2018}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0263a72303694fe1d8a4a264abd88928}{%
+           family={Wimo},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{0263a72303694fe1d8a4a264abd88928}
+      \strng{fullhash}{0263a72303694fe1d8a4a264abd88928}
+      \strng{bibnamehash}{0263a72303694fe1d8a4a264abd88928}
+      \strng{authorbibnamehash}{0263a72303694fe1d8a4a264abd88928}
+      \strng{authornamehash}{0263a72303694fe1d8a4a264abd88928}
+      \strng{authorfullhash}{0263a72303694fe1d8a4a264abd88928}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Hack RF One}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb http://www.wimo.com/hackrf-sdr_d.html
+      \endverb
+      \verb{url}
+      \verb http://www.wimo.com/hackrf-sdr_d.html
+      \endverb
+    \endentry
+    \entry{qorvo}{online}{}
+      \name{author}{1}{}{%
+        {{hash=380c1883b043cba6986a13417ddc3dd1}{%
+           family={Inc.},
+           familyi={I\bibinitperiod},
+           given={Qorvo},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{380c1883b043cba6986a13417ddc3dd1}
+      \strng{fullhash}{380c1883b043cba6986a13417ddc3dd1}
+      \strng{bibnamehash}{380c1883b043cba6986a13417ddc3dd1}
+      \strng{authorbibnamehash}{380c1883b043cba6986a13417ddc3dd1}
+      \strng{authornamehash}{380c1883b043cba6986a13417ddc3dd1}
+      \strng{authorfullhash}{380c1883b043cba6986a13417ddc3dd1}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{RFFC5072. 85 - 4200 MHz Wideband Synthesizer / VCO with Integrated 6 GHz RF Mixer}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://www.qorvo.com/products/p/RFFC5072#overview
+      \endverb
+      \verb{url}
+      \verb https://www.qorvo.com/products/p/RFFC5072#overview
+      \endverb
+    \endentry
+    \entry{max2837}{online}{}
+      \name{author}{1}{}{%
+        {{hash=1e32a1a91c0604ab851ae2d91e1e8bf3}{%
+           family={Integrated},
+           familyi={I\bibinitperiod},
+           given={Maxim},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{1e32a1a91c0604ab851ae2d91e1e8bf3}
+      \strng{fullhash}{1e32a1a91c0604ab851ae2d91e1e8bf3}
+      \strng{bibnamehash}{1e32a1a91c0604ab851ae2d91e1e8bf3}
+      \strng{authorbibnamehash}{1e32a1a91c0604ab851ae2d91e1e8bf3}
+      \strng{authornamehash}{1e32a1a91c0604ab851ae2d91e1e8bf3}
+      \strng{authorfullhash}{1e32a1a91c0604ab851ae2d91e1e8bf3}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MAX2837. 2.3GHz to 2.7GHz Wireless Broadband RF Transceiver}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.maximintegrated.com/en/products/comms/wireless-rf/MAX2837.html
+      \endverb
+      \verb{url}
+      \verb https://www.maximintegrated.com/en/products/comms/wireless-rf/MAX2837.html
+      \endverb
+    \endentry
+    \entry{max5864}{online}{}
+      \name{author}{1}{}{%
+        {{hash=1e32a1a91c0604ab851ae2d91e1e8bf3}{%
+           family={Integrated},
+           familyi={I\bibinitperiod},
+           given={Maxim},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{1e32a1a91c0604ab851ae2d91e1e8bf3}
+      \strng{fullhash}{1e32a1a91c0604ab851ae2d91e1e8bf3}
+      \strng{bibnamehash}{1e32a1a91c0604ab851ae2d91e1e8bf3}
+      \strng{authorbibnamehash}{1e32a1a91c0604ab851ae2d91e1e8bf3}
+      \strng{authornamehash}{1e32a1a91c0604ab851ae2d91e1e8bf3}
+      \strng{authorfullhash}{1e32a1a91c0604ab851ae2d91e1e8bf3}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MAX5864. Ultra-Low-Power, High-Dynamic-Performance, 22Msps Analog Front End}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.maximintegrated.com/en/products/analog/data-converters/analog-front-end-ics/MAX5864.html
+      \endverb
+      \verb{url}
+      \verb https://www.maximintegrated.com/en/products/analog/data-converters/analog-front-end-ics/MAX5864.html
+      \endverb
+    \endentry
+    \entry{hackrf-wiki:2016}{online}{}
+      \name{author}{2}{}{%
+        {{hash=a9dd56841ae6c73672f01534691a79e9}{%
+           family={Mossman},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6190b099ba060805d7825eb0c8374637}{%
+           family={Nieznalski},
+           familyi={N\bibinitperiod},
+           given={Jakub},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{bb0349f4c30f1402bf6ab0b339c8632d}
+      \strng{fullhash}{bb0349f4c30f1402bf6ab0b339c8632d}
+      \strng{bibnamehash}{bb0349f4c30f1402bf6ab0b339c8632d}
+      \strng{authorbibnamehash}{bb0349f4c30f1402bf6ab0b339c8632d}
+      \strng{authornamehash}{bb0349f4c30f1402bf6ab0b339c8632d}
+      \strng{authorfullhash}{bb0349f4c30f1402bf6ab0b339c8632d}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Hardware Components}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://github.com/mossmann/hackrf/wiki/Hardware-Components
+      \endverb
+      \verb{url}
+      \verb https://github.com/mossmann/hackrf/wiki/Hardware-Components
+      \endverb
+    \endentry
     \entry{osmocom:2018}{online}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labeltitlesource}{title}
       \field{title}{Open Source Mobile Communications}
       \field{year}{2018}
@@ -654,8 +841,8 @@
       \endverb
     \endentry
     \entry{gr-osmosdr:2018}{online}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labeltitlesource}{title}
       \field{title}{gr-osmosdr}
       \field{year}{2018}
@@ -664,6 +851,48 @@
       \endverb
       \verb{url}
       \verb https://github.com/osmocom/gr-osmosdr
+      \endverb
+    \endentry
+    \entry{ppm}{online}{}
+      \name{author}{4}{}{%
+        {{hash=0ce18b7d24b1c5a3169ad41a778b3f2d}{%
+           family={Whiting},
+           familyi={W\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod}}}%
+        {{hash=263777324261fb3eee74005e1ed8ce54}{%
+           family={Sorensen},
+           familyi={S\bibinitperiod},
+           given={Dana},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d9e178cc01874be6cb8e994e2a250982}{%
+           family={Moon},
+           familyi={M\bibinitperiod},
+           given={Todd\bibnamedelima K.},
+           giveni={T\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=d942af1391b6d786b48bf3a5babe9d1e}{%
+           family={Gunther},
+           familyi={G\bibinitperiod},
+           given={Jacob\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{369c144087ee26273fac7b2cfbc92f29}
+      \strng{fullhash}{6f4ea942b48656827d04aa34f6be1383}
+      \strng{bibnamehash}{369c144087ee26273fac7b2cfbc92f29}
+      \strng{authorbibnamehash}{369c144087ee26273fac7b2cfbc92f29}
+      \strng{authornamehash}{369c144087ee26273fac7b2cfbc92f29}
+      \strng{authorfullhash}{6f4ea942b48656827d04aa34f6be1383}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Time and Frequency Corrections in a Distributed Network Using GNURadio}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://pubs.gnuradio.org/index.php/grcon/article/download/38/28/
+      \endverb
+      \verb{url}
+      \verb https://pubs.gnuradio.org/index.php/grcon/article/download/38/28/
       \endverb
     \endentry
   \enddatalist
