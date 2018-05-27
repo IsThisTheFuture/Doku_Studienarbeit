@@ -54,7 +54,7 @@ In dem oben genannten Frequenzbereich liegen unter anderem folgende Anwendungen:
 
 \begin{description}
 
-	\item [\ac{GSM} 400]{In diesem Frequenzbereich von 380 Mhz - 496 MHz befindet sich der digitale \ac{BOS}-Funk. Der BOS-Funk ist ein nichtöffentlicher mobiler \ac{UKW}-Funkdienst. Über diese Technik können Einsatzkräfte miteinander kommunizieren oder direkt alarmiert werden.}
+	\item [\ac{GSM} 400]{In diesem Frequenzbereich von 380 MHz - 496 MHz befindet sich der digitale \ac{BOS}-Funk. Der BOS-Funk ist ein nichtöffentlicher mobiler \ac{UKW}-Funkdienst. Über diese Technik können Einsatzkräfte miteinander kommunizieren oder direkt alarmiert werden.}
 	\item [\ac{SRD}] {Short Range Devices sind Funkanwendungen die Jedermann für Sprach und Datenübertragung verwenden kann. Darunter liegen Geräte wie der Autoschlüssel, Wetterstationen und weitere Anwendungen im Smart Home Bereich. Diese Funktechnik liegt im Bereich von 443 MHz. Um in Zukunft die Störung innerhalb dieser Technik zu verringern  wurde das 860 Mhz-Band festgelegt. Dieses wurde in mehrere Subbänder unterteilt, um gegenseitige Störungen zu vermeiden. Dieser Bereich erstreckt sich von 863 MHz - 870 MHz. Jedes dieser Subbänder hat für die Nutzung besondere Parameter vorgesehen. Darunter kommunizieren Geräte wie Funk-Alarmanlagen und gewisse "Internet of Things"- Geräte.}
 	\item [\ac{GSM} 900] {GSM ist ein Mobilfunkstandard für Mobilfunknetze. Hauptsächlich wird dieses Netz für Telefonie und Datenübertragung wie Kurzmitteilungen (SMS). GSM wurde als mobile Alternative zum ISDN Telefonnetz entwickelt. Das GSM Netz bietet die technische Grundlage der D- und E-Netze, worauf die heutigen Landesmobilfunknetze wie UMTS aufbauen.}
 	\item [\ac{GPS}] {Das GPS ist ein globales Navigationssatellitensystem zur Positionsbestimmung. Die Kommunikation der spezifischen Daten wie Position und Uhrzeit erfolgt auf der Frequenz 1227,60 Mhz. Zur genauen Positionsbestimmung muss ein Empfänger die Signale von vier Satelliten gleichzeitig empfangen. Im Empfangsgerät werden die Signallaufzeiten gemessen und unter Berücksichtigung der Uhrfehler, die aktuelle Position und Höhe errechnet.}
@@ -77,16 +77,20 @@ In der Abbildung \ref{SDRSharp}  ist die Oberfläche von SDR\# zu erkennen. Im o
 	\label{SDRSharp}
 \end{figure}
 
+\subsection{QSpectrumAnalyzer}
+QSpectrumAnalyzer \cite{qspectrum} ist ein Tool mit dem es möglich ist, einen Bereich zu scannen, der größer ist als die Bandbreite des dafür verwendeten SDR Gerätes.
+Dabei wird in einer Schleife schrittweise über das zu überwachende Spektrum iteriert und die Ergebnisse jeder Frequenz gemittelt, bis ein vollständiges Bild des Frequenzbereiches darstellt werden kann.
 
+\newpage
 \subsection{GNU Radio}
 GNU Radio \cite{gnuradio} ist ein freies, quelloffenes Entwicklerwerkzeug zur Implementierung von Software Defined Radio mittels Signalverarbeitungsblöcken. Es kann mit externer Funkhardware oder als Simulation ohne zusätzliche Hardware genutzt werden. GNU Radio ist im Hobbybereich weit verbreitet, wird aber auch in der Wissenschaft und im kommerziellen Bereich genutzt. GNU Radio Programme können zusätzlich durch selbst programmierte Ergänzungsblöcke erweitert werden. Die können wahlweise in den Programmiersprachen Python oder C++ geschrieben werden, wobei sich besonders für echtzeitkritische Signalverarbeitungen letzteres anbietet.\\
 GNU Radio bietet zusätzlich eine grafische Oberfläche mit \ac{GRC}, die es ermöglicht Blockschaltbilder als Flowgraph darzustellen.
 
 \subsubsection{Funktionsweise}
-GNU Radio verarbeitet den Datenstrom, der vom Empfänger kommt, oder bereitet Daten vor, um diese zu senden. Dabei ist die gesamte Datenverarbeitung in Blöcke eingeteilt, die  beliebig  zusammengestellt  werden können. GNU Radio liefert eine Vielzahl von Filtern, Kanal-Codes, Synchronisationselementen, Equalizern, Demodulatoren, und weitere gängige Werkzeuge der Nachrichten- und Funktechnik. Diese Blöcke stellen die Hardwarekomponenten klassischer Funkhardware dar. Falls nötig können auch selbst Blöcke hinzugefügt werden. Dabei sollte darauf geachtet werden, dass ein Block genau eine Aufgabe erledigt, damit er so vielseitig wie möglich eingesetzt werden kann. GNU Radio bietet die Möglichkeit, diese Blöcke miteinander zu verbinden und regelt dadurch den Datenfluss zwischen verbundenen Blöcken. \\
+GNU Radio verarbeitet den Datenstrom, der vom Empfänger kommt, oder bereitet Daten vor, um diese zu senden. Dabei ist die gesamte Datenverarbeitung in Blöcke eingeteilt, die  beliebig  zusammengestellt  werden können. GNU Radio liefert eine Vielzahl von Filtern, Kanal-Codes, Synchronisationselementen, Equalizern, Demodulatoren, und weitere gängige Werkzeuge der Nachrichten- und Funktechnik. Diese Blöcke stellen die Hardwarekomponenten klassischer Funkhardware dar. Falls nötig können auch selbst Blöcke hinzugefügt werden. Dabei sollte darauf geachtet werden, dass ein Block genau eine Aufgabe erledigt, damit er so vielseitig wie möglich eingesetzt werden kann. GNU Radio bietet die Möglichkeit, diese Blöcke miteinander zu verbinden und regelt dadurch den Datenfluss zwischen verbundenen Blöcken. 
 
 Für die digitale Verarbeitung von Daten kommen in GNU Radio verschiedene Datentypen zum Einsatz: Der Datenstrom des Empfängers besteht in den meisten Fällen aus komplexen Zahlen, also einem Datentyp, bei dem jedes Datum aus zwei Float-Werten, dem Imaginärteil und dem Realteil, besteht (siehe Abschnitt \ref{iq}). \\
-Als Ein- oder Ausgänge eines Blocks können jedoch verschiedene Datentypen zum Einsatz kommen, üblicherweise Short, Byte, Integer und Float. Der Datentyp am Eingang und Ausgang eines Blockes muss dabei nicht gleich sein.\\
+Als Ein- oder Ausgänge eines Blocks können jedoch verschiedene Datentypen zum Einsatz kommen, üblicherweise Short, Byte, Integer und Float. Der Datentyp am Eingang und Ausgang eines Blockes muss dabei nicht gleich sein.
 
 Um mit GNU Radio eine SDR-Anwendung zu erstellen, muss man Blöcke, die die einzelnen Funktionseinheiten darstellen, miteinander zu einem Graphen kombinieren. Sollte ein benötigter Block nicht verfügbar sein, kann man diesen mittels einem Tool selbst hinzufügen. Beim Starten des Graphen ruft GNU Radio nun jeden Block nacheinander auf und stellt sicher, dass Daten von einem Block zum Nächsten weitergereicht werden. Ergebnisse  können  durch  Graphical  User  Interface  (GUI)-Blöcke dargestellt werden. Diese nutzen die freien und plattformübergreifenden GUI-Toolkits.
 
@@ -248,7 +252,7 @@ Die Verarbeitung im Basisband bzw. in einer Zwischenfrequenz erfolgt durch einen
 
 \newpage
 \section{Aufbau/Entwurf}
-Zu Beginn der praktischen Arbeit, wird der technische Versuchsaufbau beschrieben. Mit einer Skizze soll der Aufbau der Aufgabe detaillierte dargestellt werden. Wie in der Abbildung \ref{Technischer Aufbau} angezeigt, wird der Computer über den \ac{USB}-Anschluss mit dem HackRF One verbunden. Darüber bezieht das SDR-Gerät seine notwendige Spannungsversorgung von 5 Volt.\\
+Zu Beginn der praktischen Arbeit, wird der technische Versuchsaufbau beschrieben. Mit einer Skizze soll der Aufbau der Aufgabe detaillierte dargestellt werden. Wie in der Abbildung \ref{Technischer Aufbau} angezeigt, wird der Computer über den USB-Anschluss mit dem HackRF One verbunden. Darüber bezieht das SDR-Gerät seine notwendige Spannungsversorgung von 5 Volt.\\
 Die gegenüberliegende Seite befasst sich mit der Inbetriebnahme der ausgewählten Antenne. Diese hat einen N-Buchsen Anschluss und wird an den HackRF One angeschlossen dieser besitzt jedoch nur einen SMA-Anschluss. Dämpfung wird bei diesem Aufbau nicht berücksichtigt, da das Antennenkabel nur 10 Meter beträgt. Somit können die Geräte miteinander Kommunizieren und die empfangen Daten der Antenne bis hin zum Computer übertragen werden.  
 \begin{figure}[H]
 	\centering
