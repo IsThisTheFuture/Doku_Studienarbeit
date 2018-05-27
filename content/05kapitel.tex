@@ -4,6 +4,13 @@
 Software Defined Radio Systeme haben in den letzten Jahren immer mehr an Bedeutung gewonnen, nicht zuletzt wegen den vergleichsweise geringen Kosten im Gegensatz zu klassischen Funkverarbeitungssystemen.
 Bereits mit einem DVB-T-Stick und einer günstigen Teleskopantenne lassen sich je nach Anforderung brauchbare Ergebnisse erzielen. Bei der Analyse eines größeren Frequenzbereiches mit unterschiedlichsten Signalen und Anwendungen ist es jedoch unverzichtbar auf eine breitbandige, hochwertige Antenne samt SDR-Gerät mit ausreichender Bandbreite und Abtastrate zurückzugreifen. Die genauen Anforderungen hängen jedoch immer von der jeweiligen Anwendung ab und so ist es schwer, die Anforderungen an ein allgemeines Analysesystem zu formulieren bzw. zu erfüllen.
 
+Das Messen vieler Kennwerte von Signalen, dazu gehören auch das Signal-Rausch-Verhältnis oder die Signalleistung, sind stark abhängig von der verwendeten Hardware und Implementierung.
+
+Die Frage danach, wie sich solche Kennzahlen bzw. Metainformationen allgemeingültig messen lassen, kann deshalb nicht eindeutig beantwortet werden.
+Stattdessen wäre es besser eine spezifische Fragestellung zu formulieren, wie: \\
+Was ist der minimale Leistungspegel eines Signales in dBm, mit der Modulationsart M auf der Frequenz F, welche von einem SDR-Gerät D mit Antenne A, unter Verwendung der Software S und Konfiguration K erkannt werden kann, mit einer maximalen Fehlerrate von E?\\
+Die daraus resultierende Funktion mehrerer Variablen, \(P_{Signal} (M, F, D, A, S, K, E)\), kann Aufschluss darüber geben, ob etwa das HackRF One für einen bestimmten Einsatzzweck geeignet ist.
+
 %Hilfreiche Fragestellungen
 %\begin{description}
 %\item Was sind die wichtigsten Ergebnisse?
@@ -22,11 +29,14 @@ Bereits mit einem DVB-T-Stick und einer günstigen Teleskopantenne lassen sich j
 \section{Zusammenfassung}
 Zu Beginn der Arbeit wurden die theoretischen Grundlagen für die Bearbeitung der Aufgabenstellung geschaffen. Da das vorliegende Thema nicht Schwerpunkt des Studiengangs Informationstechnik ist, war eine intensive Literaturrecherche notwendig, um mit dem Praxisteil beginnen zu können.
 
-In Kapitel 3 wird zu Beginn auf die Einteilung des elektromagnetischen Spektrums durch die Internationale Fernmeldeunion und der Bundesnetzagentur eingegangen. Mit dem Hintergrund der  rechtlichen Rahmenbedingungen wurden spezifische Anwendungen im Bereich der Dezimeterwelle betrachtet. Aus den gewonnen Erkenntnissen wurden die Anforderungen für ein System festgelegt, welches die Aufgabestellung abdeckt. Unter Berücksichtigung der festgelegten Anforderungen wurden mögliche Hard- und Softwarekomponenten evaluiert und ausgewählt. Der entstandene Aufbau samt Antenne, Signalkabel und SDR-Gerät wurden installiert und im anschließenden Praxisteil konfiguriert.
+In Kapitel 3 wird zu Beginn auf die Einteilung des elektromagnetischen Spektrums durch die Internationale Fernmeldeunion und der Bundesnetzagentur eingegangen. Mit dem Hintergrund der rechtlichen Rahmenbedingungen wurden spezifische Anwendungen im Bereich der Dezimeterwelle betrachtet. Aus den gewonnen Erkenntnissen wurden die Anforderungen für ein System festgelegt, welches die Aufgabestellung abdeckt. Unter Berücksichtigung der festgelegten Anforderungen wurden mögliche Hard- und Softwarekomponenten evaluiert und ausgewählt. Der entstandene Aufbau samt Antenne, Signalkabel und SDR-Gerät wurden installiert und im anschließenden Praxisteil konfiguriert. 
+
+Mit Hilfe des funktionsfähigen Systems konnte eine Spektralanalyse über den gesamten Dezimeterwellenfrequenzbereich erstellt werden, welche die dominierenden Anwendungen kenntlich gemacht hat. Anschließend erfolgte eine Dokumentation der verwendeten Logikbausteine von GNU Radio. In diesem Zuge wurde auf die entsprechenden Metainformationen eingegangen. Das Ergebnis des praktischen Teiles stellte die Implementierung der Oberfläche mit GNU Radio Companion dar.  
 
 
 
 
 \section{Ausblick}
-Die Dezimeterwelle bietet viele praktische Anwendungsszenarien, die in deren rechtlichen Rahmen näher untersucht oder implementiert werden können:
+Die Dezimeterwelle bietet viele praktische Anwendungsszenarien, die in deren rechtlichen Rahmen näher untersucht oder implementiert werden können.
+Da die Aufgabenstellung sehr allgemein formuliert war, könnte diese Arbeit als Grundlage verwendet werden, um eine konkrete Anwendung zu untersuchen. Mögliche Erweiterungen können dahingehend umgesetzt werden, ein Signal zu demodulieren und zu dekodieren.
 Beispielsweise das Dekodieren von Wettersatellitenaufnahmen, die im Frequenzband um 1700 MHz gesendet werden. 

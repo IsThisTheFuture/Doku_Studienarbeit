@@ -180,13 +180,6 @@ Es gibt verschiedene Wege damit umzugehen:
 \end{figure}
 
 
-\subsection{Schlussfolgerung}
-Viele Kennwerte von Signalen, dazu gehören auch das Signal-Rausch-Verhältnis oder die Signalleistung, sind stark abhängig von der verwendeten Hardware und Implementierung.
-Die Frage danach, wie sich solche Kennzahlen bzw. Metainformationen allgemeingültig messen lassen, kann deshalb nicht eindeutig beantwortet werden.
-Stattdessen wäre es besser eine spezifische Fragestellung zu formulieren, wie: \\
-Was ist der minimale Leistungspegel eines Signales in dBm, mit der Modulationsart M auf der Frequenz F, welche von einem SDR-Gerät D mit Antenne A, unter Verwendung der Software S und Konfiguration K erkannt werden kann, mit einer maximalen Fehlerrate von E?\\
-Die daraus resultierende Funktion mehrerer Variablen, \(P_{Signal} (M, F, D, A, S, K, E)\), kann Aufschluss darüber geben, ob etwa das HackRF One für einen bestimmten Einsatzzweck geeignet ist.
-
 \newpage
 \section{GRC-Flowgraph zur Analyse von Metadaten}
 Aus den in diesem Kapitel behandelten Kennwerten wird im Folgenden ein GNU Radio Companion Programm erstellt, welches es erlaubt diese Informationen zu visualisieren. Zudem bietet die grafische Oberfläche diverse Einstellungsmöglichkeiten um Signale gemäß ihrer individuellen Eigenschaften angemessen betrachten zu können.
@@ -252,16 +245,3 @@ Das resultierende Programm als GRC Flowgraph wird in der folgenden Grafik darges
 	\caption[GRC Flowgraph zur Metaanalyse]{GRC Flowgraph zur Metaanalyse. Quelle: Eigene Darstellung, GNU Radio 3.7.11} 
 	\label{grc-flowgraph}
 \end{figure}
-
-\section{Identifizieren eines Signales}
-Signale müssen im Empfänger gemittelt werden, da sie aufgrund der durchgeführten Kanalfilterung ein oszillierendes Verhalten aufweisen, siehe Abb. \ref{mod-send-empf} \cite[vgl. Heuberger, e. a., S. TODO]{Heuberger:2017}.
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.8\textwidth]{mod-sender-empf.png}
-	\caption[GFSK-Modulationssignale im Sender und im Empfänger]{GFSK-Modulationssignale im Sender und im Empfänger. Quelle: TODO} %TODO Selbst darstellen, am besten anhand eines 433MHz Signals! 
-	\label{mod-send-empf}
-\end{figure}
-
-
-\newpage
