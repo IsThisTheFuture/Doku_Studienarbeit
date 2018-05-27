@@ -117,11 +117,9 @@ Dieser untersützt das HackRF durch die zuvor installierte Bibliothek \textit{li
 \section{Erarbeiten der relevanten Metainformationen}
 Maßgebend für das Erkennen und Verarbeiten von Signalen im Kontext von Software Defined Radio sind die Randbedingungen, gestellt von eingesetzter Hard- und Software, Umweltbedingungen und Signalarten.
 Im folgenden wird eine Übersicht der relevanten Rahmenbedingungen und Kennzahlen, zusammengefasst im Begriff \enquote{Metainformationen} gegeben.
+%TODO: Quantisierung / Diskretisierung
 
 \subsection{Signalleistung}
-\subsection{Quantisierung}
-\subsection{Diskretisierung}
-\subsection{Frequenz}
 \subsection{Modulation}
 \subsection{DC Offset}
 Durch die Überführung eines modulierten Signals zurück ins Basisband entsteht im FFT-Plot um die Nullfrequenz eine deutlich wahrnehmbare Spitze:
@@ -146,9 +144,6 @@ Es gibt verschiedene Wege damit umzugehen:
 	\caption[DC Offset Korrektur]{DC Offset Korrektur. Quelle: Eigene Darstellung} 
 	\label{dc-offset-correction}
 \end{figure}
-
-
-\subsubsection{Bandbreite}
 
 
 
@@ -182,18 +177,69 @@ Die daraus resultierende Funktion mehrerer Variablen, \(P_{Signal} (M, F, D, A, 
 
 \newpage
 \section{GRC-Flowgraph zur Analyse von Metadaten}
-\textbf{TODO: } GRC Flowgraph mit Optionsfeldern (Frequenz-slider, Parameter für FFT: Bin count/size,Signal-To-Noise Ratio, )\\
-\\
-\textbf{Mögliche Leitfrage: Was sind Metainformationen überhaupt? Welche Davon sind relevant für Software Defined Radio? (Signal-To-Noise, Antennengewinn/Verstärkung/Gain (dB), Quantisierung (Werte, z.B. die Amplitude bei I/Q Signalen), Diskretisierung (zeitlich), Rauschen, etc.)} $\rightarrow$ GRC-Flowgraph erstellen, der diese Metainformationen anzeigt und Einstellungsmöglichkeiten bietet
+Aus den in diesem Kapitel behandelten Kennwerten wird im Folgenden ein GNU Radio Companion Programm erstellt, welches es erlaubt diese Informationen zu visualisieren. Zudem bietet die grafische Oberfläche diverse Einstellungsmöglichkeiten um Signale gemäß ihrer individuellen Eigenschaften angemessen betrachten zu können.
+
+Die Einstellungsmöglichkeiten sind:
+
+\begin{description}
+	\item [Frequenz:] Angabe möglich in Schritten von 1 Hz. Das Frequenzspektrum ist begrenzt auf den Bereich der Dezimeterwelle. Der limitierende Faktor ist hier die Bandbreite der Antenne.
+	\item [Abtastrate:] Angabe möglich in Schritten von 1 Hz. Die Sampling Rate ist begrenzt auf den Bereich von 0 Hz bis 20 MHz. Der limitierende Faktor ist hier die maximale Abtastrate des HackRF One.
+	\item [DC Offset:]  Angabe möglich in Schritten von 1 Hz. Der Bereich ist begrenzt durch die maximale Bandbreite des HackRF One.
+	\item[Bandbreite:] Angabe möglich in Schritten von 1 Hz. Die maximale Bandbreite beträgt 20 MHz. 
+\end{description}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.5\textwidth]{metaanalyse.png}
-	\caption[GRC-Flowgraph zur Analyse von Metadaten]{GRC-Flowgraph zur Analyse von Metadaten. Quelle: Eigene Darstellung, GNU Radio 3.7.11} 
-	\label{metaanalyse}
+	\includegraphics[width=\textwidth]{grc-freq.png}
+	\caption[Frequenz, Bandbreite, Abtastrate, DC Offset]{Frequenz, Bandbreite, Abtastrate, DC Offset. Quelle: Eigene Darstellung, GNU Radio 3.7.11} 
+	\label{grc-freq}
+\end{figure}
+
+\newpage
+\begin{description}
+	\item[RF Gain:] Entweder 0 dB, oder 14 dB. 
+	\item[IF Gain:] Einstellbar in Schritten von 8 dB, im Bereich zwischen 0 und 40 dB.
+	\item[BB Gain:] Einstellbar in Schritten von 2 dB, im Bereich zwischen 0 und 62 dB.
+\end{description}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.65\textwidth]{grc-gain.png}
+	\caption[Gain Einstellungen]{Gain Einstellungen. Quelle: Eigene Darstellung, GNU Radio 3.7.11} 
+	\label{grc-gain}
+\end{figure}
+
+Die Visualisierung der Signale kann in den folgenden Darstellungen erfolgen:
+\begin{description}
+	\item[Frequenzdarstellung:] Als FFT-Plot. Es lassen sich einstellen:
+		\begin{itemize}
+			\item Max/Min Hold: Halten der maximalen bzw. minimalen Werte im Frequenzdiagramm.
+			\item Anzeige der RF Frequenzen: Die Beschriftung der x-Achse kann entweder im Basisband erfolgen (Zentrierung um die Nullfrequenz), oder es werden die \enquote{tatsächlichen} Frequenzen (RF Frequencies) benutzt.
+			\item  Averaging: Das Averaging ermöglicht eine Mittelung der aufgenommen Samples
+			\item FFT Size: Steuert die Frequenzauflösung, also die Anzahl Abstufungen im FFT-Plot. Gemäß Abschnitt \ref{fft-grundlagen} muss der Wert einer Zweierpotenz entsprechen.
+			\item Fensterfunktionen: Die von GNU Radio unterstützten Fensterfunktionen können hier ausgewählt werden.
+		\end{itemize}
+	\item[Wasserfalldiagramm:] GNU Radio ermöglicht die Darstellung von Signalen auch als Wasserfalldiagramm. Die Schwellwerte der Farbintensitäten können hier eingestellt werden. 
+	\item[Zeitdomäne:] Hier können Signale als im Zeitbereich betrachtet werden.
+	\item[Konstellationsdarstellung] (engl.: \enquote{Constellation Display}): Hierdurch wird die Betrachtung der Ortskurven empfangener I/Q-Daten ermöglicht.
+\end{description}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{grc-qt-gui.png}
+	\caption[Darstellung im Frequenzbereich]{Darstellung im Frequenzbereich. Quelle: Eigene Darstellung, GNU Radio 3.7.11} 
+	\label{grc-qt-gui}
 \end{figure}
 
 
+
+Das resultierende Programm als GRC Flowgraph wird in der folgenden Grafik dargestellt:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{grc-flowgraph.png}
+	\caption[GRC Flowgraph zur Metaanalyse]{GRC Flowgraph zur Metaanalyse. Quelle: Eigene Darstellung, GNU Radio 3.7.11} 
+	\label{grc-flowgraph}
+\end{figure}
 
 \section{Identifizieren und Dekodieren eines Signales}
 Signale müssen im Empfänger gemittelt werden, da sie aufgrund der durchgeführten Kanalfilterung ein oszillierendes Verhalten aufweisen, siehe Abb. \ref{mod-send-empf} \cite[vgl. Heuberger, e. a., S. TODO]{Heuberger:2017}.
