@@ -123,7 +123,7 @@ Die im folgenden gezeigte Tabelle beschreibt die technischen Daten der HyperLOG 
 		\hline 
 		Länge &  60 cm\\ 
 		\hline 
-		Preis in \euro &  350 \euro \\ 
+		Preis &  350 \euro \\ 
 		\hline 
 		Installationsart & Mobil\\ 
 		
@@ -154,7 +154,7 @@ Im Folgenden Abschnitt beschreibt eine Tabelle die technischen Daten der Sirio S
 		\hline 
 		Länge &  72 cm\\ 
 		\hline 
-		Preis in \euro &  90 \euro \\ 
+		Preis &  90 \euro \\ 
 		\hline 
 		Installationsart & Stationär\\ 
 		
@@ -172,19 +172,19 @@ Ein Software Defined Radio Gerät, das man experimentell betreiben kann, reicht 
 	\item Abtastrate
 \end{itemize}
 
-Beim Computer kommen häufig Universal Serial Bus (USB) und Ethernet als Schnittstelle zum  Einsatz.
-Da nur Empfängersignale betrachtet werden sollen, würde ein handelsüblicher DVB-T-Stick eine günstige Option darstellen. Mithilfe des entsprechenden Treibers kann der Stick mit GNU Radio genutzt werden, jedoch deckt sich der Frequenzbereich des Gerätes nicht mit dem innerhalb der Aufgabenstellung beschriebenen Dezimeterwelle.\\
+Als Schnittstelle zum Computer kommen häufig Universal Serial Bus (USB) oder Ethernet zum  Einsatz.
+Da im Rahmen der Studienarbeit nur Empfängersignale betrachtet werden sollen, würde ein handelsüblicher DVB-T-Stick eine günstige Option darstellen. Mithilfe des entsprechenden Treibers kann der Stick mit GNU Radio genutzt werden, jedoch deckt sich der Frequenzbereich des Gerätes nicht mit dem innerhalb der Aufgabenstellung beschriebenen Dezimeterwelle.\\
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{NooElec.png}
+	\includegraphics[width=0.35\textwidth]{NooElec.png}
 	\caption[NooElec DVB-T Stick]{NooElec DVB-T Sick. Quelle: \cite{NooElec:2018}} 
 	\label{NooElec}
 \end{figure}
 
-Das SDR-Gerät muss sich in Kombination mit der Funkantenne über den kompletten Frequenzbereich der Dezimeterwelle erstrecken, um die Metainformationen in diesem Bereich zu analysieren. Aus diesem Grund kann ein solches Gerät für diese Arbeit nicht verwendet werden. Aus der Tabelle können die groben Daten des DVB-T Sticks entnommen werden.\\
+Der empfangbare Bereich des SDR-Gerätes muss sich in Kombination mit der Funkantenne über den kompletten Frequenzbereich der Dezimeterwelle erstrecken, um die Metainformationen in diesem Bereich zu analysieren. Aus diesem Grund kann ein einfacher DVB-T Stick für diese Arbeit nicht verwendet werden. Aus der Tabelle können die Daten des Gerätes entnommen werden.\\
 
-\begin{table}[h]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{c|c}
 		Modellbezeichnung & RTL2832U\\
@@ -193,7 +193,7 @@ Das SDR-Gerät muss sich in Kombination mit der Funkantenne über den kompletten
 		\hline 
 		Frequenzbereich & 25 MHz - 1750 MHz \\ 
 		\hline 
-		Preis in \euro & 20 \euro \\ 
+		Preis & 20 \euro \\ 
 		\hline 
 		Installationsart & Mobil \\ 
 		\hline 
@@ -202,7 +202,7 @@ Das SDR-Gerät muss sich in Kombination mit der Funkantenne über den kompletten
 	\caption{Produktinformationen des NooElec RTL2832U}
 \end{table}
 
-Ein gutes Preis-Leistungsverhältnis bietet das HackRF One Board \cite{greatscott}. Die HackRF One Platine ist ein flexibles Testmodul für die Funkmesstechnik, das wie ein Software Defined Radio (SDR) arbeitet. Sie ist ein Open Source Hardware Transceiver, der sich hauptsächlich zu eigenen Versuchen und Messungen für SDRs eignet, außerdem ist dieses Gerät für die Hochfrequenztechnik und im Amateurfunkbereich für seinen vergleichsweise geringen Preises von rund 300 Euro sehr beliebt.\\
+Ein gutes Preis-Leistungsverhältnis bietet das HackRF One Board von Great Scott Gadgets \cite{greatscott}. Die HackRF One Platine ist ein flexibles Testmodul für die Funkmesstechnik. Die Hardware, sowie auch Firmware des HackRF One ist vollständig Open Source.  Das Gerät ist für die Hochfrequenztechnik und im Amateurfunkbereich für seinen vergleichsweise geringen Preises von rund 300 Euro sehr beliebt.\\
 
 \begin{figure}[H]
 	\centering
@@ -226,7 +226,7 @@ Der Hack RF One deckt einen weiten Frequenzbereich von 1 bis 6000 MHz (6 GHz) ab
 		\hline 
 		Abtastrate & \( 20 \times 10^{6} \) Hz \\ 
 		\hline 
-		Preis in \euro &  300 \euro\\ 
+		Preis &  300 \euro\\ 
 		\hline 
 		Installationsart & Mobil \\ 
 		\hline 
@@ -241,7 +241,7 @@ Technisch realisiert ist das Frontend des HackRF One durch einen Qorvo RFFC5072 
 Die Verarbeitung im Basisband bzw. in einer Zwischenfrequenz erfolgt durch einen MAX2837 Transceiver von Maxim Integrated \cite{max2837}, gefolgt von einem AD-/DA- Wandler der gleichen Firma \cite{max5864}, der das Empfangene Signal digitalisiert oder das zu sendende Signal in die analoge Domäne überführt.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{hackrf-blockdiagram-frontend-baseband.png}
+	\includegraphics[width=0.6\textwidth]{hackrf-blockdiagram-frontend-baseband.png}
 	\caption[Hack RF One Frontend/Baseband]{Hack RF One Frontend/Baseband. Quelle: \cite{hackrf-wiki:2016}} 
 	\label{HackRFOne-Blockschaltbild}
 \end{figure}
@@ -257,14 +257,3 @@ Die gegenüberliegende Seite befasst sich mit der Inbetriebnahme der ausgewählt
 	\label{Technischer Aufbau}
 \end{figure}
 
-\newpage
-\section{Spektralanalyse der Dezimeterwelle}
-Die Abbildung \ref{spektralanalyse} zeigt das komplette Spektrum der Dezimeterwelle. Dabei wird erkannt welche Anwendungen in diesem Frequenzbereich liegen. Um eine solche Übersicht zu erschaffen, musste ein Interator über den Frequenzbereich genutzt werden. Der HackRF One bietet einen sogenannten Sweep Mode. Nach Installation und Inbetriebnahme dieses Modus konnte ein kompletter Bereich innerhalb von Sekunden gescannt werden. Die unten gezeigt Abbildung zeigt das komplette Spektrum der Dezimeterwelle mit den empfangenen Signalen auf den jeweiligen Frequenzen. Somit konnte eine Übersicht erstellt werden, auf welchen Frequenzen ein Signal empfangen wurde.\\
-
-Wie sehr gut zu erkennen ist, liegen viele und starke Signale um die Frequenzbereiche 443 MHz, 868 MHz, 900 MHz (GSM 900) und 1,2 GHz (GPS). Weitere lokale Maxima der Kurve liegen bei 1,8 GHz - 2,2 GHz (Mobiler Landesfunkdienst UMTS) und 2,4 GHz (WLAN, Bluetooth)
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{spektrum.png}
-	\caption[Spektralanalyse der Dezimeterwelle]{Spektralanalyse der Dezimeterwelle. Quelle: Eigene Darstellung} 
-	\label{spektralanalyse}
-\end{figure}

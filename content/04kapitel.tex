@@ -62,6 +62,18 @@ Das Ergebnis wird in einer Datei abgespeichert. \\
 Es ist zu erkennen, dass das Gerät die maximale Abtastrate
 
 \newpage
+\section{Spektralanalyse der Dezimeterwelle}
+Die Abbildung \ref{spektralanalyse} zeigt das komplette Spektrum der Dezimeterwelle. Dabei wird erkannt welche Anwendungen in diesem Frequenzbereich liegen. Um eine solche Übersicht zu erschaffen, musste ein Interator über den Frequenzbereich genutzt werden. Der HackRF One bietet einen sogenannten Sweep Mode. Nach Installation und Inbetriebnahme dieses Modus konnte ein kompletter Bereich innerhalb von Sekunden gescannt werden. Die unten gezeigt Abbildung zeigt das komplette Spektrum der Dezimeterwelle mit den empfangenen Signalen auf den jeweiligen Frequenzen. Somit konnte eine Übersicht erstellt werden, auf welchen Frequenzen ein Signal empfangen wurde.\\
+
+Wie sehr gut zu erkennen ist, liegen viele und starke Signale um die Frequenzbereiche 443 MHz, 868 MHz, 900 MHz (GSM 900) und 1,2 GHz (GPS). Weitere lokale Maxima der Kurve liegen bei 1,8 GHz - 2,2 GHz (Mobiler Landesfunkdienst UMTS) und 2,4 GHz (WLAN, Bluetooth)
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{spektrum.png}
+	\caption[Spektralanalyse der Dezimeterwelle]{Spektralanalyse der Dezimeterwelle. Quelle: Eigene Darstellung} 
+	\label{spektralanalyse}
+\end{figure}
+\newpage
+
 \section{Grundbausteine in GNU Radio Companion}
 GNU Radio Companion wird am besten durch das klassische FM-Radio Beispiel erklärt:
 
@@ -167,9 +179,6 @@ Es gibt verschiedene Wege damit umzugehen:
 	\label{dc-offset-correction}
 \end{figure}
 
-
-
-<<<<<<< HEAD
 
 \subsection{Schlussfolgerung}
 Viele Kennwerte von Signalen, dazu gehören auch das Signal-Rausch-Verhältnis oder die Signalleistung, sind stark abhängig von der verwendeten Hardware und Implementierung.
