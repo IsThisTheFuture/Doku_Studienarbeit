@@ -1,53 +1,32 @@
 %!TEX root = ../dokumentation.tex
 
 \chapter{Einleitung}
-Diese Studienarbeit befasst sich mit dem Erfassen und Auswerten von Signalen in einem begrenzten Frequenzbereich.  
+Im Rahmen dieser Studienarbeit soll ein Gerät zur Erfassung von Metainformationen über Signale innerhalb der Dezimeterwelle entwickelt werden. Dabei stützen wir uns auf ein Software Defined Radio Gerät zur digitalen Auswertung dieser Signale.
+Es gilt zu klären, was man unter Metainformationen versteht und welche davon im Kontext von Software Defined Radio relevant sind.
 
 \section{Problemstellung}
-%\begin{description}
-%	\item \textbf{Warum ist das Thema relevant? In welchem Kontext?}
+Im alltäglichen Leben rauschen unzählige Funksignale an uns vorbei. Im Bereich der Dezimeterwelle sind viele gängige Anwendungen angesiedelt, die von Verbrauchern genutzt werden, etwa GSM, GPS, WLAN und Bluetooth. 
+Deshalb ist es schwer, genau sagen zu können, was beachtet werden muss, um ein generisches System zur Analyse möglichst vieler dieser Signale zu entwickeln.
 
-%\end{description}	
-
-\textbf{Was ist die Empfängerempfindlichkeit (Receiver Sensitivity) des HackRF?}\\
-\url{http://www.phys.hawaii.edu/~anita/new/papers/militaryHandbook/rcvr_sen.pdf}
-
-
-\textbf{What is the minimum signal power level that can be detected by HackRF?\\
-A:}
-
-This isn't a question that can be answered for a general purpose SDR platform such as HackRF. Any answer would be very specific to a particular application. For example, an answerable question might be: What is the minimum power level in dBm of modulation M at frequency F that can be detected by HackRF One with software S under configuration C at a bit error rate of no more than E%? Changing any of those variables (M, F, S, C, or E) would change the answer to the question. Even a seemingly minor software update might result in a significantly different answer. To learn the exact answer for a specific application, you would have to measure it yourself.
-
-HackRF's concrete specifications include operating frequency range, maximum sample rate, and dynamic range in bits. These specifications can be used to roughly determine the suitability of HackRF for a given application. Testing is required to finely measure performance in an application. Performance can typically be enhanced significantly by selecting an appropriate antenna, external amplifier, and/or external filter for the application.
 
 \section{Zielsetzung}
-Ziel der Studienarbeit ist es die Frage zu klären, was Metainformationen im Kontext von \ac{SDR} bedeuten und welche Informationen zur Realisierung eines generischen Gerätes zur Analyse einer möglichst hohen Anzahl von Signalen innerhalb der Dezimeterwelle erforderlich sind.\\
+Ziel der Studienarbeit ist es die Frage zu klären, was Metainformationen im Kontext von \ac{SDR} bedeuten und welche Informationen zur Realisierung eines generischen Gerätes zur Analyse einer möglichst hohen Anzahl von Signalen innerhalb der Dezimeterwelle erforderlich sind.
 
-Auf dieser Grundlage wird ein System ausgelegt und implementiert, welches die gestellten Anforderungen erfüllt.\\
+Auf dieser Grundlage wird ein System ausgelegt und implementiert, welches die gestellten Anforderungen erfüllt.
 
-Die relevanten Metainformationen sollen in einem Programm mit grafischer Oberfläche visualisiert werden. Zudem soll darüber das Empfängersystem gesteuert und das Signal manipuliert werden können.
-%TODO: drüberlesen und eventuell noch was schreiben Vorgehensweise sollte passen.
-
-
-
-%\begin{description}
-%	\item \textbf{Welche Fragen soll die Arbeit beantworten?}
-%	\item \textbf{Welchem Zweck dient die Arbeit?}
-%\end{description}
+Die relevanten Metainformationen sollen in einem Programm mit grafischer Oberfläche visualisiert werden. Zudem soll sich darüber das Empfängersystem steuern lassen. Das Programm ist so zu realisieren, dass es für konkrete Anwendungen erweitert werden kann.
 
 
 \section{Abgrenzung}
-
+Da die Aufgabenstellung sehr allgemein gehalten ist, verzichten wir darauf einzelne Signale im Detail zu betrachten.
+Stattdessen wird der Schwerpunkt dieser Studienarbeit auf die Entwicklung eines Gerätes im Kontext von Signalen im Bereich der Dezimeterwelle beschränkt.
 
 \section{Vorgehensweise}
-Zu Beginn werden in Abschnitt 2 die theoretischen Grundlagen geschaffen, die für das Verständnis dieser Projektarbeit nötig sind. \\
-Darauf folgt in Kapitel 3 die Anforderungsanalyse, sowie Planung und Aufbau des Empfängersystems mit Funkantenne.\\
-In Kapitel 4 wird mit Hilfe von GNU Radio eine grafische Oberfläche gestaltet, über die sich beliebige Signale im gegebenen Frequenzbereich analysieren lassen.\\
-Abschließend folgt eine Zusammenfassung mit Fazit und Ausblick.
+Zu Beginn werden in Abschnitt 2 die theoretischen Grundlagen geschaffen, die für das Verständnis dieser Studienarbeit nötig sind. \\
+Darauf folgt in Kapitel 3 die Anforderungsanalyse, sowie Evaluierung, Planung und der Aufbau des Empfängersystems.\\
+In Kapitel 4 wird mit Hilfe der ausgewählten Software eine grafische Oberfläche gestaltet, über die sich beliebige Signale im gegebenen Frequenzbereich analysieren lassen sollen.\\
+Im Zuge dieser Arbeit wird abschließend eine Zusammenfassung mit Fazit und Ausblick gegeben.
 
-%\begin{description}
-%	\item \textbf{Welche Vorgehensweise wird hierzu gewählt?}
-%\end{description}
 
 
 
