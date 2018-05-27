@@ -117,10 +117,32 @@ Dieser untersützt das HackRF durch die zuvor installierte Bibliothek \textit{li
 \section{Erarbeiten der relevanten Metainformationen}
 Maßgebend für das Erkennen und Verarbeiten von Signalen im Kontext von Software Defined Radio sind die Randbedingungen, gestellt von eingesetzter Hard- und Software, Umweltbedingungen und Signalarten.
 Im folgenden wird eine Übersicht der relevanten Rahmenbedingungen und Kennzahlen, zusammengefasst im Begriff \enquote{Metainformationen} gegeben.
-%TODO: Quantisierung / Diskretisierung
+Einige relevante Punkte wurden bereits im Grundlagenkapitel behandelt, darunter auch die Quantisierung (der Amplituden bei I/Q-Signalen) und Diskretisierung (Zeitliche Abstufung) von Signalen.
+Ebenfalls behandelt wurden die Begriffe des Rauschens, der Modulation und grundlegende Konzepte wie Frequenz, Bandbreite und Abtastrate.
 
-\subsection{Signalleistung}
-\subsection{Modulation}
+Im folgenden werden also nur noch für die praktische Anwendung relevante Kennzahlen und Konzepte beschrieben.
+
+\subsection{Empfängerempfindlichkeit}
+\subsubsection{Signal-Rausch-Verhältnis}
+Das Signal-Rausch-Verhältnis (engl.: \enquote{Signal-to-Noise Ratio}) gibt das Verhältnis eines Nutzsignals 
+zu einem Rauschsignal an, von dem es überlagert ist. Das Rauschen kann dabei durch das Empfängersystem selbst, 
+sowie durch Störungen im Übertragungskanal verursacht worden sein. %TODO: Es gibt glaub mehrere Definitionen
+
+\[ S/N = \frac{\text{Nutzsignalleistung}}{\text{Rauschsignalleistung}} = \frac{P_{Signal}}{P_{Rauschen}} \]
+
+
+Für den Fall \(P_{Signal} \leq P_{Rauschen}\), also wenn gilt: 
+Die Signalleistung ist kleiner oder gleich der Rauschsignalleistung, kann ein Signal in der Regel nicht erkannt werden.
+Damit dies gelingt, muss die Energie des Signals addiert mit der des Rauschsignals größer sein als ein festgelegter Schwellwert.
+Der Schwellwert wird wesentlich höher gelegt als das durchschnittliche Rauschniveau, um die beiden deutlich von einander unterscheiden zu können.
+Es bietet sich also an das Verhältnis in Dezibel auszudrücken:
+\[ S/N = 10 \lg \Big( \frac{P_{Signal}}{P_{Rauschen}} \Big) \text{dB}\] 
+
+
+
+Das minimale Signal-Rausch-Verhältnis \(S/N_{min}\) gibt diesen Schwellwert an, der mindestens erreicht werden muss um das Signal zu erkennen. 
+%TODO: Nutzsignalleistung und Rauschsignalleistung definieren
+
 \subsection{DC Offset}
 Durch die Überführung eines modulierten Signals zurück ins Basisband entsteht im FFT-Plot um die Nullfrequenz eine deutlich wahrnehmbare Spitze:
 \begin{figure}[ht]
@@ -147,26 +169,7 @@ Es gibt verschiedene Wege damit umzugehen:
 
 
 
-\subsection{Empfängerempfindlichkeit}
-\subsubsection{Signal-Rausch-Verhältnis}
-Das Signal-Rausch-Verhältnis (engl.: \enquote{Signal-to-Noise Ratio}) gibt das Verhältnis eines Nutzsignals 
-zu einem Rauschsignal an, von dem es überlagert ist. Das Rauschen kann dabei durch das Empfängersystem selbst, 
-sowie durch Störungen im Übertragungskanal verursacht worden sein. %TODO: Es gibt glaub mehrere Definitionen
-
-\[ S/N = \frac{\text{Nutzsignalleistung}}{\text{Rauschsignalleistung}} = \frac{P_{Signal}}{P_{Rauschen}} \]
-
-
-Für den Fall \(P_{Signal} \leq P_{Rauschen}\), also wenn gilt: 
-Die Signalleistung ist kleiner oder gleich der Rauschsignalleistung, kann ein Signal in der Regel nicht erkannt werden.
-Damit dies gelingt, muss die Energie des Signals addiert mit der des Rauschsignals größer sein als ein festgelegter Schwellwert.
-Der Schwellwert wird wesentlich höher gelegt, als das durchschnittliche Rauschniveau, um die beiden deutlich von einander unterscheiden zu können.
-Es bietet sich also an das Verhältnis in Dezibel auszudrücken:
-\[ S/N = 10 \lg \Big( \frac{P_{Signal}}{P_{Rauschen}} \Big) \text{dB}\] 
-
-
-
-Das minimale Signal-Rausch-Verhältnis \(S/N_{min}\) gibt diesen Schwellwert an, der mindestens erreicht werden muss um das Signal zu erkennen. 
-%TODO: Nutzsignalleistung und Rauschsignalleistung definieren
+<<<<<<< HEAD
 
 \subsection{Schlussfolgerung}
 Viele Kennwerte von Signalen, dazu gehören auch das Signal-Rausch-Verhältnis oder die Signalleistung, sind stark abhängig von der verwendeten Hardware und Implementierung.
@@ -241,7 +244,7 @@ Das resultierende Programm als GRC Flowgraph wird in der folgenden Grafik darges
 	\label{grc-flowgraph}
 \end{figure}
 
-\section{Identifizieren und Dekodieren eines Signales}
+\section{Identifizieren eines Signales}
 Signale müssen im Empfänger gemittelt werden, da sie aufgrund der durchgeführten Kanalfilterung ein oszillierendes Verhalten aufweisen, siehe Abb. \ref{mod-send-empf} \cite[vgl. Heuberger, e. a., S. TODO]{Heuberger:2017}.
 
 \begin{figure}[ht]
