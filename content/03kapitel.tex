@@ -256,7 +256,8 @@ Der Hack RF One deckt einen weiten Frequenzbereich von 1 bis 6000 MHz (6 GHz) ab
 
 Abschließend lässt sich das ein eindeutiges Ergebnis zu Stande kam, da die gewünschten Anforderungen nur durch den HackRF One gegeben sind. Was die Entscheidung, ein geeignetes SDR-Gerät deutliche simpler gestaltete.\\
 
-
+Technisch realisiert ist das Frontend des HackRF One durch einen Qorvo RFFC5072 Synthesizer mit einem integrierten 6 GHz RF Mixer \cite{qorvo}.
+Die Verarbeitung im Basisband bzw. in einer Zwischenfrequenz erfolgt durch einen MAX2837 Transceiver von Maxim Integrated \cite{max2837}, gefolgt von einem AD-/DA- Wandler der gleichen Firma \cite{max5864}, der das Empfangene Signal digitalisiert oder das zu sendende Signal in die analoge Domäne überführt.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.7\textwidth]{hackrf-blockdiagram-frontend-baseband.png}

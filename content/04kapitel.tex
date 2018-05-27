@@ -97,15 +97,16 @@ Dieser untersützt das HackRF durch die zuvor installierte Bibliothek \textit{li
 \end{figure}
 
 \begin{description}
-	\item[ID:] Der Name der Python-Variable des GRC Blocks
-	\item[Output Type:] Der vom Block produzierte Datentyp, in diesem Fall \textit{Complex float32}, da das HackRF One Samples als IQ-Paare darstellt, wobei die I- und Q-Komponente jeweils als Float-Gleitkommazahl repräsentiert werden
-	\item [Sample Rate (sps):] Die Abtastrate $f_a$ in Samples pro Sekunde
-	\item[Ch0 Frequency (Hz):] Die Frequenz des Kanals. Da nur eine Antenne vorhanden ist, wird automatisch Channel 0 benutzt
-	\item[Ch0 Freq. Corr. (ppm):] description %TODO
-	\item[Ch0 RF Gain (dB):] description
-	\item[Ch0 IF Gain (dB):] Intermediate Frequency
-	\item[Ch0 BB Gain (dB):] Baseband
-	\item[Ch0 Bandwidth (Hz):] Bandbreite
+	\item[ID:] Der Name der Python-Variable des GRC Blocks. Variablennamen und Werte müssen mit denen der Python Spezifikation übereinstimmen, da diese beim Ausführen des Programmes in das entstehende Skript übernommen werden.
+	\item[Output Type:] Der vom Block produzierte Datentyp, in diesem Fall \textit{Complex float32}, da das HackRF One Samples als IQ-Paare darstellt, wobei die I- und Q-Komponente jeweils als Float-Gleitkommazahl repräsentiert werden.
+	\item[Device Arguments:] Dieser Wert identifiziert die zu verwendende Hardware. Da nur ein SDR Gerät bzw. HackRF angeschlossen ist, registriert dieses sich mit der ID 0. Alternativ kann das Gerät auch über dessen Seriennummer adressiert werden.
+	\item [Sample Rate (sps):] Die Abtastrate $f_a$ in Samples pro Sekunde.
+	\item[Ch0 Frequency (Hz):] Die Frequenz des Kanals. Da nur eine Antenne vorhanden ist, wird automatisch Channel 0 benutzt.
+	\item[Ch0 Freq. Corr. (ppm):] Besonders bei RTL-SDR Geräten wie DVBT-Sticks, die keine hochwertigen Analog-Digital-Konverter nutzen, kommt es bei der Synchronisation ebendieser zu Abweichungen die in ppm (Parts per Million) angegeben und in Software korrigiert werden können \cite[vgl. Whiting, e. a., S.1]{ppm}.
+	\item[Ch0 RF Gain (dB):] Die \ac{RF} Verstärker des HackRF One befinden sich nahe des Antennenanschlusses befinden, je einen für das Senden und Empfangen. Diese sind entweder ausgeschaltet oder verstärken mit 14 dB.
+	\item[Ch0 IF Gain (dB):] \ac{IF} Gain regelt die Verstärkung der Zwischenfrequenz (bevor das Signal ins Basisband umgesetzt wird, überführt das HackRF es zur effizienteren Verarbeitung in eine Zwischenfrequenz). Es sind Werte von 0 - 40 dB möglich.
+	\item[Ch0 BB Gain (dB):] Die Basisbandverstärkung des Signals. Erlaubt sind für das HackRF Werte zwischen 0 und 62 dB.
+	\item[Ch0 Bandwidth (Hz):] Die zu verwendende Bandbreite hängt von dem zu betrachtenden Signal ab. 
 \end{description}
 
 
@@ -114,13 +115,15 @@ Dieser untersützt das HackRF durch die zuvor installierte Bibliothek \textit{li
 
 
 \section{Erarbeiten der relevanten Metainformationen}
+Maßgebend für das Erkennen und Verarbeiten von Signalen im Kontext von Software Defined Radio sind die Randbedingungen, gestellt von eingesetzter Hard- und Software, Umweltbedingungen und Signalarten.
+Im folgenden wird eine Übersicht der relevanten Rahmenbedingungen und Kennzahlen, zusammengefasst im Begriff \enquote{Metainformationen} gegeben.
 
-\subsubsection{Antennengewinn}
-\subsubsection{Signalleistung}
-\subsubsection{Quantisierung}
-\subsubsection{Diskretisierung}
-\subsubsection{Frequenz}
-\subsubsection{DC Offset}
+\subsection{Signalleistung}
+\subsection{Quantisierung}
+\subsection{Diskretisierung}
+\subsection{Frequenz}
+\subsection{Modulation}
+\subsection{DC Offset}
 Durch die Überführung eines modulierten Signals zurück ins Basisband entsteht im FFT-Plot um die Nullfrequenz eine deutlich wahrnehmbare Spitze:
 \begin{figure}[ht]
 	\centering
@@ -170,7 +173,12 @@ Es bietet sich also an das Verhältnis in Dezibel auszudrücken:
 Das minimale Signal-Rausch-Verhältnis \(S/N_{min}\) gibt diesen Schwellwert an, der mindestens erreicht werden muss um das Signal zu erkennen. 
 %TODO: Nutzsignalleistung und Rauschsignalleistung definieren
 
-
+\subsection{Schlussfolgerung}
+Viele Kennwerte von Signalen, dazu gehören auch das Signal-Rausch-Verhältnis oder die Signalleistung, sind stark abhängig von der verwendeten Hardware und Implementierung.
+Die Frage danach, wie sich solche Kennzahlen bzw. Metainformationen allgemeingültig messen lassen, kann deshalb nicht eindeutig beantwortet werden.
+Stattdessen wäre es besser eine spezifische Fragestellung zu formulieren, wie: \\
+Was ist der minimale Leistungspegel eines Signales in dBm, mit der Modulationsart M auf der Frequenz F, welche von einem SDR-Gerät D mit Antenne A, unter Verwendung der Software S und Konfiguration K erkannt werden kann, mit einer maximalen Fehlerrate von E?\\
+Die daraus resultierende Funktion mehrerer Variablen, \(P_{Signal} (M, F, D, A, S, K, E)\), kann Aufschluss darüber geben, ob etwa das HackRF One für einen bestimmten Einsatzzweck geeignet ist.
 
 \newpage
 \section{GRC-Flowgraph zur Analyse von Metadaten}
@@ -188,7 +196,7 @@ Das minimale Signal-Rausch-Verhältnis \(S/N_{min}\) gibt diesen Schwellwert an,
 
 
 \section{Identifizieren und Dekodieren eines Signales}
-Signale müssen im Empfänger gemittelt werden, da sie aufgrund der durchgeführten Kanalfilterung ein oszillierendes Verhalten aufweisen, siehe Abb. \ref{mod-send-empf} \cite[vgl. Heuberger, e. a., S. TODO]{heuberger:2017}.
+Signale müssen im Empfänger gemittelt werden, da sie aufgrund der durchgeführten Kanalfilterung ein oszillierendes Verhalten aufweisen, siehe Abb. \ref{mod-send-empf} \cite[vgl. Heuberger, e. a., S. TODO]{Heuberger:2017}.
 
 \begin{figure}[ht]
 	\centering

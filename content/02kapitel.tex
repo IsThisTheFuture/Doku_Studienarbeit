@@ -283,22 +283,20 @@ Nach der eulerschen Formel ( \( e^{i\varphi} = cos \varphi + i \sin \varphi \) )
 \[ \underline{x} (t) = i(t) + jq(t) = a(t) e^{j \varphi(t)}\]
 
 Es gilt zu beachten, dass in der Nachrichten- und Elektrotechnik häufig $j$ zur Darstellung von komplexen Zahlen benutzt wird, da $i$ meist bereits durch andere Größen, etwa der Stromstärke, oder wie hier - der \textit{realen} Inphase-Komponente belegt ist.
-\newpage
 
 \section{Software Defined Radio Systeme} 
 \ac{SDR} Systeme sind digitale Datenübertragungssysteme, bei denen der Großteil der Signal- und Datenverarbeitung mittels Softwarekomponenten erfolgt \cite[Heuberger, e. a., S. 1]{Heuberger:2017}.
 Besonders hervorzuheben ist bei \ac{SDR} Systemen, dass ihre Hardware größtenteils unabhängig nachrichtentechnischer Eigenschaften wie der Symbolrate und Modulationsart sind. \ac{SDR} Systeme können verschiedene Standards verwenden um entsprechende Übertragungsarten zu implementieren, da die Funktionalität durch Software, also hardwareunabhängig, realisiert wird \cite[Heuberger, e. a., S. 36]{Heuberger:2017}. \newline
 Abbildung \ref{sdr-blockschaltbild} zeigt den Aufbau eines \ac{SDR} Systems als Blockschaltbild, in dem sowohl Sender und Empfänger als SDR realisiert sind.
 Für jedes Element im Sender gibt es ein entsprechendes Element im Empfänger, welches die Senderoperationen rückgängig macht, um die ursprünglichen Daten rekonstruieren zu können.
-
-Da sich diese Studienarbeit mit dem Empfangen und Auswerten von Signalen, aber nicht dem Senden befasst, wird im weiteren Verlauf des Dokumentes hauptsächlich die Seite des Empfängersystems und der Übertragungsstrecke betrachtet.
-
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.9\textwidth]{sdr.png}
 	\caption[Blockschaltbild eines SDR Systems]{Blockschaltbild eines SDR Systems. Quelle: \cite[Heuberger, e. a., S. 37]{Heuberger:2017}}
 	\label{sdr-blockschaltbild}
 \end{figure}
+
+Da sich diese Studienarbeit mit dem Empfangen und Auswerten von Signalen, aber nicht dem Senden befasst, wird im weiteren Verlauf des Dokumentes hauptsächlich die Seite des Empfängersystems und der Übertragungsstrecke betrachtet.
 
 Abbildung \ref{nachrichtentechn-blockschaltbild} zeigt den Aufbau eines klassischen digitalen Übertragungssystems. Die Funktionsweise lässt sich wie folgt zusammenfassen:
 \begin{description}
@@ -318,8 +316,9 @@ Anschließend erfolgen auf der Empfängerseite die entsprechenden inversen Opera
 	\label{nachrichtentechn-blockschaltbild}
 \end{figure}
 
-
-
+Im Gegensatz zum Sender, wo eine reine Vorwärts-Verarbeitung erfolgt, kann es im Empfänger
+auch mehrere Rückkopplungsmechanismen geben. 
+Häufig ist dabei die Rückführung der entschiedenen Symbole durch den Symbolmapper oder das sogenannte Turbo Feedback bei der Kanaldecodierung. 
 
 
 
